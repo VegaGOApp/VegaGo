@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Route, Clock, User, ChevronRight, Search, Bus, Mail, Phone, X, Star, AlertTriangle, Train, Car, Send, Users, Map as MapIcon, Calendar, Bell, Info, Heart } from 'lucide-react';
+import { Route, Clock, User, ChevronRight, Search, Bus, Mail, Phone, X, Star, AlertTriangle, Train, Car, Send, Users, Map as MapIcon, Calendar, Bell, Info, Heart, MapPin, Navigation } from 'lucide-react';
 import { busLines } from '../data/busLines';
 import taxis from '../data/taxis.json';
 import { useAlerts } from '../hooks/useAlerts';
@@ -33,20 +33,23 @@ const Footer = ({ onSelectLine, selectedLineId, lang, onMenuOpen, favorites, tog
   const lineDistances = useMemo(() => {
     if (!userLocation) return {};
     const distances = {};
-    busLines.forEach(line => {
-      if (line.stops && line.stops.length > 0) {
-        const userCoords = [userLocation.lat, userLocation.lng];
-        // Use a simple loop for maximum performance
-        let minDist = Infinity;
-        for (let i = 0; i < line.stops.length; i++) {
-          const d = getDistance(line.stops[i].coords, userCoords);
-          if (d < minDist) minDist = d;
-        }
-        distances[line.id] = minDist;
-      } else {
+    const userLat = userLocation.lat;
+    const userLng = userLocation.lng;
+    const userCoords = [userLat, userLng];
+
+    for (const line of busLines) {
+      if (!line.stops || line.stops.length === 0) {
         distances[line.id] = Infinity;
+        continue;
       }
-    });
+
+      let minDist = Infinity;
+      for (const stop of line.stops) {
+        const d = getDistance(stop.coords, userCoords);
+        if (d < minDist) minDist = d;
+      }
+      distances[line.id] = minDist;
+    }
     return distances;
   }, [userLocation]);
 
@@ -118,7 +121,7 @@ const Footer = ({ onSelectLine, selectedLineId, lang, onMenuOpen, favorites, tog
     if (!userLocation) return [];
     return busLines
       .map(line => ({ ...line, distance: lineDistances[line.id] || Infinity }))
-      .filter(l => l.distance < 5000) // Only within 5km
+      .filter(l => l.distance <= 10) // Only within 10km for a better user experience
       .sort((a, b) => a.distance - b.distance)
       .slice(0, 3);
   }, [userLocation, lineDistances]);
@@ -345,7 +348,7 @@ const Footer = ({ onSelectLine, selectedLineId, lang, onMenuOpen, favorites, tog
                   <div className="route-details">
                     <div className="route-name" style={{ fontSize: '0.85rem' }}>{line.name}</div>
                     <div className="route-meta" style={{ fontSize: '0.7rem' }}>
-                      <MapPin size={10} /> {(line.distance / 1000).toFixed(1)} km
+                      <MapPin size={10} /> {line.distance.toFixed(1)} km
                     </div>
                   </div>
                   <ChevronRight size={16} className="arrow-icon" />
