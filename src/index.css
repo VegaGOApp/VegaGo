@@ -1499,9 +1499,10 @@ body {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  margin-bottom: 5.8rem; /* Closer to footer */
-  margin-right: 12px;
+  margin-bottom: 6.8rem; /* Adjusted to sit right above the footer */
+  margin-right: 16px;
   color: var(--primary);
+  z-index: 5500;
 }
 
 :root.dark .crystal-fab {

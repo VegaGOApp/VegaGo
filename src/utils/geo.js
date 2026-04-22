@@ -9,20 +9,25 @@ export const getDistance = (p1, p2) => {
   return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
 };
 
+// Squared distance for fast comparison (avoids Math.sqrt/sin)
+export const getSquaredDistance = (p1, p2) => {
+  if (!p1 || !p2) return Infinity;
+  const dx = p2[0] - p1[0];
+  const dy = p2[1] - p1[1];
+  return dx * dx + dy * dy;
+};
+
 export const getVehicleStopIndex = (line, vehicle) => {
   if (!line || !line.stops) return -1;
   let minIdx = -1;
-  let minDist = Infinity;
+  let minDistSq = Infinity;
   
-  line.stops.forEach((stop, idx) => {
-    const d = Math.sqrt(
-      Math.pow(stop.coords[0] - vehicle.coords[0], 2) + 
-      Math.pow(stop.coords[1] - vehicle.coords[1], 2)
-    );
-    if (d < minDist) {
-      minDist = d;
-      minIdx = idx;
+  for (let i = 0; i < line.stops.length; i++) {
+    const dSq = getSquaredDistance(line.stops[i].coords, vehicle.coords);
+    if (dSq < minDistSq) {
+      minDistSq = dSq;
+      minIdx = i;
     }
-  });
+  }
   return minIdx;
 };

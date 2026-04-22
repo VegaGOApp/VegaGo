@@ -4,7 +4,7 @@ import { busLines } from '../data/busLines';
 import taxis from '../data/taxis.json';
 import { useAlerts } from '../hooks/useAlerts';
 import { useTranslation } from '../hooks/useTranslation';
-import { getDistance } from '../utils/geo';
+import { getDistance, getSquaredDistance } from '../utils/geo';
 import { sanitizeInput } from '../utils/security';
 
 const Footer = ({ onSelectLine, selectedLineId, lang, onMenuOpen, favorites, toggleFavorite }) => {
@@ -43,12 +43,16 @@ const Footer = ({ onSelectLine, selectedLineId, lang, onMenuOpen, favorites, tog
         continue;
       }
 
-      let minDist = Infinity;
+      let minDistSq = Infinity;
+      let closestStopCoords = null;
       for (const stop of line.stops) {
-        const d = getDistance(stop.coords, userCoords);
-        if (d < minDist) minDist = d;
+        const dSq = getSquaredDistance(stop.coords, userCoords);
+        if (dSq < minDistSq) {
+          minDistSq = dSq;
+          closestStopCoords = stop.coords;
+        }
       }
-      distances[line.id] = minDist;
+      distances[line.id] = getDistance(closestStopCoords, userCoords);
     }
     return distances;
   }, [userLocation]);
