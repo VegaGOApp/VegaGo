@@ -259,7 +259,7 @@ export default function BusMap({ selectedLineId, onSelectLine, theme, vehicles, 
         {userPos && (
           <CircleMarker 
             center={[userPos.lat, userPos.lng]} 
-            pathOptions={{ color: '#ffffff', fillColor: '#3b82f6', fillOpacity: 1, weight: 3 }} 
+            pathOptions={{ color: '#ffffff', fillColor: '#84cc16', fillOpacity: 1, weight: 3 }} 
             radius={8} 
             zIndexOffset={1000}
           />

@@ -6,12 +6,14 @@ import { useAlerts } from '../hooks/useAlerts';
 import { useTranslation } from '../hooks/useTranslation';
 import { getDistance, getSquaredDistance } from '../utils/geo';
 import { sanitizeInput } from '../utils/security';
+import Logo from './Logo';
 
 const Footer = ({ onSelectLine, selectedLineId, lang, onMenuOpen, favorites, toggleFavorite }) => {
   const [activeMenu, setActiveMenu] = useState(null); // 'lines', 'alerts', 'about', 'report', 'taxi'
   const [scheduleSearch, setScheduleSearch] = useState('');
   const [scheduleTab, setScheduleTab] = useState('Todas');
   const [userLocation, setUserLocation] = useState(null);
+  const [showLegalFull, setShowLegalFull] = useState(false);
   const { t } = useTranslation(lang);
 
   // Community Reports State with robust parsing
@@ -321,15 +323,39 @@ const Footer = ({ onSelectLine, selectedLineId, lang, onMenuOpen, favorites, tog
           <div className="sheet-handle-container" onClick={() => setActiveMenu(null)} style={{ cursor: 'pointer' }}><div className="sheet-handle"></div></div>
           <div className="dropdown-header"><h3>{t.aboutTitle}</h3><button onClick={() => setActiveMenu(null)} className="close-dropdown"><X size={20} /></button></div>
           <div style={{ padding: '2rem', textAlign: 'center' }}>
-            <Bus size={48} color="var(--primary)" style={{ marginBottom: '1.5rem' }} />
-            <h2 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem' }}>VegaGO</h2>
-            <p style={{ opacity: 0.7, fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '1.5rem' }}>{t.aboutDesc}</p>
+            <Logo size={80} className="about-logo" style={{ marginBottom: '1.5rem' }} />
+            <h2 style={{ fontSize: '1.8rem', fontWeight: 900, marginBottom: '1rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+              <span style={{ color: 'var(--brand-navy)' }}>Vega</span>
+              <span style={{ color: 'var(--primary)' }}>GO</span>
+            </h2>
+            <p style={{ opacity: 0.7, fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '1.5rem' }}>{t.aboutDesc}</p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', opacity: 0.6, fontSize: '0.8rem', marginBottom: '1.5rem' }}>
               <span>www.vegago.app</span>
               <span>hello@vegago.app</span>
               <span>{t.version}</span>
             </div>
             <p style={{ fontSize: '0.7rem', opacity: 0.4, borderTop: '1px solid var(--border-color)', paddingTop: '1rem' }}>{t.legal}</p>
+            <button 
+              onClick={() => setShowLegalFull(true)} 
+              style={{ background: 'none', border: 'none', color: 'var(--primary)', fontSize: '0.75rem', fontWeight: 700, cursor: 'pointer', marginTop: '0.5rem', textDecoration: 'underline' }}
+            >
+              {t.legalBtn}
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* Formal Legal Full Modal */}
+      {showLegalFull && (
+        <div className="lines-dropdown crystal-card" style={{ zIndex: 11000, height: '70vh' }}>
+          <div className="dropdown-header">
+            <h3>{t.legalBtn}</h3>
+            <button onClick={() => setShowLegalFull(false)} className="close-dropdown"><X size={20} /></button>
+          </div>
+          <div style={{ padding: '1.5rem', overflowY: 'auto', fontSize: '0.85rem', lineHeight: '1.6', whiteSpace: 'pre-wrap', opacity: 0.8 }}>
+            {t.legalFull}
+            <div style={{ height: '2rem' }}></div>
+            <button className="crystal-button-full" onClick={() => setShowLegalFull(false)}>{lang === 'es' ? 'Entendido' : 'Got it'}</button>
           </div>
         </div>
       )}
@@ -398,16 +424,22 @@ const Footer = ({ onSelectLine, selectedLineId, lang, onMenuOpen, favorites, tog
         >
           <div className="glass-circle" style={{
             transform: activeMenu === 'about' ? 'scale(1.1) translateY(-5px)' : 'scale(1)',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center'
           }}>
-            <Bus size={30} color="var(--primary)" />
+            <Logo size={32} />
             <span style={{
               fontWeight: 900,
-              color: 'var(--primary)',
               textTransform: 'none',
               letterSpacing: '-0.02em',
               fontSize: '0.75rem',
-              lineHeight: 1
-            }}>VegaGO</span>
+              lineHeight: 1,
+              marginTop: '2px'
+            }}>
+              <span style={{ color: 'var(--brand-navy)' }}>Vega</span>
+              <span style={{ color: 'var(--primary)' }}>GO</span>
+            </span>
           </div>
         </button>
         <button 

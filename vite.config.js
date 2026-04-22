@@ -13,8 +13,8 @@ export default defineConfig({
         name: 'VegaGO',
         short_name: 'VegaGO',
         description: 'Muévete por la Vega Baja sin complicaciones. Consulta buses, horarios y rutas al instante y llega siempre a tiempo.',
-        theme_color: '#3b82f6',
-        background_color: '#ffffff',
+        theme_color: '#84cc16',
+        background_color: '#0f172a',
         display: 'standalone',
         orientation: 'portrait',
         icons: [
