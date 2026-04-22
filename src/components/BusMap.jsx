@@ -146,6 +146,7 @@ const OutOfBoundsControl = () => {
 const LocateControl = () => {
   const map = useMap();
   const [container, setContainer] = useState(null);
+  const [isLocating, setIsLocating] = useState(false);
 
   useEffect(() => {
     const corner = map._controlContainer.querySelector('.leaflet-bottom.leaflet-right');
@@ -153,30 +154,50 @@ const LocateControl = () => {
   }, [map]);
 
   const handleLocate = async () => {
+    if (isLocating) return;
+    setIsLocating(true);
+    
     try {
-      // First, check/request permissions explicitly for Android
       const permissions = await Geolocation.checkPermissions();
       if (permissions.location !== 'granted') {
         const request = await Geolocation.requestPermissions();
         if (request.location !== 'granted') {
-          alert("Permisos de ubicación denegados.");
+          alert("Permisos de ubicación denegados. Por favor, habilítalos en ajustes.");
+          setIsLocating(false);
           return;
         }
       }
 
-      const position = await Geolocation.getCurrentPosition({
-        enableHighAccuracy: true,
-        timeout: 10000
-      });
+      let position;
+      try {
+        position = await Geolocation.getCurrentPosition({
+          enableHighAccuracy: true,
+          timeout: 15000,
+          maximumAge: 0
+        });
+      } catch (err) {
+        console.warn("High accuracy failed, trying coarse location fallback...");
+        position = await Geolocation.getCurrentPosition({
+          enableHighAccuracy: false,
+          timeout: 15000,
+          maximumAge: 0
+        });
+      }
 
       const { latitude, longitude } = position.coords;
       const latlng = [latitude, longitude];
       
-      map.flyTo(latlng, 14);
+      map.flyTo(latlng, 15);
       window.dispatchEvent(new CustomEvent('onUserLocation', { detail: { lat: latitude, lng: longitude } }));
     } catch (e) {
-      alert("GPS desactivado o sin señal. Por favor, activa la ubicación.");
-      console.error('Geolocation error:', e);
+      if (e.message?.includes('timeout')) {
+        alert("Tiempo de espera agotado. Asegúrate de estar en un lugar con señal GPS.");
+      } else {
+        alert("GPS desactivado o sin señal. Por favor, activa la ubicación en los ajustes del teléfono.");
+      }
+      console.error('Geolocation error details:', e);
+    } finally {
+      setIsLocating(false);
     }
   };
 
@@ -184,8 +205,13 @@ const LocateControl = () => {
 
   return createPortal(
     <div className="leaflet-control leaflet-bar" style={{ border: 'none', background: 'none' }}>
-      <button onClick={handleLocate} className="crystal-fab" title="Mi ubicación">
-        <Navigation size={20} className="blue-icon" />
+      <button 
+        onClick={handleLocate} 
+        className={`crystal-fab ${isLocating ? 'locating' : ''}`} 
+        disabled={isLocating}
+        title="Mi ubicación"
+      >
+        <Navigation size={20} className={isLocating ? "spinning-icon" : "blue-icon"} />
       </button>
     </div>,
     container
