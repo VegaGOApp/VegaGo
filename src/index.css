@@ -136,7 +136,7 @@ body {
   font-weight: 500;
 }
 
-.theme-toggle, .lang-toggle {
+.theme-toggle {
   background: none;
   border: none;
   color: var(--text-color);
@@ -145,6 +145,34 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.lang-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1.5px solid rgba(0,0,0,0.05);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  margin-left: 0.2rem;
+}
+
+:root.dark .lang-toggle {
+  border-color: rgba(255,255,255,0.1);
+}
+
+.lang-toggle svg, .lang-toggle img, .flag-svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .planner-backdrop {
