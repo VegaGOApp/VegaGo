@@ -172,15 +172,15 @@ const LocateControl = () => {
       try {
         position = await Geolocation.getCurrentPosition({
           enableHighAccuracy: true,
-          timeout: 15000,
-          maximumAge: 0
+          timeout: 7000,
+          maximumAge: 5000 // Use recent cache if available (5s)
         });
       } catch (err) {
         console.warn("High accuracy failed, trying coarse location fallback...");
         position = await Geolocation.getCurrentPosition({
           enableHighAccuracy: false,
-          timeout: 15000,
-          maximumAge: 0
+          timeout: 7000,
+          maximumAge: 10000 // Coarse can be a bit older
         });
       }
 
