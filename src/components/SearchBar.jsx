@@ -7,7 +7,7 @@ export default function SearchBar({ onSelectLine, selectedLineId, theme, setThem
   const [origin, setOrigin] = useState('');
   const [destination, setDestination] = useState('');
   const [isPlanning, setIsPlanning] = useState(false);
-  const { t, flag } = useTranslation(lang);
+  const { t, Flag } = useTranslation(lang);
 
   useEffect(() => {
     if (selectedLineId) setIsPlanning(false);
@@ -41,7 +41,7 @@ export default function SearchBar({ onSelectLine, selectedLineId, theme, setThem
               className="lang-toggle"
               aria-label={t.changeLang || 'Cambiar idioma'}
             >
-              <img src={flag} alt={lang} />
+              <Flag />
             </button>
             <div 
               className="search-trigger" 
