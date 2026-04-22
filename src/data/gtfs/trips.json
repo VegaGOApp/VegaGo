@@ -1,0 +1,290 @@
+[
+  {
+    "route_id": "route_l1",
+    "service_id": "everyday",
+    "trip_id": "trip_l1_outbound",
+    "trip_headsign": "Pilar de la Horadada",
+    "direction_id": 0,
+    "shape_id": "route_l1"
+  },
+  {
+    "route_id": "route_l2",
+    "service_id": "everyday",
+    "trip_id": "trip_l2_outbound",
+    "trip_headsign": "Alicante",
+    "direction_id": 0,
+    "shape_id": "route_l2"
+  },
+  {
+    "route_id": "route_l3",
+    "service_id": "everyday",
+    "trip_id": "trip_l3_outbound",
+    "trip_headsign": "Pilar de la Horadada",
+    "direction_id": 0,
+    "shape_id": "route_l3"
+  },
+  {
+    "route_id": "route_l4",
+    "service_id": "everyday",
+    "trip_id": "trip_l4_outbound",
+    "trip_headsign": "Callosa de Segura",
+    "direction_id": 0,
+    "shape_id": "route_l4"
+  },
+  {
+    "route_id": "route_l5_u",
+    "service_id": "everyday",
+    "trip_id": "trip_l5_u_outbound",
+    "trip_headsign": "La Mata",
+    "direction_id": 0,
+    "shape_id": "route_l5_u"
+  },
+  {
+    "route_id": "route_l6_u",
+    "service_id": "everyday",
+    "trip_id": "trip_l6_u_outbound",
+    "trip_headsign": "Lago Jardín",
+    "direction_id": 0,
+    "shape_id": "route_l6_u"
+  },
+  {
+    "route_id": "route_l7",
+    "service_id": "everyday",
+    "trip_id": "trip_l7_outbound",
+    "trip_headsign": "Desamparados",
+    "direction_id": 0,
+    "shape_id": "route_l7"
+  },
+  {
+    "route_id": "route_l8",
+    "service_id": "everyday",
+    "trip_id": "trip_l8_outbound",
+    "trip_headsign": "Mil Palmeras",
+    "direction_id": 0,
+    "shape_id": "route_l8"
+  },
+  {
+    "route_id": "route_l9",
+    "service_id": "everyday",
+    "trip_id": "trip_l9_outbound",
+    "trip_headsign": "Hospital de Torrevieja",
+    "direction_id": 0,
+    "shape_id": "route_l9"
+  },
+  {
+    "route_id": "route_l10",
+    "service_id": "everyday",
+    "trip_id": "trip_l10_outbound",
+    "trip_headsign": "Hospital de Torrevieja",
+    "direction_id": 0,
+    "shape_id": "route_l10"
+  },
+  {
+    "route_id": "route_l11",
+    "service_id": "everyday",
+    "trip_id": "trip_l11_outbound",
+    "trip_headsign": "Torrevieja",
+    "direction_id": 0,
+    "shape_id": "route_l11"
+  },
+  {
+    "route_id": "route_l12",
+    "service_id": "everyday",
+    "trip_id": "trip_l12_outbound",
+    "trip_headsign": "Torrevieja",
+    "direction_id": 0,
+    "shape_id": "route_l12"
+  },
+  {
+    "route_id": "route_l13",
+    "service_id": "everyday",
+    "trip_id": "trip_l13_outbound",
+    "trip_headsign": "Crevillente",
+    "direction_id": 0,
+    "shape_id": "route_l13"
+  },
+  {
+    "route_id": "route_l14",
+    "service_id": "everyday",
+    "trip_id": "trip_l14_outbound",
+    "trip_headsign": "Aeropuerto Alicante/Elche",
+    "direction_id": 0,
+    "shape_id": "route_l14"
+  },
+  {
+    "route_id": "route_l15",
+    "service_id": "everyday",
+    "trip_id": "trip_l15_outbound",
+    "trip_headsign": "Torrevieja",
+    "direction_id": 0,
+    "shape_id": "route_l15"
+  },
+  {
+    "route_id": "route_l16",
+    "service_id": "everyday",
+    "trip_id": "trip_l16_outbound",
+    "trip_headsign": "Guardamar del Segura",
+    "direction_id": 0,
+    "shape_id": "route_l16"
+  },
+  {
+    "route_id": "route_l17",
+    "service_id": "everyday",
+    "trip_id": "trip_l17_outbound",
+    "trip_headsign": "Alicante",
+    "direction_id": 0,
+    "shape_id": "route_l17"
+  },
+  {
+    "route_id": "route_l18",
+    "service_id": "everyday",
+    "trip_id": "trip_l18_outbound",
+    "trip_headsign": "Aeropuerto",
+    "direction_id": 0,
+    "shape_id": "route_l18"
+  },
+  {
+    "route_id": "route_l19",
+    "service_id": "everyday",
+    "trip_id": "trip_l19_outbound",
+    "trip_headsign": "Orihuela",
+    "direction_id": 0,
+    "shape_id": "route_l19"
+  },
+  {
+    "route_id": "route_l20",
+    "service_id": "everyday",
+    "trip_id": "trip_l20_outbound",
+    "trip_headsign": "Hospital Vega Baja",
+    "direction_id": 0,
+    "shape_id": "route_l20"
+  },
+  {
+    "route_id": "route_l21",
+    "service_id": "everyday",
+    "trip_id": "trip_l21_outbound",
+    "trip_headsign": "Guardamar/Alicante",
+    "direction_id": 0,
+    "shape_id": "route_l21"
+  },
+  {
+    "route_id": "route_l22",
+    "service_id": "everyday",
+    "trip_id": "trip_l22_outbound",
+    "trip_headsign": "Alicante",
+    "direction_id": 0,
+    "shape_id": "route_l22"
+  },
+  {
+    "route_id": "route_l23",
+    "service_id": "everyday",
+    "trip_id": "trip_l23_outbound",
+    "trip_headsign": "Alicante",
+    "direction_id": 0,
+    "shape_id": "route_l23"
+  },
+  {
+    "route_id": "route_l24",
+    "service_id": "everyday",
+    "trip_id": "trip_l24_outbound",
+    "trip_headsign": "Alicante",
+    "direction_id": 0,
+    "shape_id": "route_l24"
+  },
+  {
+    "route_id": "route_l25",
+    "service_id": "everyday",
+    "trip_id": "trip_l25_outbound",
+    "trip_headsign": "Pilar de la Horadada",
+    "direction_id": 0,
+    "shape_id": "route_l25"
+  },
+  {
+    "route_id": "route_l26",
+    "service_id": "everyday",
+    "trip_id": "trip_l26_outbound",
+    "trip_headsign": "Crevillent",
+    "direction_id": 0,
+    "shape_id": "route_l26"
+  },
+  {
+    "route_id": "route_l27",
+    "service_id": "everyday",
+    "trip_id": "trip_l27_outbound",
+    "trip_headsign": "Elche",
+    "direction_id": 0,
+    "shape_id": "route_l27"
+  },
+  {
+    "route_id": "route_l28",
+    "service_id": "everyday",
+    "trip_id": "trip_l28_outbound",
+    "trip_headsign": "Alicante",
+    "direction_id": 0,
+    "shape_id": "route_l28"
+  },
+  {
+    "route_id": "route_a_u",
+    "service_id": "everyday",
+    "trip_id": "trip_a_u_outbound",
+    "trip_headsign": "Servicio Urbano",
+    "direction_id": 0,
+    "shape_id": "route_a_u"
+  },
+  {
+    "route_id": "route_a2_u",
+    "service_id": "everyday",
+    "trip_id": "trip_a2_u_outbound",
+    "trip_headsign": "Servicio Urbano",
+    "direction_id": 0,
+    "shape_id": "route_a2_u"
+  },
+  {
+    "route_id": "route_b_u",
+    "service_id": "everyday",
+    "trip_id": "trip_b_u_outbound",
+    "trip_headsign": "Servicio Urbano",
+    "direction_id": 0,
+    "shape_id": "route_b_u"
+  },
+  {
+    "route_id": "route_c_u",
+    "service_id": "everyday",
+    "trip_id": "trip_c_u_outbound",
+    "trip_headsign": "Servicio Urbano",
+    "direction_id": 0,
+    "shape_id": "route_c_u"
+  },
+  {
+    "route_id": "route_df_u",
+    "service_id": "everyday",
+    "trip_id": "trip_df_u_outbound",
+    "trip_headsign": "Servicio Urbano",
+    "direction_id": 0,
+    "shape_id": "route_df_u"
+  },
+  {
+    "route_id": "route_e_u",
+    "service_id": "everyday",
+    "trip_id": "trip_e_u_outbound",
+    "trip_headsign": "Servicio Urbano",
+    "direction_id": 0,
+    "shape_id": "route_e_u"
+  },
+  {
+    "route_id": "route_g_u",
+    "service_id": "everyday",
+    "trip_id": "trip_g_u_outbound",
+    "trip_headsign": "Servicio Urbano",
+    "direction_id": 0,
+    "shape_id": "route_g_u"
+  },
+  {
+    "route_id": "route_h_u",
+    "service_id": "everyday",
+    "trip_id": "trip_h_u_outbound",
+    "trip_headsign": "Servicio Urbano",
+    "direction_id": 0,
+    "shape_id": "route_h_u"
+  }
+]

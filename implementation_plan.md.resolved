@@ -1,0 +1,56 @@
+# Goal Description
+
+Create a modern, interactive web application to display all bus lines in the Vega Baja region of Alicante, Spain. The application will feature a map with bus routes, stops (start, middle, end), schedules, and pricing information. The UI will be inspired by Uber, providing a sleek, premium, and dynamic user experience with smooth animations, modern typography, and a polished aesthetic.
+
+## User Review Required
+
+> [!IMPORTANT]
+> **Data Access Needed:** You mentioned having a Google Sheets file with information about the bus lines. I need access to this data to integrate it into the application and understand what additional information needs to be researched. 
+> Please do one of the following:
+> 1. Export the Google Sheet as a CSV or Excel file and save it in the workspace folder (`C:\Users\User\Documents\Antigra`).
+> 2. OR, publish the Google Sheet to the web (as CSV) and provide the public URL here in the chat.
+> 3. OR, copy and paste the contents here in the chat.
+
+## Open Questions
+
+> [!CAUTION]
+> - Do you have any preference between using OpenStreetMap (free, no API key required) or Google Maps (requires an API key that you would need to provide)? We recommend OpenStreetMap (via Leaflet) with a custom sleek map style for immediate setup.
+> - What specific details are currently missing in your Google Sheet that you want me to research (e.g., exact stop coordinates, schedules, prices)?
+
+## Proposed Changes
+
+We will build a React application using Vite for fast development and high performance. We will use Vanilla CSS for styling to ensure a highly customized, premium design, and `react-leaflet` for mapping.
+
+### Initial App Setup
+- Initialize a React project using Vite in the current directory.
+- Install dependencies: `react-leaflet`, `leaflet`, `lucide-react` (for sleek icons).
+
+### Main Components
+#### [NEW] `src/index.css`
+Will contain our custom design system, CSS variables for colors (sleek dark mode / clean light mode), typography, and modern micro-animations.
+
+#### [NEW] `src/App.jsx`
+The main application shell containing the full-screen map and an overlay UI similar to Uber's bottom-sheet design.
+
+#### [NEW] `src/components/BusMap.jsx`
+The interactive map component rendering the bus routes, stops with custom markers, and handling map interactions (zooming to routes).
+
+#### [NEW] `src/components/RouteDetails.jsx`
+An overlaid sliding panel (like Uber) displaying details of the selected bus route, including schedules, prices, and a timeline of stops.
+
+#### [NEW] `src/components/SearchBar.jsx`
+A floating search interface over the map to allow users to search for specific origins, destinations, or bus lines.
+
+#### [NEW] `src/data/busLines.js`
+A module to process and serve the bus line data (which will be populated using your Google Sheet and supplemented with internet research).
+
+## Verification Plan
+
+### Automated/Local Testing
+- Start the development server locally.
+- Verify the build process has no errors.
+
+### Manual Verification
+- Review the aesthetic and confirm it meets the "premium, dynamic, and Uber-like" requirement.
+- Verify the map loads correctly and custom route lines/markers are rendered.
+- Test interactivity: clicking on a route or searching for a destination displays the correct schedule and pricing details in the UI overlay.

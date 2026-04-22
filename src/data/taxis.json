@@ -1,0 +1,12 @@
+[
+  { "id": "torrevieja", "name": "Radio Taxi Torrevieja", "phone": "965712277", "city": "Torrevieja" },
+  { "id": "orihuela", "name": "Radio Taxi Orihuela", "phone": "966740202", "city": "Orihuela" },
+  { "id": "orihuela-costa", "name": "Radio Taxi Orihuela Costa", "phone": "966761088", "city": "Orihuela Costa" },
+  { "id": "guardamar", "name": "Taxi Guardamar", "phone": "965032965", "city": "Guardamar del Segura" },
+  { "id": "pilar", "name": "Radio Taxi Pilar de la Horadada", "phone": "966766013", "city": "Pilar de la Horadada" },
+  { "id": "almoradi", "name": "Taxis Almoradí", "phone": "680913095", "city": "Almoradí" },
+  { "id": "san-fulgencio", "name": "Taxi San Fulgencio", "phone": "666415415", "city": "San Fulgencio" },
+  { "id": "rojales", "name": "Taxi Quesada", "phone": "617555444", "city": "Rojales" },
+  { "id": "albatera", "name": "Taxi Albatera", "phone": "672319682", "city": "Albatera" },
+  { "id": "bigastro", "name": "Taxi Bigastro", "phone": "610730073", "city": "Bigastro" }
+]

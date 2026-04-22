@@ -1,0 +1,233 @@
+[
+  {
+    "stop_id": "stop_1",
+    "stop_name": "Av. de Loring (Alicante)",
+    "stop_lat": 38.3375,
+    "stop_lon": -0.4914,
+    "zone_id": "vega_baja"
+  },
+  {
+    "stop_id": "stop_2",
+    "stop_name": "El Altet",
+    "stop_lat": 38.2709,
+    "stop_lon": -0.5513,
+    "zone_id": "vega_baja"
+  },
+  {
+    "stop_id": "stop_3",
+    "stop_name": "Santa Pola",
+    "stop_lat": 38.1964,
+    "stop_lon": -0.5615,
+    "zone_id": "vega_baja"
+  },
+  {
+    "stop_id": "stop_4",
+    "stop_name": "La Marina",
+    "stop_lat": 38.1384,
+    "stop_lon": -0.6433,
+    "zone_id": "vega_baja"
+  },
+  {
+    "stop_id": "stop_5",
+    "stop_name": "Guardamar",
+    "stop_lat": 38.0878,
+    "stop_lon": -0.6559,
+    "zone_id": "vega_baja"
+  },
+  {
+    "stop_id": "stop_6",
+    "stop_name": "Torrevieja",
+    "stop_lat": 37.9792,
+    "stop_lon": -0.6758,
+    "zone_id": "vega_baja"
+  },
+  {
+    "stop_id": "stop_7",
+    "stop_name": "C.C. Zenia Boulevard",
+    "stop_lat": 37.9272,
+    "stop_lon": -0.735,
+    "zone_id": "vega_baja"
+  },
+  {
+    "stop_id": "stop_8",
+    "stop_name": "Mil Palmeras",
+    "stop_lat": 37.8821,
+    "stop_lon": -0.7588,
+    "zone_id": "vega_baja"
+  },
+  {
+    "stop_id": "stop_9",
+    "stop_name": "Pilar de la Horadada",
+    "stop_lat": 37.868,
+    "stop_lon": -0.7925,
+    "zone_id": "vega_baja"
+  },
+  {
+    "stop_id": "stop_10",
+    "stop_name": "Alicante",
+    "stop_lat": 38.3375,
+    "stop_lon": -0.4914,
+    "zone_id": "vega_baja"
+  },
+  {
+    "stop_id": "stop_11",
+    "stop_name": "Zenia Boulevard",
+    "stop_lat": 37.9272,
+    "stop_lon": -0.735,
+    "zone_id": "vega_baja"
+  },
+  {
+    "stop_id": "stop_12",
+    "stop_name": "Orihuela",
+    "stop_lat": 38.0779,
+    "stop_lon": -0.9447,
+    "zone_id": "vega_baja"
+  },
+  {
+    "stop_id": "stop_13",
+    "stop_name": "Hospital Vega Baja",
+    "stop_lat": 38.0772,
+    "stop_lon": -0.8451,
+    "zone_id": "vega_baja"
+  },
+  {
+    "stop_id": "stop_14",
+    "stop_name": "Callosa de Segura",
+    "stop_lat": 38.1292,
+    "stop_lon": -0.8768,
+    "zone_id": "vega_baja"
+  },
+  {
+    "stop_id": "stop_15",
+    "stop_name": "La Mata",
+    "stop_lat": 38.0267,
+    "stop_lon": -0.6558,
+    "zone_id": "vega_baja"
+  },
+  {
+    "stop_id": "stop_16",
+    "stop_name": "Hospital Torrevieja",
+    "stop_lat": 37.9615,
+    "stop_lon": -0.7138,
+    "zone_id": "vega_baja"
+  },
+  {
+    "stop_id": "stop_17",
+    "stop_name": "Lago Jardín",
+    "stop_lat": 37.9555,
+    "stop_lon": -0.7169,
+    "zone_id": "vega_baja"
+  },
+  {
+    "stop_id": "stop_18",
+    "stop_name": "Desamparados",
+    "stop_lat": 38.0674,
+    "stop_lon": -0.9631,
+    "zone_id": "vega_baja"
+  },
+  {
+    "stop_id": "stop_19",
+    "stop_name": "Los Montesinos",
+    "stop_lat": 38.0264,
+    "stop_lon": -0.7628,
+    "zone_id": "vega_baja"
+  },
+  {
+    "stop_id": "stop_20",
+    "stop_name": "Crevillente",
+    "stop_lat": 38.2494,
+    "stop_lon": -0.8105,
+    "zone_id": "vega_baja"
+  },
+  {
+    "stop_id": "stop_21",
+    "stop_name": "Aeropuerto Alicante/Elche",
+    "stop_lat": 38.2822,
+    "stop_lon": -0.5582,
+    "zone_id": "vega_baja"
+  },
+  {
+    "stop_id": "stop_22",
+    "stop_name": "Almoradí",
+    "stop_lat": 38.1105,
+    "stop_lon": -0.7915,
+    "zone_id": "vega_baja"
+  },
+  {
+    "stop_id": "stop_23",
+    "stop_name": "Rojales",
+    "stop_lat": 38.0863,
+    "stop_lon": -0.7226,
+    "zone_id": "vega_baja"
+  },
+  {
+    "stop_id": "stop_24",
+    "stop_name": "Aeropuerto",
+    "stop_lat": 38.2822,
+    "stop_lon": -0.5582,
+    "zone_id": "vega_baja"
+  },
+  {
+    "stop_id": "stop_25",
+    "stop_name": "Abanilla",
+    "stop_lat": 38.2045,
+    "stop_lon": -1.0408,
+    "zone_id": "vega_baja"
+  },
+  {
+    "stop_id": "stop_26",
+    "stop_name": "La Murada",
+    "stop_lat": 38.1884,
+    "stop_lon": -0.9634,
+    "zone_id": "vega_baja"
+  },
+  {
+    "stop_id": "stop_27",
+    "stop_name": "Benferri",
+    "stop_lat": 38.1407,
+    "stop_lon": -0.9611,
+    "zone_id": "vega_baja"
+  },
+  {
+    "stop_id": "stop_28",
+    "stop_name": "Elche",
+    "stop_lat": 38.2721,
+    "stop_lon": -0.6912,
+    "zone_id": "vega_baja"
+  },
+  {
+    "stop_id": "stop_29",
+    "stop_name": "Sant Vicent del Raspeig",
+    "stop_lat": 38.3962,
+    "stop_lon": -0.5255,
+    "zone_id": "vega_baja"
+  },
+  {
+    "stop_id": "stop_30",
+    "stop_name": "Crevillent",
+    "stop_lat": 38.2494,
+    "stop_lon": -0.8105,
+    "zone_id": "vega_baja"
+  },
+  {
+    "stop_id": "stop_31",
+    "stop_name": "Doña Inés (Carrefour)",
+    "stop_lat": 37.9940,
+    "stop_lon": -0.6850,
+    "zone_id": "vega_baja"
+  },
+  {
+    "stop_id": "stop_32",
+    "stop_name": "Los Balcones",
+    "stop_lat": 37.9700,
+    "stop_lon": -0.7100,
+    "zone_id": "vega_baja"
+  },
+  {
+    "stop_id": "stop_33",
+    "stop_name": "Hotel Fontana",
+    "stop_lat": 37.9750,
+    "stop_lon": -0.6820,
+    "zone_id": "vega_baja"
+  }
+]
