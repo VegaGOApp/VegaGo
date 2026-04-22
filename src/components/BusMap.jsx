@@ -4,6 +4,7 @@ import 'leaflet/dist/leaflet.css';
 import { busLines } from '../data/busLines';
 import { Navigation } from 'lucide-react';
 import L from 'leaflet';
+import { Geolocation } from '@capacitor/geolocation';
 import { createPortal } from 'react-dom';
 
 // Fix for default marker icons
@@ -151,16 +152,39 @@ const LocateControl = () => {
     if (corner) setContainer(corner);
   }, [map]);
 
-  useMapEvents({
-    locationfound: (e) => window.dispatchEvent(new CustomEvent('onUserLocation', { detail: e.latlng })),
-    locationerror: () => alert("GPS desactivado o sin señal.")
-  });
+  const handleLocate = async () => {
+    try {
+      // First, check/request permissions explicitly for Android
+      const permissions = await Geolocation.checkPermissions();
+      if (permissions.location !== 'granted') {
+        const request = await Geolocation.requestPermissions();
+        if (request.location !== 'granted') {
+          alert("Permisos de ubicación denegados.");
+          return;
+        }
+      }
+
+      const position = await Geolocation.getCurrentPosition({
+        enableHighAccuracy: true,
+        timeout: 10000
+      });
+
+      const { latitude, longitude } = position.coords;
+      const latlng = [latitude, longitude];
+      
+      map.flyTo(latlng, 14);
+      window.dispatchEvent(new CustomEvent('onUserLocation', { detail: { lat: latitude, lng: longitude } }));
+    } catch (e) {
+      alert("GPS desactivado o sin señal. Por favor, activa la ubicación.");
+      console.error('Geolocation error:', e);
+    }
+  };
 
   if (!container) return null;
 
   return createPortal(
     <div className="leaflet-control leaflet-bar" style={{ border: 'none', background: 'none' }}>
-      <button onClick={() => map.locate({ setView: true, maxZoom: 14 })} className="crystal-fab" title="Mi ubicación">
+      <button onClick={handleLocate} className="crystal-fab" title="Mi ubicación">
         <Navigation size={20} className="blue-icon" />
       </button>
     </div>,
