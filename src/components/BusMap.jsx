@@ -113,6 +113,11 @@ const MapFitter = ({ selectedLineId, isNearbySelection }) => {
       const line = busLines.find(l => l.id === selectedLineId);
       if (line && line.path.length > 0) {
         map.fitBounds(line.path, { padding: [50, 150], animate: true, duration: 1.5 });
+        
+        // Offset centering: move map down so line appears in top half
+        setTimeout(() => {
+          map.panBy([0, window.innerHeight * 0.18], { animate: true, duration: 1 });
+        }, 1600);
       }
       isFirstRender.current = false;
     } else if (!isFirstRender.current) {
@@ -196,9 +201,10 @@ const LocateControl = () => {
       map.flyTo(latlng, 15, { animate: true, duration: 1.5 });
       
       setTimeout(() => {
-        // Pan the map DOWN (moves point UP) by ~25% of the screen height
-        map.panBy([0, -window.innerHeight * 0.22], { animate: true, duration: 1 });
-      }, 600);
+        // Pan the map DOWN (moves point UP) by ~18% of the screen height
+        // Positive Y in panBy moves the map DOWN
+        map.panBy([0, window.innerHeight * 0.18], { animate: true, duration: 1 });
+      }, 800);
       
       window.dispatchEvent(new CustomEvent('onUserLocation', { detail: { lat: latitude, lng: longitude } }));
     } catch (e) {

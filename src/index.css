@@ -768,7 +768,7 @@ body {
   transform: translateX(-50%) translateY(110%);
   width: 94%;
   max-width: 450px;
-  max-height: 70vh;
+  max-height: 48vh; /* Reduced to take approx half the screen */
   display: flex;
   flex-direction: column;
   background: rgba(255, 255, 255, 0.88);
@@ -1499,10 +1499,10 @@ body {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  margin-bottom: 6.8rem; /* Adjusted to sit right above the footer */
-  margin-right: 16px;
+  margin-bottom: 7.5rem; /* Reverting to the position that was 'perfect' */
+  margin-right: 1.2rem;
   color: var(--primary);
-  z-index: 5500;
+  z-index: 1000; /* Reverting to standard Leaflet control z-index */
 }
 
 :root.dark .crystal-fab {
