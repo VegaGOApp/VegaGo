@@ -1435,5 +1435,13 @@ body {
   background: rgba(0, 0, 0, 0.15);
   transform: scale(1.1);
 }
-. s p i n n i n g - i c o n   {   a n i m a t i o n :   s p i n   1 . 5 s   l i n e a r   i n f i n i t e ;   c o l o r :   v a r ( - - p r i m a r y ) ;   }   @ k e y f r a m e s   s p i n   {   f r o m   {   t r a n s f o r m :   r o t a t e ( 0 d e g ) ;   }   t o   {   t r a n s f o r m :   r o t a t e ( 3 6 0 d e g ) ;   }   }  
- 
+
+.spinning-icon {
+  animation: spin 1.5s linear infinite;
+  color: var(--primary);
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
