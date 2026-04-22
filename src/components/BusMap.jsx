@@ -112,12 +112,8 @@ const MapFitter = ({ selectedLineId, isNearbySelection }) => {
       }
       const line = busLines.find(l => l.id === selectedLineId);
       if (line && line.path.length > 0) {
-        map.fitBounds(line.path, { padding: [50, 150], animate: true, duration: 1.5 });
-        
-        // Offset centering: move map down so line appears in top half
-        setTimeout(() => {
-          map.panBy([0, window.innerHeight * 0.18], { animate: true, duration: 1 });
-        }, 1600);
+        // For lines, we fit bounds first
+        map.fitBounds(line.path, { padding: [50, 50, 300, 50], animate: true, duration: 2 });
       }
       isFirstRender.current = false;
     } else if (!isFirstRender.current) {
@@ -154,13 +150,7 @@ const OutOfBoundsControl = () => {
 
 const LocateControl = () => {
   const map = useMap();
-  const [container, setContainer] = useState(null);
   const [isLocating, setIsLocating] = useState(false);
-
-  useEffect(() => {
-    const corner = map._controlContainer.querySelector('.leaflet-bottom.leaflet-right');
-    if (corner) setContainer(corner);
-  }, [map]);
 
   const handleLocate = async () => {
     if (isLocating) return;
@@ -182,57 +172,54 @@ const LocateControl = () => {
         position = await Geolocation.getCurrentPosition({
           enableHighAccuracy: true,
           timeout: 7000,
-          maximumAge: 5000 // Use recent cache if available (5s)
+          maximumAge: 5000 
         });
       } catch (err) {
-        console.warn("High accuracy failed, trying coarse location fallback...");
         position = await Geolocation.getCurrentPosition({
           enableHighAccuracy: false,
           timeout: 7000,
-          maximumAge: 10000 // Coarse can be a bit older
+          maximumAge: 10000 
         });
       }
 
       const { latitude, longitude } = position.coords;
       const latlng = [latitude, longitude];
       
-      // Calculate a target center that puts the user in the top half of the screen
-      // to make room for the nearby lines popup at the bottom
-      map.flyTo(latlng, 15, { animate: true, duration: 1.5 });
-      
-      setTimeout(() => {
-        // Pan the map DOWN (moves point UP) by ~18% of the screen height
-        // Positive Y in panBy moves the map DOWN
-        map.panBy([0, window.innerHeight * 0.18], { animate: true, duration: 1 });
-      }, 800);
+      const targetZoom = 15;
+      const point = map.project(latlng, targetZoom);
+      const offsetPoint = point.add([0, window.innerHeight * 0.18]); 
+      const targetCenter = map.unproject(offsetPoint, targetZoom);
+
+      map.flyTo(targetCenter, targetZoom, {
+        animate: true,
+        duration: 2,
+        easeLinearity: 0.25
+      });
       
       window.dispatchEvent(new CustomEvent('onUserLocation', { detail: { lat: latitude, lng: longitude } }));
     } catch (e) {
-      if (e.message?.includes('timeout')) {
-        alert("Tiempo de espera agotado. Asegúrate de estar en un lugar con señal GPS.");
-      } else {
-        alert("GPS desactivado o sin señal. Por favor, activa la ubicación en los ajustes del teléfono.");
-      }
-      console.error('Geolocation error details:', e);
+      alert("GPS desactivado o sin señal.");
+      console.error(e);
     } finally {
       setIsLocating(false);
     }
   };
 
-  if (!container) return null;
-
-  return createPortal(
-    <div className="leaflet-control leaflet-bar" style={{ border: 'none', background: 'none' }}>
-      <button 
-        onClick={handleLocate} 
-        className={`crystal-fab ${isLocating ? 'locating' : ''}`} 
-        disabled={isLocating}
-        title="Mi ubicación"
-      >
-        <Navigation size={20} className={isLocating ? "spinning-icon" : "blue-icon"} />
-      </button>
-    </div>,
-    container
+  return (
+    <button 
+      onClick={handleLocate} 
+      className={`crystal-fab ${isLocating ? 'locating' : ''}`} 
+      disabled={isLocating}
+      style={{ 
+        position: 'absolute', 
+        bottom: 'calc(7.5rem + var(--safe-area-bottom))', 
+        right: '1.2rem', 
+        zIndex: 1000 
+      }}
+      title="Mi ubicación"
+    >
+      <Navigation size={20} className={isLocating ? "spinning-icon" : "blue-icon"} />
+    </button>
   );
 };
 
