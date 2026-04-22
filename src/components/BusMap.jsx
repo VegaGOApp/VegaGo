@@ -100,12 +100,16 @@ const BusMarker = React.memo(({ vehicle, isSelected, onClick }) => {
   );
 });
 
-const MapFitter = ({ selectedLineId }) => {
+const MapFitter = ({ selectedLineId, isNearbySelection }) => {
   const map = useMap();
   const isFirstRender = useRef(true);
   
   useEffect(() => {
     if (selectedLineId) {
+      if (isNearbySelection) {
+        // Skip fitBounds to keep the user's focus on their current location + nearby popup
+        return;
+      }
       const line = busLines.find(l => l.id === selectedLineId);
       if (line && line.path.length > 0) {
         map.fitBounds(line.path, { padding: [50, 150], animate: true, duration: 1.5 });
@@ -187,7 +191,15 @@ const LocateControl = () => {
       const { latitude, longitude } = position.coords;
       const latlng = [latitude, longitude];
       
-      map.flyTo(latlng, 15);
+      // Calculate a target center that puts the user in the top half of the screen
+      // to make room for the nearby lines popup at the bottom
+      map.flyTo(latlng, 15, { animate: true, duration: 1.5 });
+      
+      setTimeout(() => {
+        // Pan the map DOWN (moves point UP) by ~25% of the screen height
+        map.panBy([0, -window.innerHeight * 0.22], { animate: true, duration: 1 });
+      }, 600);
+      
       window.dispatchEvent(new CustomEvent('onUserLocation', { detail: { lat: latitude, lng: longitude } }));
     } catch (e) {
       if (e.message?.includes('timeout')) {
@@ -218,7 +230,7 @@ const LocateControl = () => {
   );
 };
 
-export default function BusMap({ selectedLineId, onSelectLine, theme, vehicles }) {
+export default function BusMap({ selectedLineId, onSelectLine, theme, vehicles, isNearbySelection }) {
   const [userPos, setUserPos] = useState(null);
 
   useEffect(() => {
@@ -247,7 +259,7 @@ export default function BusMap({ selectedLineId, onSelectLine, theme, vehicles }
         preferCanvas={true} // Performance boost for geometries
       >
         <TileLayer url={tileUrl} updateWhenIdle={true} />
-        <MapFitter selectedLineId={selectedLineId} />
+        <MapFitter selectedLineId={selectedLineId} isNearbySelection={isNearbySelection} />
         <LocateControl />
         <OutOfBoundsControl />
 

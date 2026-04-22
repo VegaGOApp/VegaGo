@@ -75,14 +75,14 @@ export default function RouteDetails({ selectedLineId, onClose, lang, favorites,
           </div>
         </div>
 
-        <div style={{ marginTop: '1.5rem' }}>
+        <div className="stops-scroll-area">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
             <h3 style={{ fontSize: '0.9rem', fontWeight: 800, margin: 0, textTransform: 'uppercase', letterSpacing: '0.05em', opacity: 0.6 }}>
               {lineVehicles.length > 0 ? t.stops : (lang === 'va' ? 'Recorregut i Parades' : lang === 'gb' ? 'Route and Stops' : lang === 'ru' ? 'Маршрут и остановки' : 'Recorrido y Paradas')}
             </h3>
             {lineVehicles.length === 0 && (
               <span style={{ fontSize: '0.7rem', fontWeight: 700, opacity: 0.4, textTransform: 'uppercase' }}>
-                {lang === 'va' ? 'Fora de servici' : lang === 'gb' ? 'Out of service' : lang === 'ru' ? 'Вне службы' : 'Fuera de servicio'}
+                {lang === 'va' ? 'Fora de servici' : lang === 'gb' ? 'Out of service' : lang === 'ru' ? 'Вne службы' : 'Fuera de servicio'}
               </span>
             )}
           </div>
@@ -105,22 +105,22 @@ export default function RouteDetails({ selectedLineId, onClose, lang, favorites,
               );
             })}
           </div>
-        </div>
 
-        {line.operatorUrl && (
-          <div style={{ marginTop: '2rem' }}>
-            <a 
-              href={safeOperatorUrl} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="crystal-button-full"
-              style={{ textDecoration: 'none' }}
-            >
-              <Globe size={18} />
-              {t.moreInfo} {line.operatorName ? `(${line.operatorName})` : ''}
-            </a>
-          </div>
-        )}
+          {line.operatorUrl && (
+            <div style={{ marginTop: '2rem', paddingBottom: '1rem' }}>
+              <a 
+                href={safeOperatorUrl} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="crystal-button-full"
+                style={{ textDecoration: 'none' }}
+              >
+                <Globe size={18} />
+                {t.moreInfo} {line.operatorName ? `(${line.operatorName})` : ''}
+              </a>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

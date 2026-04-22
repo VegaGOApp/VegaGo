@@ -10,6 +10,7 @@ function App() {
   const [selectedLineId, setSelectedLineId] = useState(null);
   const [theme, setTheme] = useState('light');
   const [lang, setLang] = useState('es');
+  const [isNearbySelection, setIsNearbySelection] = useState(false);
   
   // Single source of truth for moving vehicles
   const vehicles = useBusSimulation();
@@ -41,8 +42,9 @@ function App() {
     );
   };
 
-  const handleSelectLine = (id) => {
+  const handleSelectLine = (id, options = {}) => {
     setSelectedLineId(id);
+    setIsNearbySelection(!!options.isNearby);
   };
 
   return (
@@ -52,6 +54,7 @@ function App() {
         onSelectLine={handleSelectLine} 
         theme={theme}
         vehicles={vehicles}
+        isNearbySelection={isNearbySelection}
       />
       
       <SearchBar 

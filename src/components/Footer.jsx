@@ -329,9 +329,8 @@ const Footer = ({ onSelectLine, selectedLineId, lang, onMenuOpen, favorites, tog
           </div>
         </div>
       )}
-      {/* Nearby Lines View (Compact Popup) */}
       {activeMenu === 'nearby' && (
-        <div className="lines-dropdown crystal-card nearby-overlay" style={{ bottom: 'calc(7.5rem + var(--safe-area-bottom))', maxHeight: 'auto' }}>
+        <div className="lines-dropdown crystal-card nearby-overlay">
           <div className="sheet-handle-container" onClick={() => setActiveMenu(null)} style={{ cursor: 'pointer' }}><div className="sheet-handle"></div></div>
           <div className="dropdown-header">
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
@@ -343,7 +342,7 @@ const Footer = ({ onSelectLine, selectedLineId, lang, onMenuOpen, favorites, tog
           <div className="nearby-content" style={{ padding: '0.5rem 1rem 1rem' }}>
             {nearbyLines.length > 0 ? (
               nearbyLines.map(line => (
-                <div key={line.id} className="premium-route-card" style={{ marginBottom: '0.5rem', padding: '0.75rem' }} onClick={() => { onSelectLine(line.id); setActiveMenu(null); }}>
+                <div key={line.id} className="premium-route-card" style={{ marginBottom: '0.5rem', padding: '0.75rem' }} onClick={() => { onSelectLine(line.id, { isNearby: true }); setActiveMenu(null); }}>
                   <div className="line-pill" style={{ background: line.color, width: '38px', height: '22px', fontSize: '0.75rem' }}>{line.shortName}</div>
                   <div className="route-details">
                     <div className="route-name" style={{ fontSize: '0.85rem' }}>{line.name}</div>
