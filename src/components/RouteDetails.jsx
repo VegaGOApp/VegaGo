@@ -75,14 +75,14 @@ export default function RouteDetails({ selectedLineId, onClose, lang, favorites,
           </div>
         </div>
 
-        <div className="stops-scroll-area">
+        <div style={{ marginTop: '1.5rem' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
             <h3 style={{ fontSize: '0.9rem', fontWeight: 800, margin: 0, textTransform: 'uppercase', letterSpacing: '0.05em', opacity: 0.6 }}>
-              {lineVehicles.length > 0 ? t.stops : (lang === 'va' ? 'Recorregut i Parades' : lang === 'gb' ? 'Route and Stops' : lang === 'ru' ? 'Маршрут и остановки' : 'Recorrido y Paradas')}
+              {lineVehicles.length > 0 ? t.stops : (lang === 'va' ? 'Recorregut i Parades' : lang === 'gb' ? 'Route and Stops' : lang === 'ru' ? 'Маршруut i ostanoвki' : 'Recorrido y Paradas')}
             </h3>
             {lineVehicles.length === 0 && (
               <span style={{ fontSize: '0.7rem', fontWeight: 700, opacity: 0.4, textTransform: 'uppercase' }}>
-                {lang === 'va' ? 'Fora de servici' : lang === 'gb' ? 'Out of service' : lang === 'ru' ? 'Вne службы' : 'Fuera de servicio'}
+                {lang === 'va' ? 'Fora de servici' : lang === 'gb' ? 'Out of service' : lang === 'ru' ? 'Вne sluzhbi' : 'Fuera de servicio'}
               </span>
             )}
           </div>

@@ -21,13 +21,18 @@ export default function SearchBar({ onSelectLine, selectedLineId, theme, setThem
 
   const suggestedRoutes = useMemo(() => {
     if (!origin && !destination) return [];
-    const search = (origin + ' ' + destination).toLowerCase().trim();
+    
+    // If origin is "My Location", we only search by destination
+    const originSearch = (origin === t.origin) ? '' : origin;
+    const search = (originSearch + ' ' + destination).toLowerCase().trim();
+    
     if (!search) return [];
+    
     return busLines.filter(line => {
       const lineData = (line.shortName + line.name + line.origin + line.destination + (line.stops ? line.stops.map(s => s.name).join(' ') : '')).toLowerCase();
       return search.split(/\s+/).every(term => lineData.includes(term));
     }).slice(0, 5);
-  }, [origin, destination]);
+  }, [origin, destination, t.origin]);
 
   const recentSearches = [{ from: "Orihuela", to: "Torrevieja" }, { from: "Alicante", to: "Aeropuerto" }];
 

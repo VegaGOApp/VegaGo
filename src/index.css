@@ -790,34 +790,11 @@ body {
 
 .sheet-content {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden; /* Change to hidden to let inner area scroll */
-  padding: 0 1.5rem 1rem;
-}
-
-.stops-scroll-area {
-  flex: 1;
   overflow-y: auto;
-  margin-top: 1.5rem;
-  padding-right: 4px;
   -webkit-overflow-scrolling: touch;
+  padding: 0 1.5rem 1.5rem;
 }
 
-/* Custom Scrollbar for Stops area */
-.stops-scroll-area::-webkit-scrollbar {
-  width: 4px;
-}
-.stops-scroll-area::-webkit-scrollbar-track {
-  background: transparent;
-}
-.stops-scroll-area::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.05);
-  border-radius: 10px;
-}
-:root.dark .stops-scroll-area::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.05);
-}
 
 .bottom-sheet.open {
   transform: translateX(-50%) translateY(0);
@@ -1499,10 +1476,10 @@ body {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  margin-bottom: 7.5rem; /* Reverting to the position that was 'perfect' */
-  margin-right: 1.2rem;
+  margin-bottom: 7.5rem; 
+  margin-right: -4px; /* Move to the extreme edge of the leaflet container */
   color: var(--primary);
-  z-index: 1000; /* Reverting to standard Leaflet control z-index */
+  z-index: 1000;
 }
 
 :root.dark .crystal-fab {
