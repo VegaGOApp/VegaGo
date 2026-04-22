@@ -81,7 +81,7 @@ const Footer = ({ onSelectLine, selectedLineId, lang, onMenuOpen, favorites, tog
   useEffect(() => {
     const handleUserLocation = (e) => {
       setUserLocation(e.detail);
-      setActiveMenu('lines');
+      setActiveMenu('nearby');
       if (onMenuOpen) onMenuOpen();
     };
     window.addEventListener('onUserLocation', handleUserLocation);
@@ -113,6 +113,15 @@ const Footer = ({ onSelectLine, selectedLineId, lang, onMenuOpen, favorites, tog
     setReportForm(prev => ({ ...prev, reason: '' })); // Clear input after success
     setActiveMenu('alerts');
   };
+
+  const nearbyLines = useMemo(() => {
+    if (!userLocation) return [];
+    return busLines
+      .map(line => ({ ...line, distance: lineDistances[line.id] || Infinity }))
+      .filter(l => l.distance < 5000) // Only within 5km
+      .sort((a, b) => a.distance - b.distance)
+      .slice(0, 3);
+  }, [userLocation, lineDistances]);
 
   const filteredLines = useMemo(() => {
     return busLines.filter(line => {
@@ -314,6 +323,39 @@ const Footer = ({ onSelectLine, selectedLineId, lang, onMenuOpen, favorites, tog
               <span>{t.version}</span>
             </div>
             <p style={{ fontSize: '0.7rem', opacity: 0.4, borderTop: '1px solid var(--border-color)', paddingTop: '1rem' }}>{t.legal}</p>
+          </div>
+        </div>
+      )}
+      {/* Nearby Lines View (Compact Popup) */}
+      {activeMenu === 'nearby' && (
+        <div className="lines-dropdown crystal-card nearby-overlay" style={{ bottom: 'calc(7.5rem + var(--safe-area-bottom))', maxHeight: 'auto' }}>
+          <div className="sheet-handle-container" onClick={() => setActiveMenu(null)} style={{ cursor: 'pointer' }}><div className="sheet-handle"></div></div>
+          <div className="dropdown-header">
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
+              <Navigation size={22} color="var(--primary)" />
+              <h3 style={{ fontSize: '1rem', fontWeight: 800 }}>{lang === 'va' ? 'Línies properes' : lang === 'gb' ? 'Nearby lines' : lang === 'ru' ? 'Ближайшие линии' : 'Líneas cercanas'}</h3>
+            </div>
+            <button onClick={() => setActiveMenu(null)} className="close-dropdown"><X size={18} /></button>
+          </div>
+          <div className="nearby-content" style={{ padding: '0.5rem 1rem 1rem' }}>
+            {nearbyLines.length > 0 ? (
+              nearbyLines.map(line => (
+                <div key={line.id} className="premium-route-card" style={{ marginBottom: '0.5rem', padding: '0.75rem' }} onClick={() => { onSelectLine(line.id); setActiveMenu(null); }}>
+                  <div className="line-pill" style={{ background: line.color, width: '38px', height: '22px', fontSize: '0.75rem' }}>{line.shortName}</div>
+                  <div className="route-details">
+                    <div className="route-name" style={{ fontSize: '0.85rem' }}>{line.name}</div>
+                    <div className="route-meta" style={{ fontSize: '0.7rem' }}>
+                      <MapPin size={10} /> {(line.distance / 1000).toFixed(1)} km
+                    </div>
+                  </div>
+                  <ChevronRight size={16} className="arrow-icon" />
+                </div>
+              ))
+            ) : (
+              <div style={{ textAlign: 'center', padding: '1rem', opacity: 0.6, fontSize: '0.85rem' }}>
+                {lang === 'va' ? 'No hi ha línies prop' : lang === 'gb' ? 'No lines nearby' : lang === 'ru' ? 'Нет линий поблизости' : 'No hay líneas cerca'}
+              </div>
+            )}
           </div>
         </div>
       )}

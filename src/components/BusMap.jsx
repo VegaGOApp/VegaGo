@@ -219,6 +219,14 @@ const LocateControl = () => {
 };
 
 export default function BusMap({ selectedLineId, onSelectLine, theme, vehicles }) {
+  const [userPos, setUserPos] = useState(null);
+
+  useEffect(() => {
+    const handleUserLocation = (e) => setUserPos(e.detail);
+    window.addEventListener('onUserLocation', handleUserLocation);
+    return () => window.removeEventListener('onUserLocation', handleUserLocation);
+  }, []);
+
   const tileUrl = theme === 'dark'
     ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
     : 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
@@ -242,6 +250,15 @@ export default function BusMap({ selectedLineId, onSelectLine, theme, vehicles }
         <MapFitter selectedLineId={selectedLineId} />
         <LocateControl />
         <OutOfBoundsControl />
+
+        {userPos && (
+          <CircleMarker 
+            center={[userPos.lat, userPos.lng]} 
+            pathOptions={{ color: '#ffffff', fillColor: '#3b82f6', fillOpacity: 1, weight: 3 }} 
+            radius={8} 
+            zIndexOffset={1000}
+          />
+        )}
 
         {/* Render Train Lines */}
         {TRAIN_LINES.map((line, i) => (
