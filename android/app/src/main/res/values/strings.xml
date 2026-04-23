@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">Vega Bus</string>
-    <string name="title_activity_main">Vega Bus</string>
+    <string name="app_name">VegaGO</string>
+    <string name="title_activity_main">VegaGO</string>
     <string name="package_name">com.vegabus.app</string>
     <string name="custom_url_scheme">com.vegabus.app</string>
 </resources>
