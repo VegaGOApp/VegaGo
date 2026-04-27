@@ -48,17 +48,11 @@ export default function RouteDetails({ selectedLineId, onClose, lang, favorites,
           <div className="info-box-premium">
             <div className="info-label"><Clock size={14} /> {t.schedule}</div>
             <div className="info-value schematic-schedule">
-              {(() => {
-                const parts = line.schedule.split('(');
-                const range = parts[0].trim();
-                const notes = parts[1] ? parts[1].replace(')', '').trim() : null;
-                return (
-                  <>
-                    <div className="schedule-range">{range}</div>
-                    {notes && <div className="schedule-notes">{notes}</div>}
-                  </>
-                );
-              })()}
+              {line.schedule.split('|').map((part, i) => (
+                <div key={i} className="schedule-range">
+                  {part.trim()}
+                </div>
+              ))}
             </div>
           </div>
           <div className="info-box-premium">

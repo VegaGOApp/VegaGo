@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Search, MapPin, Sun, Moon, ArrowLeft, ArrowUpDown, Navigation, Clock, ChevronRight, History, X } from 'lucide-react';
 import { busLines } from '../data/busLines';
+import pois from '../data/gtfs/pois.json';
 import { useTranslation } from '../hooks/useTranslation';
+import { Landmark, ShoppingBag, Train } from 'lucide-react';
 
-export default function SearchBar({ onSelectLine, selectedLineId, theme, setTheme, lang, setLang, onMenuOpen }) {
+export default function SearchBar({ onSelectLine, onSelectPOI, selectedLineId, theme, setTheme, lang, setLang, onMenuOpen }) {
   const [origin, setOrigin] = useState('');
   const [destination, setDestination] = useState('');
   const [isPlanning, setIsPlanning] = useState(false);
@@ -31,6 +33,17 @@ export default function SearchBar({ onSelectLine, selectedLineId, theme, setThem
     return busLines.filter(line => {
       const lineData = (line.shortName + line.name + line.origin + line.destination + (line.stops ? line.stops.map(s => s.name).join(' ') : '')).toLowerCase();
       return search.split(/\s+/).every(term => lineData.includes(term));
+    }).slice(0, 5);
+  }, [origin, destination, t.origin]);
+
+  const suggestedPOIs = useMemo(() => {
+    if (!origin && !destination) return [];
+    const search = (origin + ' ' + destination).toLowerCase().trim().replace(t.origin.toLowerCase(), '');
+    if (!search) return [];
+    
+    return pois.filter(p => {
+      const poiData = (p.name + (p.description || '') + (p.address || '') + p.type).toLowerCase();
+      return search.split(/\s+/).every(term => poiData.includes(term));
     }).slice(0, 5);
   }, [origin, destination, t.origin]);
 
@@ -88,16 +101,42 @@ export default function SearchBar({ onSelectLine, selectedLineId, theme, setThem
               </div>
             </div>
             <div className="planner-scroll-content">
-              {suggestedRoutes.length > 0 ? (
+              {(suggestedRoutes.length > 0 || suggestedPOIs.length > 0) ? (
                 <div className="results-section">
-                  <h3 className="section-title">{t.routes}</h3>
-                  {suggestedRoutes.map(line => (
-                    <div key={line.id} className="premium-route-card" onClick={() => { onSelectLine(line.id); setIsPlanning(false); }}>
-                      <div className="line-pill" style={{ background: line.color }}>{line.shortName}</div>
-                      <div className="route-details"><div className="route-name">{line.name}</div><div className="route-meta"><Clock size={12} /> {line.schedule.split('|')[0]}<span className="dot-separator">•</span>{line.type}</div></div>
-                      <ChevronRight size={18} className="arrow-icon" />
-                    </div>
-                  ))}
+                  {suggestedRoutes.length > 0 && (
+                    <>
+                      <h3 className="section-title">{t.routes}</h3>
+                      {suggestedRoutes.map(line => (
+                        <div key={line.id} className="premium-route-card" onClick={() => { onSelectLine(line.id); setIsPlanning(false); }}>
+                          <div className="line-pill" style={{ background: line.color }}>{line.shortName}</div>
+                          <div className="route-details"><div className="route-name">{line.name}</div><div className="route-meta"><Clock size={12} /> {line.schedule.split('|')[0]}<span className="dot-separator">•</span>{line.type}</div></div>
+                          <ChevronRight size={18} className="arrow-icon" />
+                        </div>
+                      ))}
+                    </>
+                  )}
+                  {suggestedPOIs.length > 0 && (
+                    <>
+                      <h3 className="section-title" style={{ marginTop: suggestedRoutes.length > 0 ? '1.5rem' : '0' }}>{lang === 'es' ? 'Sitios de Interés' : 'Places of Interest'}</h3>
+                      {suggestedPOIs.map(p => (
+                        <div key={p.id} className="premium-route-card" onClick={() => { onSelectPOI(p); setIsPlanning(false); }}>
+                          <div className="line-pill" style={{ 
+                            background: p.type === 'transport' ? 'var(--primary)' : 
+                                       p.type === 'culture' ? '#8b5cf6' : '#ec4899',
+                            display: 'flex', alignItems: 'center', justifyContent: 'center'
+                          }}>
+                            {p.type === 'transport' ? <Train size={12} /> : 
+                             p.type === 'culture' ? <Landmark size={12} /> : <ShoppingBag size={12} />}
+                          </div>
+                          <div className="route-details">
+                            <div className="route-name">{p.name}</div>
+                            <div className="route-meta">{p.address || p.description}</div>
+                          </div>
+                          <ChevronRight size={18} className="arrow-icon" />
+                        </div>
+                      ))}
+                    </>
+                  )}
                 </div>
               ) : (
                 <div className="recent-section">
@@ -105,6 +144,12 @@ export default function SearchBar({ onSelectLine, selectedLineId, theme, setThem
                   {recentSearches.map((search, i) => (
                     <div key={i} className="recent-item" onClick={() => { setOrigin(search.from); setDestination(search.to); }}><History size={16} className="history-icon" /><div className="recent-text"><span>{search.from}</span><ChevronRight size={12} className="to-arrow" /><span>{search.to}</span></div></div>
                   ))}
+                </div>
+              )}
+              {suggestedRoutes.length === 0 && suggestedPOIs.length === 0 && (origin || destination) && (
+                <div style={{ textAlign: 'center', padding: '3rem 1rem', opacity: 0.5 }}>
+                  <Search size={40} style={{ marginBottom: '1rem' }} />
+                  <p>{lang === 'es' ? 'No se encontraron resultados' : 'No results found'}</p>
                 </div>
               )}
             </div>

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "bus_station_torrevieja",
+    "name": "Estación de Autobuses Torrevieja",
+    "type": "transport",
+    "coords": [37.9782, -0.6830],
+    "address": "Calle del Mar, 50, Torrevieja",
+    "description": "Terminal principal de autobuses interurbanos y urbanos.",
+    "isPremium": false
+  },
+  {
+    "id": "museo_mar_sal",
+    "name": "Museo del Mar y de la Sal",
+    "type": "culture",
+    "coords": [37.9772, -0.6835],
+    "address": "Calle Patricio Pérez, 10, Torrevieja",
+    "description": "Exposición sobre la historia marinera y salinera de la ciudad.",
+    "isPremium": false
+  },
+  {
+    "id": "habaneras_cc",
+    "name": "CC Habaneras",
+    "type": "shop",
+    "coords": [37.9912, -0.6885],
+    "address": "Av. Rosa Mazón Valero, Torrevieja",
+    "description": "Centro comercial con tiendas de moda, ocio y restauración.",
+    "isPremium": false
+  },
+  {
+    "id": "zenia_boulevard",
+    "name": "CC Zenia Boulevard",
+    "type": "shop",
+    "coords": [37.9265, -0.7350],
+    "address": "C. Jade, 03189 Orihuela",
+    "description": "El centro comercial más grande de la provincia de Alicante.",
+    "isPremium": true
+  }
+]

@@ -1,290 +1,2312 @@
 [
   {
-    "route_id": "route_l1",
-    "service_id": "everyday",
-    "trip_id": "trip_l1_outbound",
-    "trip_headsign": "Pilar de la Horadada",
-    "direction_id": 0,
-    "shape_id": "route_l1"
+    "trip_id": "2658202635",
+    "route_id": "509013",
+    "shape_id": "50901302"
   },
   {
-    "route_id": "route_l2",
-    "service_id": "everyday",
-    "trip_id": "trip_l2_outbound",
-    "trip_headsign": "Alicante",
-    "direction_id": 0,
-    "shape_id": "route_l2"
+    "trip_id": "2658204077",
+    "route_id": "500301",
+    "shape_id": "50030101"
   },
   {
-    "route_id": "route_l3",
-    "service_id": "everyday",
-    "trip_id": "trip_l3_outbound",
-    "trip_headsign": "Pilar de la Horadada",
-    "direction_id": 0,
-    "shape_id": "route_l3"
+    "trip_id": "2658201163",
+    "route_id": "509021",
+    "shape_id": "50902101"
   },
   {
-    "route_id": "route_l4",
-    "service_id": "everyday",
-    "trip_id": "trip_l4_outbound",
-    "trip_headsign": "Callosa de Segura",
-    "direction_id": 0,
-    "shape_id": "route_l4"
+    "trip_id": "2659878446",
+    "route_id": "509004",
+    "shape_id": "50900401"
   },
   {
-    "route_id": "route_l5_u",
-    "service_id": "everyday",
-    "trip_id": "trip_l5_u_outbound",
-    "trip_headsign": "La Mata",
-    "direction_id": 0,
-    "shape_id": "route_l5_u"
+    "trip_id": "2658202632",
+    "route_id": "509013",
+    "shape_id": "50901302"
   },
   {
-    "route_id": "route_l6_u",
-    "service_id": "everyday",
-    "trip_id": "trip_l6_u_outbound",
-    "trip_headsign": "Lago Jardín",
-    "direction_id": 0,
-    "shape_id": "route_l6_u"
+    "trip_id": "2658202116",
+    "route_id": "503101",
+    "shape_id": "50310101"
   },
   {
-    "route_id": "route_l7",
-    "service_id": "everyday",
-    "trip_id": "trip_l7_outbound",
-    "trip_headsign": "Desamparados",
-    "direction_id": 0,
-    "shape_id": "route_l7"
+    "trip_id": "2658201619",
+    "route_id": "509017",
+    "shape_id": "50901702"
   },
   {
-    "route_id": "route_l8",
-    "service_id": "everyday",
-    "trip_id": "trip_l8_outbound",
-    "trip_headsign": "Mil Palmeras",
-    "direction_id": 0,
-    "shape_id": "route_l8"
+    "trip_id": "2658233691",
+    "route_id": "509022",
+    "shape_id": "50902201"
   },
   {
-    "route_id": "route_l9",
-    "service_id": "everyday",
-    "trip_id": "trip_l9_outbound",
-    "trip_headsign": "Hospital de Torrevieja",
-    "direction_id": 0,
-    "shape_id": "route_l9"
+    "trip_id": "2659933658",
+    "route_id": "509017",
+    "shape_id": "50901702"
   },
   {
-    "route_id": "route_l10",
-    "service_id": "everyday",
-    "trip_id": "trip_l10_outbound",
-    "trip_headsign": "Hospital de Torrevieja",
-    "direction_id": 0,
-    "shape_id": "route_l10"
+    "trip_id": "2658202622",
+    "route_id": "509013",
+    "shape_id": "50901302"
   },
   {
-    "route_id": "route_l11",
-    "service_id": "everyday",
-    "trip_id": "trip_l11_outbound",
-    "trip_headsign": "Torrevieja",
-    "direction_id": 0,
-    "shape_id": "route_l11"
+    "trip_id": "2658201629",
+    "route_id": "509023",
+    "shape_id": "50902302"
   },
   {
-    "route_id": "route_l12",
-    "service_id": "everyday",
-    "trip_id": "trip_l12_outbound",
-    "trip_headsign": "Torrevieja",
-    "direction_id": 0,
-    "shape_id": "route_l12"
+    "trip_id": "2659878439",
+    "route_id": "509017",
+    "shape_id": "50901702"
   },
   {
-    "route_id": "route_l13",
-    "service_id": "everyday",
-    "trip_id": "trip_l13_outbound",
-    "trip_headsign": "Crevillente",
-    "direction_id": 0,
-    "shape_id": "route_l13"
+    "trip_id": "2660385847",
+    "route_id": "509002",
+    "shape_id": "50900202"
   },
   {
-    "route_id": "route_l14",
-    "service_id": "everyday",
-    "trip_id": "trip_l14_outbound",
-    "trip_headsign": "Aeropuerto Alicante/Elche",
-    "direction_id": 0,
-    "shape_id": "route_l14"
+    "trip_id": "2658202134",
+    "route_id": "509004",
+    "shape_id": "50900401"
   },
   {
-    "route_id": "route_l15",
-    "service_id": "everyday",
-    "trip_id": "trip_l15_outbound",
-    "trip_headsign": "Torrevieja",
-    "direction_id": 0,
-    "shape_id": "route_l15"
+    "trip_id": "2659879675",
+    "route_id": "500301",
+    "shape_id": "50030101"
   },
   {
-    "route_id": "route_l16",
-    "service_id": "everyday",
-    "trip_id": "trip_l16_outbound",
-    "trip_headsign": "Guardamar del Segura",
-    "direction_id": 0,
-    "shape_id": "route_l16"
+    "trip_id": "2660383068",
+    "route_id": "509001",
+    "shape_id": "50900101"
   },
   {
-    "route_id": "route_l17",
-    "service_id": "everyday",
-    "trip_id": "trip_l17_outbound",
-    "trip_headsign": "Alicante",
-    "direction_id": 0,
-    "shape_id": "route_l17"
+    "trip_id": "2658202115",
+    "route_id": "503101",
+    "shape_id": "50310101"
   },
   {
-    "route_id": "route_l18",
-    "service_id": "everyday",
-    "trip_id": "trip_l18_outbound",
-    "trip_headsign": "Aeropuerto",
-    "direction_id": 0,
-    "shape_id": "route_l18"
+    "trip_id": "2659850634",
+    "route_id": "509002",
+    "shape_id": "50900201"
   },
   {
-    "route_id": "route_l19",
-    "service_id": "everyday",
-    "trip_id": "trip_l19_outbound",
-    "trip_headsign": "Orihuela",
-    "direction_id": 0,
-    "shape_id": "route_l19"
+    "trip_id": "2658201622",
+    "route_id": "509017",
+    "shape_id": "50901702"
   },
   {
-    "route_id": "route_l20",
-    "service_id": "everyday",
-    "trip_id": "trip_l20_outbound",
-    "trip_headsign": "Hospital Vega Baja",
-    "direction_id": 0,
-    "shape_id": "route_l20"
+    "trip_id": "2658203383",
+    "route_id": "503101",
+    "shape_id": "50310102"
   },
   {
-    "route_id": "route_l21",
-    "service_id": "everyday",
-    "trip_id": "trip_l21_outbound",
-    "trip_headsign": "Guardamar/Alicante",
-    "direction_id": 0,
-    "shape_id": "route_l21"
+    "trip_id": "2658204885",
+    "route_id": "500301",
+    "shape_id": "50030102"
   },
   {
-    "route_id": "route_l22",
-    "service_id": "everyday",
-    "trip_id": "trip_l22_outbound",
-    "trip_headsign": "Alicante",
-    "direction_id": 0,
-    "shape_id": "route_l22"
+    "trip_id": "2658204879",
+    "route_id": "500301",
+    "shape_id": "50030102"
   },
   {
-    "route_id": "route_l23",
-    "service_id": "everyday",
-    "trip_id": "trip_l23_outbound",
-    "trip_headsign": "Alicante",
-    "direction_id": 0,
-    "shape_id": "route_l23"
+    "trip_id": "2658160257",
+    "route_id": "509002",
+    "shape_id": "50900202"
   },
   {
-    "route_id": "route_l24",
-    "service_id": "everyday",
-    "trip_id": "trip_l24_outbound",
-    "trip_headsign": "Alicante",
-    "direction_id": 0,
-    "shape_id": "route_l24"
+    "trip_id": "2660387201",
+    "route_id": "509002",
+    "shape_id": "50900202"
   },
   {
-    "route_id": "route_l25",
-    "service_id": "everyday",
-    "trip_id": "trip_l25_outbound",
-    "trip_headsign": "Pilar de la Horadada",
-    "direction_id": 0,
-    "shape_id": "route_l25"
+    "trip_id": "2658202629",
+    "route_id": "509013",
+    "shape_id": "50901302"
   },
   {
-    "route_id": "route_l26",
-    "service_id": "everyday",
-    "trip_id": "trip_l26_outbound",
-    "trip_headsign": "Crevillent",
-    "direction_id": 0,
-    "shape_id": "route_l26"
+    "trip_id": "2659876392",
+    "route_id": "509023",
+    "shape_id": "50902301"
   },
   {
-    "route_id": "route_l27",
-    "service_id": "everyday",
-    "trip_id": "trip_l27_outbound",
-    "trip_headsign": "Elche",
-    "direction_id": 0,
-    "shape_id": "route_l27"
+    "trip_id": "2659876397",
+    "route_id": "509021",
+    "shape_id": "50902101"
   },
   {
-    "route_id": "route_l28",
-    "service_id": "everyday",
-    "trip_id": "trip_l28_outbound",
-    "trip_headsign": "Alicante",
-    "direction_id": 0,
-    "shape_id": "route_l28"
+    "trip_id": "2660383067",
+    "route_id": "509001",
+    "shape_id": "50900101"
   },
   {
-    "route_id": "route_a_u",
-    "service_id": "everyday",
-    "trip_id": "trip_a_u_outbound",
-    "trip_headsign": "Servicio Urbano",
-    "direction_id": 0,
-    "shape_id": "route_a_u"
+    "trip_id": "2659877722",
+    "route_id": "509017",
+    "shape_id": "50901701"
   },
   {
-    "route_id": "route_a2_u",
-    "service_id": "everyday",
-    "trip_id": "trip_a2_u_outbound",
-    "trip_headsign": "Servicio Urbano",
-    "direction_id": 0,
-    "shape_id": "route_a2_u"
+    "trip_id": "2658153477",
+    "route_id": "509003",
+    "shape_id": "50900301"
   },
   {
-    "route_id": "route_b_u",
-    "service_id": "everyday",
-    "trip_id": "trip_b_u_outbound",
-    "trip_headsign": "Servicio Urbano",
-    "direction_id": 0,
-    "shape_id": "route_b_u"
+    "trip_id": "2658203378",
+    "route_id": "503101",
+    "shape_id": "50310102"
   },
   {
-    "route_id": "route_c_u",
-    "service_id": "everyday",
-    "trip_id": "trip_c_u_outbound",
-    "trip_headsign": "Servicio Urbano",
-    "direction_id": 0,
-    "shape_id": "route_c_u"
+    "trip_id": "2659878438",
+    "route_id": "509017",
+    "shape_id": "50901702"
   },
   {
-    "route_id": "route_df_u",
-    "service_id": "everyday",
-    "trip_id": "trip_df_u_outbound",
-    "trip_headsign": "Servicio Urbano",
-    "direction_id": 0,
-    "shape_id": "route_df_u"
+    "trip_id": "2659878442",
+    "route_id": "509017",
+    "shape_id": "50901702"
   },
   {
-    "route_id": "route_e_u",
-    "service_id": "everyday",
-    "trip_id": "trip_e_u_outbound",
-    "trip_headsign": "Servicio Urbano",
-    "direction_id": 0,
-    "shape_id": "route_e_u"
+    "trip_id": "2659932775",
+    "route_id": "509017",
+    "shape_id": "50901701"
   },
   {
-    "route_id": "route_g_u",
-    "service_id": "everyday",
-    "trip_id": "trip_g_u_outbound",
-    "trip_headsign": "Servicio Urbano",
-    "direction_id": 0,
-    "shape_id": "route_g_u"
+    "trip_id": "2659851810",
+    "route_id": "509002",
+    "shape_id": "50900202"
   },
   {
-    "route_id": "route_h_u",
-    "service_id": "everyday",
-    "trip_id": "trip_h_u_outbound",
-    "trip_headsign": "Servicio Urbano",
-    "direction_id": 0,
-    "shape_id": "route_h_u"
+    "trip_id": "2658152056",
+    "route_id": "509006",
+    "shape_id": "50900602"
+  },
+  {
+    "trip_id": "2658202107",
+    "route_id": "503101",
+    "shape_id": "50310101"
+  },
+  {
+    "trip_id": "2658203385",
+    "route_id": "503101",
+    "shape_id": "50310102"
+  },
+  {
+    "trip_id": "2658201168",
+    "route_id": "509023",
+    "shape_id": "50902301"
+  },
+  {
+    "trip_id": "2658244647",
+    "route_id": "6023330",
+    "shape_id": "602333001"
+  },
+  {
+    "trip_id": "2658200397",
+    "route_id": "509017",
+    "shape_id": "50901701"
+  },
+  {
+    "trip_id": "2658159000",
+    "route_id": "509002",
+    "shape_id": "50900202"
+  },
+  {
+    "trip_id": "2658202129",
+    "route_id": "509004",
+    "shape_id": "50900401"
+  },
+  {
+    "trip_id": "2658202648",
+    "route_id": "509013",
+    "shape_id": "50901302"
+  },
+  {
+    "trip_id": "2659878901",
+    "route_id": "509004",
+    "shape_id": "50900401"
+  },
+  {
+    "trip_id": "2658200392",
+    "route_id": "509017",
+    "shape_id": "50901701"
+  },
+  {
+    "trip_id": "2658202641",
+    "route_id": "509013",
+    "shape_id": "50901302"
+  },
+  {
+    "trip_id": "2658204085",
+    "route_id": "500301",
+    "shape_id": "50030101"
+  },
+  {
+    "trip_id": "2659878404",
+    "route_id": "509023",
+    "shape_id": "50902302"
+  },
+  {
+    "trip_id": "2658203376",
+    "route_id": "503101",
+    "shape_id": "50310102"
+  },
+  {
+    "trip_id": "2658152099",
+    "route_id": "509001",
+    "shape_id": "50900101"
+  },
+  {
+    "trip_id": "2658200381",
+    "route_id": "509017",
+    "shape_id": "50901701"
+  },
+  {
+    "trip_id": "2658200399",
+    "route_id": "509021",
+    "shape_id": "50902101"
+  },
+  {
+    "trip_id": "2658201627",
+    "route_id": "509023",
+    "shape_id": "50902302"
+  },
+  {
+    "trip_id": "2658202117",
+    "route_id": "503101",
+    "shape_id": "50310101"
+  },
+  {
+    "trip_id": "2658203384",
+    "route_id": "503101",
+    "shape_id": "50310102"
+  },
+  {
+    "trip_id": "2658204889",
+    "route_id": "500301",
+    "shape_id": "50030102"
+  },
+  {
+    "trip_id": "2660383066",
+    "route_id": "509001",
+    "shape_id": "50900101"
+  },
+  {
+    "trip_id": "2658201646",
+    "route_id": "509021",
+    "shape_id": "50902102"
+  },
+  {
+    "trip_id": "2658153470",
+    "route_id": "509001",
+    "shape_id": "50900102"
+  },
+  {
+    "trip_id": "2658203377",
+    "route_id": "503101",
+    "shape_id": "50310102"
+  },
+  {
+    "trip_id": "2658152051",
+    "route_id": "509006",
+    "shape_id": "50900602"
+  },
+  {
+    "trip_id": "2659903613",
+    "route_id": "6023330",
+    "shape_id": "602333002"
+  },
+  {
+    "trip_id": "2658201176",
+    "route_id": "509023",
+    "shape_id": "50902301"
+  },
+  {
+    "trip_id": "2658200390",
+    "route_id": "509017",
+    "shape_id": "50901701"
+  },
+  {
+    "trip_id": "2658201625",
+    "route_id": "509023",
+    "shape_id": "50902302"
+  },
+  {
+    "trip_id": "2658201195",
+    "route_id": "509013",
+    "shape_id": "50901301"
+  },
+  {
+    "trip_id": "2660383069",
+    "route_id": "509001",
+    "shape_id": "50900101"
+  },
+  {
+    "trip_id": "2659877732",
+    "route_id": "509017",
+    "shape_id": "50901701"
+  },
+  {
+    "trip_id": "2658201186",
+    "route_id": "509013",
+    "shape_id": "50901301"
+  },
+  {
+    "trip_id": "2659850605",
+    "route_id": "509001",
+    "shape_id": "50900101"
+  },
+  {
+    "trip_id": "2660385821",
+    "route_id": "509002",
+    "shape_id": "50900201"
+  },
+  {
+    "trip_id": "2659878924",
+    "route_id": "509004",
+    "shape_id": "50900402"
+  },
+  {
+    "trip_id": "2658153474",
+    "route_id": "509001",
+    "shape_id": "50900102"
+  },
+  {
+    "trip_id": "2658202638",
+    "route_id": "509013",
+    "shape_id": "50901302"
+  },
+  {
+    "trip_id": "2660385850",
+    "route_id": "509002",
+    "shape_id": "50900202"
+  },
+  {
+    "trip_id": "2658201626",
+    "route_id": "509023",
+    "shape_id": "50902302"
+  },
+  {
+    "trip_id": "2659850627",
+    "route_id": "509001",
+    "shape_id": "50900102"
+  },
+  {
+    "trip_id": "2658160258",
+    "route_id": "509002",
+    "shape_id": "50900202"
+  },
+  {
+    "trip_id": "2658200386",
+    "route_id": "509017",
+    "shape_id": "50901701"
+  },
+  {
+    "trip_id": "2658233699",
+    "route_id": "509022",
+    "shape_id": "50902202"
+  },
+  {
+    "trip_id": "2658201645",
+    "route_id": "509021",
+    "shape_id": "50902102"
+  },
+  {
+    "trip_id": "2658201155",
+    "route_id": "509021",
+    "shape_id": "50902101"
+  },
+  {
+    "trip_id": "2659932776",
+    "route_id": "509017",
+    "shape_id": "50901701"
+  },
+  {
+    "trip_id": "2658204875",
+    "route_id": "500301",
+    "shape_id": "50030102"
+  },
+  {
+    "trip_id": "2658189459",
+    "route_id": "509009",
+    "shape_id": "50900901"
+  },
+  {
+    "trip_id": "2659850602",
+    "route_id": "509001",
+    "shape_id": "50900101"
+  },
+  {
+    "trip_id": "2658153496",
+    "route_id": "509002",
+    "shape_id": "50900201"
+  },
+  {
+    "trip_id": "2658202625",
+    "route_id": "509013",
+    "shape_id": "50901302"
+  },
+  {
+    "trip_id": "2658204076",
+    "route_id": "500301",
+    "shape_id": "50030101"
+  },
+  {
+    "trip_id": "2658201177",
+    "route_id": "509013",
+    "shape_id": "50901301"
+  },
+  {
+    "trip_id": "2658204074",
+    "route_id": "500301",
+    "shape_id": "50030101"
+  },
+  {
+    "trip_id": "2658197250",
+    "route_id": "509010",
+    "shape_id": "50901001"
+  },
+  {
+    "trip_id": "2658204054",
+    "route_id": "509004",
+    "shape_id": "50900402"
+  },
+  {
+    "trip_id": "2658202643",
+    "route_id": "509013",
+    "shape_id": "50901302"
+  },
+  {
+    "trip_id": "2658203381",
+    "route_id": "503101",
+    "shape_id": "50310102"
+  },
+  {
+    "trip_id": "2658200382",
+    "route_id": "509017",
+    "shape_id": "50901701"
+  },
+  {
+    "trip_id": "2660404190",
+    "route_id": "509004",
+    "shape_id": "50900401"
+  },
+  {
+    "trip_id": "2659851816",
+    "route_id": "509002",
+    "shape_id": "50900202"
+  },
+  {
+    "trip_id": "2658202646",
+    "route_id": "509013",
+    "shape_id": "50901302"
+  },
+  {
+    "trip_id": "2659880754",
+    "route_id": "500301",
+    "shape_id": "50030102"
+  },
+  {
+    "trip_id": "2658201620",
+    "route_id": "509017",
+    "shape_id": "50901702"
+  },
+  {
+    "trip_id": "2659876399",
+    "route_id": "509021",
+    "shape_id": "50902101"
+  },
+  {
+    "trip_id": "2658201179",
+    "route_id": "509013",
+    "shape_id": "50901301"
+  },
+  {
+    "trip_id": "2659880758",
+    "route_id": "500301",
+    "shape_id": "50030102"
+  },
+  {
+    "trip_id": "2658154455",
+    "route_id": "509002",
+    "shape_id": "50900201"
+  },
+  {
+    "trip_id": "2659876395",
+    "route_id": "509023",
+    "shape_id": "50902301"
+  },
+  {
+    "trip_id": "2658153454",
+    "route_id": "509001",
+    "shape_id": "50900101"
+  },
+  {
+    "trip_id": "2659879680",
+    "route_id": "500301",
+    "shape_id": "50030101"
+  },
+  {
+    "trip_id": "2658202132",
+    "route_id": "509004",
+    "shape_id": "50900401"
+  },
+  {
+    "trip_id": "2659880753",
+    "route_id": "500301",
+    "shape_id": "50030102"
+  },
+  {
+    "trip_id": "2658150900",
+    "route_id": "509006",
+    "shape_id": "50900602"
+  },
+  {
+    "trip_id": "2659877735",
+    "route_id": "509017",
+    "shape_id": "50901701"
+  },
+  {
+    "trip_id": "2658152100",
+    "route_id": "509001",
+    "shape_id": "50900101"
+  },
+  {
+    "trip_id": "2658201638",
+    "route_id": "509021",
+    "shape_id": "50902102"
+  },
+  {
+    "trip_id": "2658203382",
+    "route_id": "503101",
+    "shape_id": "50310102"
+  },
+  {
+    "trip_id": "2658201156",
+    "route_id": "509021",
+    "shape_id": "50902101"
+  },
+  {
+    "trip_id": "2659878408",
+    "route_id": "509023",
+    "shape_id": "50902302"
+  },
+  {
+    "trip_id": "2659851809",
+    "route_id": "509002",
+    "shape_id": "50900202"
+  },
+  {
+    "trip_id": "2658158997",
+    "route_id": "509002",
+    "shape_id": "50900202"
+  },
+  {
+    "trip_id": "2658152054",
+    "route_id": "509006",
+    "shape_id": "50900602"
+  },
+  {
+    "trip_id": "2660385820",
+    "route_id": "509002",
+    "shape_id": "50900201"
+  },
+  {
+    "trip_id": "2659878925",
+    "route_id": "509004",
+    "shape_id": "50900402"
+  },
+  {
+    "trip_id": "2658152058",
+    "route_id": "509006",
+    "shape_id": "50900602"
+  },
+  {
+    "trip_id": "2659851811",
+    "route_id": "509002",
+    "shape_id": "50900202"
+  },
+  {
+    "trip_id": "2658198076",
+    "route_id": "509010",
+    "shape_id": "50901002"
+  },
+  {
+    "trip_id": "2658201623",
+    "route_id": "509017",
+    "shape_id": "50901702"
+  },
+  {
+    "trip_id": "2658201640",
+    "route_id": "509021",
+    "shape_id": "50902102"
+  },
+  {
+    "trip_id": "2660404192",
+    "route_id": "509004",
+    "shape_id": "50900401"
+  },
+  {
+    "trip_id": "2659933657",
+    "route_id": "509017",
+    "shape_id": "50901702"
+  },
+  {
+    "trip_id": "2658204883",
+    "route_id": "500301",
+    "shape_id": "50030102"
+  },
+  {
+    "trip_id": "2659933655",
+    "route_id": "509017",
+    "shape_id": "50901702"
+  },
+  {
+    "trip_id": "2658153451",
+    "route_id": "509001",
+    "shape_id": "50900101"
+  },
+  {
+    "trip_id": "2659878406",
+    "route_id": "509023",
+    "shape_id": "50902302"
+  },
+  {
+    "trip_id": "2658153499",
+    "route_id": "509002",
+    "shape_id": "50900201"
+  },
+  {
+    "trip_id": "2658201624",
+    "route_id": "509017",
+    "shape_id": "50901702"
+  },
+  {
+    "trip_id": "2658201647",
+    "route_id": "509021",
+    "shape_id": "50902102"
+  },
+  {
+    "trip_id": "2658204078",
+    "route_id": "500301",
+    "shape_id": "50030101"
+  },
+  {
+    "trip_id": "2658201175",
+    "route_id": "509013",
+    "shape_id": "50901301"
+  },
+  {
+    "trip_id": "2658152052",
+    "route_id": "509006",
+    "shape_id": "50900602"
+  },
+  {
+    "trip_id": "2658204878",
+    "route_id": "500301",
+    "shape_id": "50030102"
+  },
+  {
+    "trip_id": "2658202620",
+    "route_id": "509013",
+    "shape_id": "50901302"
+  },
+  {
+    "trip_id": "2659878416",
+    "route_id": "509021",
+    "shape_id": "50902102"
+  },
+  {
+    "trip_id": "2658154452",
+    "route_id": "509002",
+    "shape_id": "50900201"
+  },
+  {
+    "trip_id": "2659878926",
+    "route_id": "509004",
+    "shape_id": "50900402"
+  },
+  {
+    "trip_id": "2658150858",
+    "route_id": "509006",
+    "shape_id": "50900601"
+  },
+  {
+    "trip_id": "2659878418",
+    "route_id": "509021",
+    "shape_id": "50902102"
+  },
+  {
+    "trip_id": "2658154459",
+    "route_id": "509002",
+    "shape_id": "50900201"
+  },
+  {
+    "trip_id": "2659935721",
+    "route_id": "500301",
+    "shape_id": "50030101"
+  },
+  {
+    "trip_id": "2658201633",
+    "route_id": "509023",
+    "shape_id": "50902302"
+  },
+  {
+    "trip_id": "2658153473",
+    "route_id": "509001",
+    "shape_id": "50900102"
+  },
+  {
+    "trip_id": "2658202640",
+    "route_id": "509013",
+    "shape_id": "50901302"
+  },
+  {
+    "trip_id": "2658202645",
+    "route_id": "509013",
+    "shape_id": "50901302"
+  },
+  {
+    "trip_id": "2659935724",
+    "route_id": "500301",
+    "shape_id": "50030101"
+  },
+  {
+    "trip_id": "2659878440",
+    "route_id": "509017",
+    "shape_id": "50901702"
+  },
+  {
+    "trip_id": "2659877733",
+    "route_id": "509017",
+    "shape_id": "50901701"
+  },
+  {
+    "trip_id": "2659877728",
+    "route_id": "509017",
+    "shape_id": "50901701"
+  },
+  {
+    "trip_id": "2659935722",
+    "route_id": "500301",
+    "shape_id": "50030101"
+  },
+  {
+    "trip_id": "2659878407",
+    "route_id": "509023",
+    "shape_id": "50902302"
+  },
+  {
+    "trip_id": "2659876396",
+    "route_id": "509023",
+    "shape_id": "50902301"
+  },
+  {
+    "trip_id": "2659877725",
+    "route_id": "509017",
+    "shape_id": "50901701"
+  },
+  {
+    "trip_id": "2658204880",
+    "route_id": "500301",
+    "shape_id": "50030102"
+  },
+  {
+    "trip_id": "2658201169",
+    "route_id": "509023",
+    "shape_id": "50902301"
+  },
+  {
+    "trip_id": "2660385848",
+    "route_id": "509002",
+    "shape_id": "50900202"
+  },
+  {
+    "trip_id": "2659878450",
+    "route_id": "509004",
+    "shape_id": "50900401"
+  },
+  {
+    "trip_id": "2659878423",
+    "route_id": "509021",
+    "shape_id": "50902102"
+  },
+  {
+    "trip_id": "2658202133",
+    "route_id": "509004",
+    "shape_id": "50900401"
+  },
+  {
+    "trip_id": "2660385816",
+    "route_id": "509002",
+    "shape_id": "50900201"
+  },
+  {
+    "trip_id": "2660385824",
+    "route_id": "509002",
+    "shape_id": "50900201"
+  },
+  {
+    "trip_id": "2658202113",
+    "route_id": "503101",
+    "shape_id": "50310101"
+  },
+  {
+    "trip_id": "2658201614",
+    "route_id": "509017",
+    "shape_id": "50901702"
+  },
+  {
+    "trip_id": "2658204075",
+    "route_id": "500301",
+    "shape_id": "50030101"
+  },
+  {
+    "trip_id": "2660385810",
+    "route_id": "509003",
+    "shape_id": "50900302"
+  },
+  {
+    "trip_id": "2659933653",
+    "route_id": "509023",
+    "shape_id": "50902302"
+  },
+  {
+    "trip_id": "2658150862",
+    "route_id": "509007",
+    "shape_id": "50900702"
+  },
+  {
+    "trip_id": "2659932769",
+    "route_id": "509023",
+    "shape_id": "50902301"
+  },
+  {
+    "trip_id": "2659850606",
+    "route_id": "509001",
+    "shape_id": "50900101"
+  },
+  {
+    "trip_id": "2660384301",
+    "route_id": "509001",
+    "shape_id": "50900102"
+  },
+  {
+    "trip_id": "2660404194",
+    "route_id": "509004",
+    "shape_id": "50900401"
+  },
+  {
+    "trip_id": "2658150861",
+    "route_id": "509006",
+    "shape_id": "50900601"
+  },
+  {
+    "trip_id": "2658160254",
+    "route_id": "509002",
+    "shape_id": "50900202"
+  },
+  {
+    "trip_id": "2659877723",
+    "route_id": "509017",
+    "shape_id": "50901701"
+  },
+  {
+    "trip_id": "2658153479",
+    "route_id": "509003",
+    "shape_id": "50900302"
+  },
+  {
+    "trip_id": "2659877729",
+    "route_id": "509017",
+    "shape_id": "50901701"
+  },
+  {
+    "trip_id": "2658202647",
+    "route_id": "509013",
+    "shape_id": "50901302"
+  },
+  {
+    "trip_id": "2658201151",
+    "route_id": "509021",
+    "shape_id": "50902101"
+  },
+  {
+    "trip_id": "2658202112",
+    "route_id": "503101",
+    "shape_id": "50310101"
+  },
+  {
+    "trip_id": "2658200383",
+    "route_id": "509017",
+    "shape_id": "50901701"
+  },
+  {
+    "trip_id": "2660385818",
+    "route_id": "509002",
+    "shape_id": "50900201"
+  },
+  {
+    "trip_id": "2659877726",
+    "route_id": "509017",
+    "shape_id": "50901701"
+  },
+  {
+    "trip_id": "2658201164",
+    "route_id": "509021",
+    "shape_id": "50902101"
+  },
+  {
+    "trip_id": "2658204888",
+    "route_id": "500301",
+    "shape_id": "50030102"
+  },
+  {
+    "trip_id": "2660406367",
+    "route_id": "509004",
+    "shape_id": "50900402"
+  },
+  {
+    "trip_id": "2659876398",
+    "route_id": "509021",
+    "shape_id": "50902101"
+  },
+  {
+    "trip_id": "2658153475",
+    "route_id": "509001",
+    "shape_id": "50900102"
+  },
+  {
+    "trip_id": "2660387205",
+    "route_id": "509002",
+    "shape_id": "50900202"
+  },
+  {
+    "trip_id": "2658160253",
+    "route_id": "509002",
+    "shape_id": "50900202"
+  },
+  {
+    "trip_id": "2658201172",
+    "route_id": "509023",
+    "shape_id": "50902301"
+  },
+  {
+    "trip_id": "2659879676",
+    "route_id": "500301",
+    "shape_id": "50030101"
+  },
+  {
+    "trip_id": "2659851814",
+    "route_id": "509002",
+    "shape_id": "50900202"
+  },
+  {
+    "trip_id": "2658201637",
+    "route_id": "509021",
+    "shape_id": "50902102"
+  },
+  {
+    "trip_id": "2659850624",
+    "route_id": "509001",
+    "shape_id": "50900102"
+  },
+  {
+    "trip_id": "2658150859",
+    "route_id": "509006",
+    "shape_id": "50900601"
+  },
+  {
+    "trip_id": "2658201618",
+    "route_id": "509017",
+    "shape_id": "50901702"
+  },
+  {
+    "trip_id": "2658200384",
+    "route_id": "509017",
+    "shape_id": "50901701"
+  },
+  {
+    "trip_id": "2658202644",
+    "route_id": "509013",
+    "shape_id": "50901302"
+  },
+  {
+    "trip_id": "2660406366",
+    "route_id": "509004",
+    "shape_id": "50900402"
+  },
+  {
+    "trip_id": "2658201166",
+    "route_id": "509023",
+    "shape_id": "50902301"
+  },
+  {
+    "trip_id": "2660404193",
+    "route_id": "509004",
+    "shape_id": "50900401"
+  },
+  {
+    "trip_id": "2658244650",
+    "route_id": "6023330",
+    "shape_id": "602333002"
+  },
+  {
+    "trip_id": "2660384308",
+    "route_id": "509001",
+    "shape_id": "50900102"
+  },
+  {
+    "trip_id": "2659851812",
+    "route_id": "509002",
+    "shape_id": "50900202"
+  },
+  {
+    "trip_id": "2658153476",
+    "route_id": "509003",
+    "shape_id": "50900301"
+  },
+  {
+    "trip_id": "2659878420",
+    "route_id": "509021",
+    "shape_id": "50902102"
+  },
+  {
+    "trip_id": "2658201639",
+    "route_id": "509021",
+    "shape_id": "50902102"
+  },
+  {
+    "trip_id": "2660406371",
+    "route_id": "509004",
+    "shape_id": "50900402"
+  },
+  {
+    "trip_id": "2659933652",
+    "route_id": "509023",
+    "shape_id": "50902302"
+  },
+  {
+    "trip_id": "2658160255",
+    "route_id": "509002",
+    "shape_id": "50900202"
+  },
+  {
+    "trip_id": "2659878413",
+    "route_id": "509021",
+    "shape_id": "50902102"
+  },
+  {
+    "trip_id": "2658200387",
+    "route_id": "509017",
+    "shape_id": "50901701"
+  },
+  {
+    "trip_id": "2659880756",
+    "route_id": "500301",
+    "shape_id": "50030102"
+  },
+  {
+    "trip_id": "2658204882",
+    "route_id": "500301",
+    "shape_id": "50030102"
+  },
+  {
+    "trip_id": "2658201632",
+    "route_id": "509023",
+    "shape_id": "50902302"
+  },
+  {
+    "trip_id": "2659850631",
+    "route_id": "509002",
+    "shape_id": "50900201"
+  },
+  {
+    "trip_id": "2658202621",
+    "route_id": "509013",
+    "shape_id": "50901302"
+  },
+  {
+    "trip_id": "2659876391",
+    "route_id": "509023",
+    "shape_id": "50902301"
+  },
+  {
+    "trip_id": "2660385822",
+    "route_id": "509002",
+    "shape_id": "50900201"
+  },
+  {
+    "trip_id": "2660404191",
+    "route_id": "509004",
+    "shape_id": "50900401"
+  },
+  {
+    "trip_id": "2658201162",
+    "route_id": "509021",
+    "shape_id": "50902101"
+  },
+  {
+    "trip_id": "2660384306",
+    "route_id": "509001",
+    "shape_id": "50900102"
+  },
+  {
+    "trip_id": "2658201643",
+    "route_id": "509021",
+    "shape_id": "50902102"
+  },
+  {
+    "trip_id": "2658200388",
+    "route_id": "509017",
+    "shape_id": "50901701"
+  },
+  {
+    "trip_id": "2658153498",
+    "route_id": "509002",
+    "shape_id": "50900201"
+  },
+  {
+    "trip_id": "2658154454",
+    "route_id": "509002",
+    "shape_id": "50900201"
+  },
+  {
+    "trip_id": "2658201621",
+    "route_id": "509017",
+    "shape_id": "50901702"
+  },
+  {
+    "trip_id": "2659876400",
+    "route_id": "509021",
+    "shape_id": "50902101"
+  },
+  {
+    "trip_id": "2658160259",
+    "route_id": "509002",
+    "shape_id": "50900202"
+  },
+  {
+    "trip_id": "2658160256",
+    "route_id": "509002",
+    "shape_id": "50900202"
+  },
+  {
+    "trip_id": "2658198083",
+    "route_id": "509015",
+    "shape_id": "50901502"
+  },
+  {
+    "trip_id": "2659932773",
+    "route_id": "509017",
+    "shape_id": "50901701"
+  },
+  {
+    "trip_id": "2659880755",
+    "route_id": "500301",
+    "shape_id": "50030102"
+  },
+  {
+    "trip_id": "2659876390",
+    "route_id": "509023",
+    "shape_id": "50902301"
+  },
+  {
+    "trip_id": "2659877730",
+    "route_id": "509017",
+    "shape_id": "50901701"
+  },
+  {
+    "trip_id": "2659932799",
+    "route_id": "509023",
+    "shape_id": "50902302"
+  },
+  {
+    "trip_id": "2658204887",
+    "route_id": "500301",
+    "shape_id": "50030102"
+  },
+  {
+    "trip_id": "2659851815",
+    "route_id": "509002",
+    "shape_id": "50900202"
+  },
+  {
+    "trip_id": "2658201160",
+    "route_id": "509021",
+    "shape_id": "50902101"
+  },
+  {
+    "trip_id": "2658198078",
+    "route_id": "509015",
+    "shape_id": "50901501"
+  },
+  {
+    "trip_id": "2658201615",
+    "route_id": "509017",
+    "shape_id": "50901702"
+  },
+  {
+    "trip_id": "2659932768",
+    "route_id": "509023",
+    "shape_id": "50902301"
+  },
+  {
+    "trip_id": "2659850630",
+    "route_id": "509002",
+    "shape_id": "50900201"
+  },
+  {
+    "trip_id": "2659879681",
+    "route_id": "500301",
+    "shape_id": "50030101"
+  },
+  {
+    "trip_id": "2659850635",
+    "route_id": "509002",
+    "shape_id": "50900201"
+  },
+  {
+    "trip_id": "2658201641",
+    "route_id": "509021",
+    "shape_id": "50902102"
+  },
+  {
+    "trip_id": "2660406369",
+    "route_id": "509004",
+    "shape_id": "50900402"
+  },
+  {
+    "trip_id": "2659933654",
+    "route_id": "509017",
+    "shape_id": "50901702"
+  },
+  {
+    "trip_id": "2658202626",
+    "route_id": "509013",
+    "shape_id": "50901302"
+  },
+  {
+    "trip_id": "2658204877",
+    "route_id": "500301",
+    "shape_id": "50030102"
+  },
+  {
+    "trip_id": "2658153472",
+    "route_id": "509001",
+    "shape_id": "50900102"
+  },
+  {
+    "trip_id": "2659850628",
+    "route_id": "509003",
+    "shape_id": "50900302"
+  },
+  {
+    "trip_id": "2658202125",
+    "route_id": "509004",
+    "shape_id": "50900401"
+  },
+  {
+    "trip_id": "2658202124",
+    "route_id": "509004",
+    "shape_id": "50900401"
+  },
+  {
+    "trip_id": "2658202127",
+    "route_id": "509004",
+    "shape_id": "50900401"
+  },
+  {
+    "trip_id": "2659880757",
+    "route_id": "500301",
+    "shape_id": "50030102"
+  },
+  {
+    "trip_id": "2658152057",
+    "route_id": "509006",
+    "shape_id": "50900602"
+  },
+  {
+    "trip_id": "2659879674",
+    "route_id": "500301",
+    "shape_id": "50030101"
+  },
+  {
+    "trip_id": "2658202634",
+    "route_id": "509013",
+    "shape_id": "50901302"
+  },
+  {
+    "trip_id": "2658198077",
+    "route_id": "509010",
+    "shape_id": "50901002"
+  },
+  {
+    "trip_id": "2660383065",
+    "route_id": "509001",
+    "shape_id": "50900101"
+  },
+  {
+    "trip_id": "2658204081",
+    "route_id": "500301",
+    "shape_id": "50030101"
+  },
+  {
+    "trip_id": "2660385849",
+    "route_id": "509002",
+    "shape_id": "50900202"
+  },
+  {
+    "trip_id": "2658202109",
+    "route_id": "503101",
+    "shape_id": "50310101"
+  },
+  {
+    "trip_id": "2659877724",
+    "route_id": "509017",
+    "shape_id": "50901701"
+  },
+  {
+    "trip_id": "2658201185",
+    "route_id": "509013",
+    "shape_id": "50901301"
+  },
+  {
+    "trip_id": "2659878437",
+    "route_id": "509017",
+    "shape_id": "50901702"
+  },
+  {
+    "trip_id": "2658201184",
+    "route_id": "509013",
+    "shape_id": "50901301"
+  },
+  {
+    "trip_id": "2659932774",
+    "route_id": "509017",
+    "shape_id": "50901701"
+  },
+  {
+    "trip_id": "2658202108",
+    "route_id": "503101",
+    "shape_id": "50310101"
+  },
+  {
+    "trip_id": "2659879678",
+    "route_id": "500301",
+    "shape_id": "50030101"
+  },
+  {
+    "trip_id": "2658201630",
+    "route_id": "509023",
+    "shape_id": "50902302"
+  },
+  {
+    "trip_id": "2658202128",
+    "route_id": "509004",
+    "shape_id": "50900401"
+  },
+  {
+    "trip_id": "2658204079",
+    "route_id": "500301",
+    "shape_id": "50030101"
+  },
+  {
+    "trip_id": "2659879677",
+    "route_id": "500301",
+    "shape_id": "50030101"
+  },
+  {
+    "trip_id": "2659850629",
+    "route_id": "509002",
+    "shape_id": "50900201"
+  },
+  {
+    "trip_id": "2659935736",
+    "route_id": "500301",
+    "shape_id": "50030102"
+  },
+  {
+    "trip_id": "2659850601",
+    "route_id": "509001",
+    "shape_id": "50900101"
+  },
+  {
+    "trip_id": "2659933656",
+    "route_id": "509017",
+    "shape_id": "50901702"
+  },
+  {
+    "trip_id": "2658204080",
+    "route_id": "500301",
+    "shape_id": "50030101"
+  },
+  {
+    "trip_id": "2660384303",
+    "route_id": "509001",
+    "shape_id": "50900102"
+  },
+  {
+    "trip_id": "2659877702",
+    "route_id": "509021",
+    "shape_id": "50902101"
+  },
+  {
+    "trip_id": "2658160251",
+    "route_id": "509002",
+    "shape_id": "50900202"
+  },
+  {
+    "trip_id": "2658200398",
+    "route_id": "509021",
+    "shape_id": "50902101"
+  },
+  {
+    "trip_id": "2659935738",
+    "route_id": "500301",
+    "shape_id": "50030102"
+  },
+  {
+    "trip_id": "2659850621",
+    "route_id": "509003",
+    "shape_id": "50900301"
+  },
+  {
+    "trip_id": "2658204083",
+    "route_id": "500301",
+    "shape_id": "50030101"
+  },
+  {
+    "trip_id": "2658201171",
+    "route_id": "509023",
+    "shape_id": "50902301"
+  },
+  {
+    "trip_id": "2658201189",
+    "route_id": "509013",
+    "shape_id": "50901301"
+  },
+  {
+    "trip_id": "2659850604",
+    "route_id": "509001",
+    "shape_id": "50900101"
+  },
+  {
+    "trip_id": "2659932778",
+    "route_id": "509017",
+    "shape_id": "50901701"
+  },
+  {
+    "trip_id": "2658200385",
+    "route_id": "509017",
+    "shape_id": "50901701"
+  },
+  {
+    "trip_id": "2658202631",
+    "route_id": "509013",
+    "shape_id": "50901302"
+  },
+  {
+    "trip_id": "2658200396",
+    "route_id": "509017",
+    "shape_id": "50901701"
+  },
+  {
+    "trip_id": "2660384324",
+    "route_id": "509003",
+    "shape_id": "50900301"
+  },
+  {
+    "trip_id": "2658201642",
+    "route_id": "509021",
+    "shape_id": "50902102"
+  },
+  {
+    "trip_id": "2658201199",
+    "route_id": "509013",
+    "shape_id": "50901301"
+  },
+  {
+    "trip_id": "2658201180",
+    "route_id": "509013",
+    "shape_id": "50901301"
+  },
+  {
+    "trip_id": "2660385823",
+    "route_id": "509002",
+    "shape_id": "50900201"
+  },
+  {
+    "trip_id": "2658200395",
+    "route_id": "509017",
+    "shape_id": "50901701"
+  },
+  {
+    "trip_id": "2658201174",
+    "route_id": "509013",
+    "shape_id": "50901301"
+  },
+  {
+    "trip_id": "2658150860",
+    "route_id": "509006",
+    "shape_id": "50900601"
+  },
+  {
+    "trip_id": "2658202627",
+    "route_id": "509013",
+    "shape_id": "50901302"
+  },
+  {
+    "trip_id": "2658201644",
+    "route_id": "509021",
+    "shape_id": "50902102"
+  },
+  {
+    "trip_id": "2659935737",
+    "route_id": "500301",
+    "shape_id": "50030102"
+  },
+  {
+    "trip_id": "2659878409",
+    "route_id": "509023",
+    "shape_id": "50902302"
+  },
+  {
+    "trip_id": "2658202637",
+    "route_id": "509013",
+    "shape_id": "50901302"
+  },
+  {
+    "trip_id": "2658201628",
+    "route_id": "509023",
+    "shape_id": "50902302"
+  },
+  {
+    "trip_id": "2659878415",
+    "route_id": "509021",
+    "shape_id": "50902102"
+  },
+  {
+    "trip_id": "2660385819",
+    "route_id": "509002",
+    "shape_id": "50900201"
+  },
+  {
+    "trip_id": "2658153497",
+    "route_id": "509002",
+    "shape_id": "50900201"
+  },
+  {
+    "trip_id": "2658189495",
+    "route_id": "509009",
+    "shape_id": "50900902"
+  },
+  {
+    "trip_id": "2658201191",
+    "route_id": "509013",
+    "shape_id": "50901301"
+  },
+  {
+    "trip_id": "2659851817",
+    "route_id": "509002",
+    "shape_id": "50900202"
+  },
+  {
+    "trip_id": "2658201192",
+    "route_id": "509013",
+    "shape_id": "50901301"
+  },
+  {
+    "trip_id": "2659876393",
+    "route_id": "509023",
+    "shape_id": "50902301"
+  },
+  {
+    "trip_id": "2658152053",
+    "route_id": "509006",
+    "shape_id": "50900602"
+  },
+  {
+    "trip_id": "2659935723",
+    "route_id": "500301",
+    "shape_id": "50030101"
+  },
+  {
+    "trip_id": "2659878445",
+    "route_id": "509004",
+    "shape_id": "50900401"
+  },
+  {
+    "trip_id": "2660384304",
+    "route_id": "509001",
+    "shape_id": "50900102"
+  },
+  {
+    "trip_id": "2658200400",
+    "route_id": "509021",
+    "shape_id": "50902101"
+  },
+  {
+    "trip_id": "2658154451",
+    "route_id": "509002",
+    "shape_id": "50900201"
+  },
+  {
+    "trip_id": "2659850632",
+    "route_id": "509002",
+    "shape_id": "50900201"
+  },
+  {
+    "trip_id": "2658201188",
+    "route_id": "509013",
+    "shape_id": "50901301"
+  },
+  {
+    "trip_id": "2658202639",
+    "route_id": "509013",
+    "shape_id": "50901302"
+  },
+  {
+    "trip_id": "2658203380",
+    "route_id": "503101",
+    "shape_id": "50310102"
+  },
+  {
+    "trip_id": "2659877731",
+    "route_id": "509017",
+    "shape_id": "50901701"
+  },
+  {
+    "trip_id": "2659877721",
+    "route_id": "509017",
+    "shape_id": "50901701"
+  },
+  {
+    "trip_id": "2658200391",
+    "route_id": "509017",
+    "shape_id": "50901701"
+  },
+  {
+    "trip_id": "2658201183",
+    "route_id": "509013",
+    "shape_id": "50901301"
+  },
+  {
+    "trip_id": "2658201158",
+    "route_id": "509021",
+    "shape_id": "50902101"
+  },
+  {
+    "trip_id": "2658204082",
+    "route_id": "500301",
+    "shape_id": "50030101"
+  },
+  {
+    "trip_id": "2658153452",
+    "route_id": "509001",
+    "shape_id": "50900101"
+  },
+  {
+    "trip_id": "2658203399",
+    "route_id": "509004",
+    "shape_id": "50900402"
+  },
+  {
+    "trip_id": "2658201190",
+    "route_id": "509013",
+    "shape_id": "50901301"
+  },
+  {
+    "trip_id": "2658201197",
+    "route_id": "509013",
+    "shape_id": "50901301"
+  },
+  {
+    "trip_id": "2659935725",
+    "route_id": "500301",
+    "shape_id": "50030101"
+  },
+  {
+    "trip_id": "2659876394",
+    "route_id": "509023",
+    "shape_id": "50902301"
+  },
+  {
+    "trip_id": "2659933651",
+    "route_id": "509023",
+    "shape_id": "50902302"
+  },
+  {
+    "trip_id": "2658201196",
+    "route_id": "509013",
+    "shape_id": "50901301"
+  },
+  {
+    "trip_id": "2658204056",
+    "route_id": "509004",
+    "shape_id": "50900402"
+  },
+  {
+    "trip_id": "2658204873",
+    "route_id": "500301",
+    "shape_id": "50030102"
+  },
+  {
+    "trip_id": "2658201159",
+    "route_id": "509021",
+    "shape_id": "50902101"
+  },
+  {
+    "trip_id": "2658153500",
+    "route_id": "509002",
+    "shape_id": "50900201"
+  },
+  {
+    "trip_id": "2659878928",
+    "route_id": "509004",
+    "shape_id": "50900402"
+  },
+  {
+    "trip_id": "2659877705",
+    "route_id": "509021",
+    "shape_id": "50902101"
+  },
+  {
+    "trip_id": "2660383064",
+    "route_id": "509001",
+    "shape_id": "50900101"
+  },
+  {
+    "trip_id": "2658154458",
+    "route_id": "509002",
+    "shape_id": "50900201"
+  },
+  {
+    "trip_id": "2658201631",
+    "route_id": "509023",
+    "shape_id": "50902302"
+  },
+  {
+    "trip_id": "2658202642",
+    "route_id": "509013",
+    "shape_id": "50901302"
+  },
+  {
+    "trip_id": "2658204055",
+    "route_id": "509004",
+    "shape_id": "50900402"
+  },
+  {
+    "trip_id": "2659850622",
+    "route_id": "509001",
+    "shape_id": "50900102"
+  },
+  {
+    "trip_id": "2658200393",
+    "route_id": "509017",
+    "shape_id": "50901701"
+  },
+  {
+    "trip_id": "2658203400",
+    "route_id": "509004",
+    "shape_id": "50900402"
+  },
+  {
+    "trip_id": "2658200389",
+    "route_id": "509017",
+    "shape_id": "50901701"
+  },
+  {
+    "trip_id": "2658154456",
+    "route_id": "509002",
+    "shape_id": "50900201"
+  },
+  {
+    "trip_id": "2658202114",
+    "route_id": "503101",
+    "shape_id": "50310101"
+  },
+  {
+    "trip_id": "2658150857",
+    "route_id": "509006",
+    "shape_id": "50900601"
+  },
+  {
+    "trip_id": "2659878449",
+    "route_id": "509004",
+    "shape_id": "50900401"
+  },
+  {
+    "trip_id": "2658201161",
+    "route_id": "509021",
+    "shape_id": "50902101"
+  },
+  {
+    "trip_id": "2658204086",
+    "route_id": "500301",
+    "shape_id": "50030101"
+  },
+  {
+    "trip_id": "2658154457",
+    "route_id": "509002",
+    "shape_id": "50900201"
+  },
+  {
+    "trip_id": "2658201167",
+    "route_id": "509023",
+    "shape_id": "50902301"
+  },
+  {
+    "trip_id": "2659932770",
+    "route_id": "509023",
+    "shape_id": "50902301"
+  },
+  {
+    "trip_id": "2658201194",
+    "route_id": "509013",
+    "shape_id": "50901301"
+  },
+  {
+    "trip_id": "2658204084",
+    "route_id": "500301",
+    "shape_id": "50030101"
+  },
+  {
+    "trip_id": "2658201616",
+    "route_id": "509017",
+    "shape_id": "50901702"
+  },
+  {
+    "trip_id": "2659932772",
+    "route_id": "509023",
+    "shape_id": "50902301"
+  },
+  {
+    "trip_id": "2659877704",
+    "route_id": "509021",
+    "shape_id": "50902101"
+  },
+  {
+    "trip_id": "2658204059",
+    "route_id": "509004",
+    "shape_id": "50900402"
+  },
+  {
+    "trip_id": "2659878422",
+    "route_id": "509021",
+    "shape_id": "50902102"
+  },
+  {
+    "trip_id": "2658204051",
+    "route_id": "509004",
+    "shape_id": "50900402"
+  },
+  {
+    "trip_id": "2659877727",
+    "route_id": "509017",
+    "shape_id": "50901701"
+  },
+  {
+    "trip_id": "2659932800",
+    "route_id": "509023",
+    "shape_id": "50902302"
+  },
+  {
+    "trip_id": "2658201165",
+    "route_id": "509023",
+    "shape_id": "50902301"
+  },
+  {
+    "trip_id": "2659851813",
+    "route_id": "509002",
+    "shape_id": "50900202"
+  },
+  {
+    "trip_id": "2660387204",
+    "route_id": "509002",
+    "shape_id": "50900202"
+  },
+  {
+    "trip_id": "2659850636",
+    "route_id": "509002",
+    "shape_id": "50900201"
+  },
+  {
+    "trip_id": "2658201187",
+    "route_id": "509013",
+    "shape_id": "50901301"
+  },
+  {
+    "trip_id": "2660387203",
+    "route_id": "509002",
+    "shape_id": "50900202"
+  },
+  {
+    "trip_id": "2658201649",
+    "route_id": "509021",
+    "shape_id": "50902102"
+  },
+  {
+    "trip_id": "2660406368",
+    "route_id": "509004",
+    "shape_id": "50900402"
+  },
+  {
+    "trip_id": "2659878927",
+    "route_id": "509004",
+    "shape_id": "50900402"
+  },
+  {
+    "trip_id": "2658202630",
+    "route_id": "509013",
+    "shape_id": "50901302"
+  },
+  {
+    "trip_id": "2659878419",
+    "route_id": "509021",
+    "shape_id": "50902102"
+  },
+  {
+    "trip_id": "2659850625",
+    "route_id": "509001",
+    "shape_id": "50900102"
+  },
+  {
+    "trip_id": "2658201617",
+    "route_id": "509017",
+    "shape_id": "50901702"
+  },
+  {
+    "trip_id": "2658158998",
+    "route_id": "509002",
+    "shape_id": "50900202"
+  },
+  {
+    "trip_id": "2658202131",
+    "route_id": "509004",
+    "shape_id": "50900401"
+  },
+  {
+    "trip_id": "2658201648",
+    "route_id": "509021",
+    "shape_id": "50902102"
+  },
+  {
+    "trip_id": "2658204058",
+    "route_id": "509004",
+    "shape_id": "50900402"
+  },
+  {
+    "trip_id": "2658201153",
+    "route_id": "509021",
+    "shape_id": "50902101"
+  },
+  {
+    "trip_id": "2658201193",
+    "route_id": "509013",
+    "shape_id": "50901301"
+  },
+  {
+    "trip_id": "2658153478",
+    "route_id": "509003",
+    "shape_id": "50900302"
+  },
+  {
+    "trip_id": "2659877734",
+    "route_id": "509017",
+    "shape_id": "50901701"
+  },
+  {
+    "trip_id": "2659879679",
+    "route_id": "500301",
+    "shape_id": "50030101"
+  },
+  {
+    "trip_id": "2659877703",
+    "route_id": "509021",
+    "shape_id": "50902101"
+  },
+  {
+    "trip_id": "2658201200",
+    "route_id": "509013",
+    "shape_id": "50901301"
+  },
+  {
+    "trip_id": "2659932777",
+    "route_id": "509017",
+    "shape_id": "50901701"
+  },
+  {
+    "trip_id": "2659878403",
+    "route_id": "509023",
+    "shape_id": "50902302"
+  },
+  {
+    "trip_id": "2660383100",
+    "route_id": "509001",
+    "shape_id": "50900102"
+  },
+  {
+    "trip_id": "2658204884",
+    "route_id": "500301",
+    "shape_id": "50030102"
+  },
+  {
+    "trip_id": "2660406370",
+    "route_id": "509004",
+    "shape_id": "50900402"
+  },
+  {
+    "trip_id": "2659878405",
+    "route_id": "509023",
+    "shape_id": "50902302"
+  },
+  {
+    "trip_id": "2658197249",
+    "route_id": "509010",
+    "shape_id": "50901001"
+  },
+  {
+    "trip_id": "2658200394",
+    "route_id": "509017",
+    "shape_id": "50901701"
+  },
+  {
+    "trip_id": "2658160252",
+    "route_id": "509002",
+    "shape_id": "50900202"
+  },
+  {
+    "trip_id": "2659935739",
+    "route_id": "500301",
+    "shape_id": "50030102"
+  },
+  {
+    "trip_id": "2658153495",
+    "route_id": "509002",
+    "shape_id": "50900201"
+  },
+  {
+    "trip_id": "2658203379",
+    "route_id": "503101",
+    "shape_id": "50310102"
+  },
+  {
+    "trip_id": "2660385817",
+    "route_id": "509002",
+    "shape_id": "50900201"
+  },
+  {
+    "trip_id": "2658201173",
+    "route_id": "509023",
+    "shape_id": "50902301"
+  },
+  {
+    "trip_id": "2658154453",
+    "route_id": "509002",
+    "shape_id": "50900201"
+  },
+  {
+    "trip_id": "2658201636",
+    "route_id": "509021",
+    "shape_id": "50902102"
+  },
+  {
+    "trip_id": "2658198082",
+    "route_id": "509015",
+    "shape_id": "50901502"
+  },
+  {
+    "trip_id": "2659878441",
+    "route_id": "509017",
+    "shape_id": "50901702"
+  },
+  {
+    "trip_id": "2659933659",
+    "route_id": "509017",
+    "shape_id": "50901702"
+  },
+  {
+    "trip_id": "2658204052",
+    "route_id": "509004",
+    "shape_id": "50900402"
+  },
+  {
+    "trip_id": "2659880752",
+    "route_id": "500301",
+    "shape_id": "50030102"
+  },
+  {
+    "trip_id": "2658201181",
+    "route_id": "509013",
+    "shape_id": "50901301"
+  },
+  {
+    "trip_id": "2658201198",
+    "route_id": "509013",
+    "shape_id": "50901301"
+  },
+  {
+    "trip_id": "2659880759",
+    "route_id": "500301",
+    "shape_id": "50030102"
+  },
+  {
+    "trip_id": "2658202126",
+    "route_id": "509004",
+    "shape_id": "50900401"
+  },
+  {
+    "trip_id": "2658202623",
+    "route_id": "509013",
+    "shape_id": "50901302"
+  },
+  {
+    "trip_id": "2659935735",
+    "route_id": "500301",
+    "shape_id": "50030102"
+  },
+  {
+    "trip_id": "2658158999",
+    "route_id": "509002",
+    "shape_id": "50900202"
+  },
+  {
+    "trip_id": "2658150856",
+    "route_id": "509007",
+    "shape_id": "50900701"
+  },
+  {
+    "trip_id": "2658204057",
+    "route_id": "509004",
+    "shape_id": "50900402"
+  },
+  {
+    "trip_id": "2659878923",
+    "route_id": "509004",
+    "shape_id": "50900402"
+  },
+  {
+    "trip_id": "2658203386",
+    "route_id": "503101",
+    "shape_id": "50310102"
+  },
+  {
+    "trip_id": "2659850626",
+    "route_id": "509001",
+    "shape_id": "50900102"
+  },
+  {
+    "trip_id": "2658201170",
+    "route_id": "509023",
+    "shape_id": "50902301"
+  },
+  {
+    "trip_id": "2660387202",
+    "route_id": "509002",
+    "shape_id": "50900202"
+  },
+  {
+    "trip_id": "2658152055",
+    "route_id": "509006",
+    "shape_id": "50900602"
+  },
+  {
+    "trip_id": "2659932771",
+    "route_id": "509023",
+    "shape_id": "50902301"
+  },
+  {
+    "trip_id": "2658153471",
+    "route_id": "509001",
+    "shape_id": "50900102"
+  },
+  {
+    "trip_id": "2659878448",
+    "route_id": "509004",
+    "shape_id": "50900401"
+  },
+  {
+    "trip_id": "2659850623",
+    "route_id": "509001",
+    "shape_id": "50900102"
+  },
+  {
+    "trip_id": "2660404189",
+    "route_id": "509004",
+    "shape_id": "50900401"
+  },
+  {
+    "trip_id": "2658202118",
+    "route_id": "503101",
+    "shape_id": "50310101"
+  },
+  {
+    "trip_id": "2659877701",
+    "route_id": "509021",
+    "shape_id": "50902101"
+  },
+  {
+    "trip_id": "2659850633",
+    "route_id": "509002",
+    "shape_id": "50900201"
+  },
+  {
+    "trip_id": "2658200380",
+    "route_id": "509017",
+    "shape_id": "50901701"
+  },
+  {
+    "trip_id": "2658153453",
+    "route_id": "509001",
+    "shape_id": "50900101"
+  },
+  {
+    "trip_id": "2659850603",
+    "route_id": "509001",
+    "shape_id": "50900101"
+  },
+  {
+    "trip_id": "2658202111",
+    "route_id": "503101",
+    "shape_id": "50310101"
+  },
+  {
+    "trip_id": "2658202110",
+    "route_id": "503101",
+    "shape_id": "50310101"
+  },
+  {
+    "trip_id": "2659878421",
+    "route_id": "509021",
+    "shape_id": "50902102"
+  },
+  {
+    "trip_id": "2659850637",
+    "route_id": "509002",
+    "shape_id": "50900201"
+  },
+  {
+    "trip_id": "2658202130",
+    "route_id": "509004",
+    "shape_id": "50900401"
+  },
+  {
+    "trip_id": "2658201182",
+    "route_id": "509013",
+    "shape_id": "50901301"
+  },
+  {
+    "trip_id": "2658201178",
+    "route_id": "509013",
+    "shape_id": "50901301"
+  },
+  {
+    "trip_id": "2658203387",
+    "route_id": "503101",
+    "shape_id": "50310102"
+  },
+  {
+    "trip_id": "2658204053",
+    "route_id": "509004",
+    "shape_id": "50900402"
   }
 ]

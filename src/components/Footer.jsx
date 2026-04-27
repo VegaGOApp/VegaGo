@@ -1,19 +1,22 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Route, Clock, User, ChevronRight, Search, Bus, Mail, Phone, X, Star, AlertTriangle, Train, Car, Send, Users, Map as MapIcon, Calendar, Bell, Info, Heart, MapPin, Navigation } from 'lucide-react';
+import { Route, Clock, User, ChevronRight, Search, Bus, Mail, Phone, X, Star, AlertTriangle, Train, Car, Send, Users, Map as MapIcon, Calendar, Bell, Info, Heart, MapPin, Navigation, Accessibility, ShoppingBag, Landmark } from 'lucide-react';
 import { busLines } from '../data/busLines';
 import taxis from '../data/taxis.json';
+import poi from '../data/gtfs/pois.json';
 import { useAlerts } from '../hooks/useAlerts';
 import { useTranslation } from '../hooks/useTranslation';
 import { getDistance, getSquaredDistance } from '../utils/geo';
 import { sanitizeInput } from '../utils/security';
 import Logo from './Logo';
 
-const Footer = ({ onSelectLine, selectedLineId, lang, onMenuOpen, favorites, toggleFavorite }) => {
+const Footer = ({ onSelectLine, onSelectPOI, selectedLineId, lang, onMenuOpen, favorites, toggleFavorite }) => {
   const [activeMenu, setActiveMenu] = useState(null); // 'lines', 'alerts', 'about', 'report', 'taxi'
   const [scheduleSearch, setScheduleSearch] = useState('');
+  const [taxiSearch, setTaxiSearch] = useState('');
   const [scheduleTab, setScheduleTab] = useState('Todas');
   const [userLocation, setUserLocation] = useState(null);
   const [showLegalFull, setShowLegalFull] = useState(false);
+  const [nearbyCategory, setNearbyCategory] = useState('bus');
   const { t } = useTranslation(lang);
 
   // Community Reports State with robust parsing
@@ -29,7 +32,7 @@ const Footer = ({ onSelectLine, selectedLineId, lang, onMenuOpen, favorites, tog
 
 
   // New Report Form State
-  const [reportForm, setReportForm] = useState({ lineId: busLines[0].id, type: 'delay', reason: '' });
+  const [reportForm, setReportForm] = useState({ lineId: busLines[0]?.id || '', type: 'delay', reason: '' });
 
   // Pre-calculate distances once per location update to optimize search performance
   const lineDistances = useMemo(() => {
@@ -173,6 +176,18 @@ const Footer = ({ onSelectLine, selectedLineId, lang, onMenuOpen, favorites, tog
     });
   }, [scheduleSearch, scheduleTab, userLocation, favorites]);
 
+  const filteredTaxis = useMemo(() => {
+    return taxis.filter(taxi => {
+      const query = taxiSearch.toLowerCase();
+      const nameMatch = taxi.name.toLowerCase().includes(query);
+      const cityMatch = taxi.city.toLowerCase().includes(query);
+      const isEurotaxiTerm = query === 'eurotaxi' || query === 'adaptado' || query === 'adaptat' || query === 'adapted';
+      const adaptedMatch = taxi.adapted && isEurotaxiTerm;
+      
+      return nameMatch || cityMatch || adaptedMatch;
+    });
+  }, [taxiSearch]);
+
   const toggleMenu = (menu) => {
     if (activeMenu === menu) {
       setActiveMenu(null);
@@ -203,11 +218,11 @@ const Footer = ({ onSelectLine, selectedLineId, lang, onMenuOpen, favorites, tog
                 <div className="line-info"><span className="line-name">{line.name}</span><span className="line-meta">{line.distance !== Infinity ? `${line.distance.toFixed(1)} km` : line.type}</span></div>
                 <button className="fav-btn-inline" onClick={(e) => { e.stopPropagation(); toggleFavorite(line.id); }}>
                   <div className={`fav-icon-glass ${(favorites || []).includes(line.id) ? 'active' : ''}`}>
-                    <Star 
-                      size={16} 
-                      fill={(favorites || []).includes(line.id) ? "white" : "none"} 
+                    <Star
+                      size={16}
+                      fill={(favorites || []).includes(line.id) ? "white" : "none"}
                       color={(favorites || []).includes(line.id) ? "white" : "var(--primary)"}
-                      strokeWidth={2.5} 
+                      strokeWidth={2.5}
                     />
                   </div>
                 </button>
@@ -262,11 +277,28 @@ const Footer = ({ onSelectLine, selectedLineId, lang, onMenuOpen, favorites, tog
             </div>
             <button onClick={() => setActiveMenu(null)} className="close-dropdown"><X size={20} /></button>
           </div>
+          <div className="ios-search-container" style={{ margin: '0.8rem 1.5rem 1rem' }}>
+            <Search size={16} style={{ opacity: 0.5 }} />
+            <input 
+              type="text" 
+              placeholder={t.searchTaxi} 
+              value={taxiSearch} 
+              onChange={(e) => setTaxiSearch(e.target.value)} 
+            />
+          </div>
           <div className="lines-list">
-            {taxis.map((taxi, i) => (
+            {filteredTaxis.map((taxi, i) => (
               <a key={i} href={`tel:${taxi.phone}`} className="line-item" style={{ textDecoration: 'none', color: 'inherit' }}>
                 <div className="line-icon" style={{ background: 'var(--primary)', opacity: 0.8 }}><Phone size={18} color="white" /></div>
-                <div className="line-info"><span className="line-name">{taxi.name}</span><span className="line-meta">{taxi.city} • {taxi.phone}</span></div>
+                <div className="line-info">
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                    <span className="line-name">{taxi.name}</span>
+                    {taxi.adapted && (
+                      <Accessibility size={16} color="#005eb8" strokeWidth={3} style={{ flexShrink: 0 }} />
+                    )}
+                  </div>
+                  <span className="line-meta">{taxi.city} • {taxi.phone}</span>
+                </div>
                 <div style={{ background: 'rgba(59, 130, 246, 0.1)', padding: '6px 12px', borderRadius: '20px', fontSize: '0.75rem', fontWeight: 700, color: 'var(--primary)' }}>{t.callNow}</div>
               </a>
             ))}
@@ -330,13 +362,12 @@ const Footer = ({ onSelectLine, selectedLineId, lang, onMenuOpen, favorites, tog
             </h2>
             <p style={{ opacity: 0.7, fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '1.5rem' }}>{t.aboutDesc}</p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', opacity: 0.6, fontSize: '0.8rem', marginBottom: '1.5rem' }}>
-              <span>www.vegago.app</span>
               <span>hello@vegago.app</span>
               <span>{t.version}</span>
             </div>
             <p style={{ fontSize: '0.7rem', opacity: 0.4, borderTop: '1px solid var(--border-color)', paddingTop: '1rem' }}>{t.legal}</p>
-            <button 
-              onClick={() => setShowLegalFull(true)} 
+            <button
+              onClick={() => setShowLegalFull(true)}
               style={{ background: 'none', border: 'none', color: 'var(--primary)', fontSize: '0.75rem', fontWeight: 700, cursor: 'pointer', marginTop: '0.5rem', textDecoration: 'underline' }}
             >
               {t.legalBtn}
@@ -365,27 +396,91 @@ const Footer = ({ onSelectLine, selectedLineId, lang, onMenuOpen, favorites, tog
           <div className="dropdown-header">
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
               <Navigation size={22} color="var(--primary)" />
-              <h3 style={{ fontSize: '1rem', fontWeight: 800 }}>{lang === 'va' ? 'Línies properes' : lang === 'gb' ? 'Nearby lines' : lang === 'ru' ? 'Ближайшие линии' : 'Líneas cercanas'}</h3>
+              <h3 style={{ fontSize: '1rem', fontWeight: 800 }}>{t.nearby}</h3>
             </div>
             <button onClick={() => setActiveMenu(null)} className="close-dropdown"><X size={18} /></button>
           </div>
-          <div className="nearby-content" style={{ padding: '0.5rem 1rem 1rem' }}>
-            {nearbyLines.length > 0 ? (
-              nearbyLines.map(line => (
-                <div key={line.id} className="premium-route-card" style={{ marginBottom: '0.5rem', padding: '0.75rem' }} onClick={() => { onSelectLine(line.id, { isNearby: true }); setActiveMenu(null); }}>
-                  <div className="line-pill" style={{ background: line.color, width: '38px', height: '22px', fontSize: '0.75rem' }}>{line.shortName}</div>
-                  <div className="route-details">
-                    <div className="route-name" style={{ fontSize: '0.85rem' }}>{line.name}</div>
-                    <div className="route-meta" style={{ fontSize: '0.7rem' }}>
-                      <MapPin size={10} /> {line.distance.toFixed(1)} km
+          <div className="nearby-content" style={{ padding: '0.5rem 0 1.5rem', overflow: 'hidden' }}>
+            <div className="nearby-categories" style={{ 
+              display: 'flex', 
+              justifyContent: 'center',
+              gap: '0.8rem', 
+              overflowX: 'auto', 
+              flexWrap: 'nowrap', 
+              padding: '0 1.2rem 1.2rem', 
+              marginBottom: '0.5rem', 
+              WebkitOverflowScrolling: 'touch',
+              scrollbarWidth: 'none',
+              msOverflowStyle: 'none'
+            }}>
+              <button className={`category-pill ${nearbyCategory === 'bus' ? 'active' : ''}`} onClick={() => setNearbyCategory('bus')}><Bus size={14} /> {t.stopsNearby}</button>
+              <button className={`category-pill ${nearbyCategory === 'shop' ? 'active' : ''}`} onClick={() => setNearbyCategory('shop')}><ShoppingBag size={14} /> {lang === 'es' ? 'Comercios' : 'Shops'}</button>
+              <button className={`category-pill ${nearbyCategory === 'culture' ? 'active' : ''}`} onClick={() => setNearbyCategory('culture')}><Landmark size={14} /> {lang === 'es' ? 'Cultura' : 'Culture'}</button>
+            </div>
+
+            {nearbyCategory === 'bus' ? (
+              <>
+                <h4 style={{ fontSize: '0.75rem', textTransform: 'uppercase', opacity: 0.5, letterSpacing: '0.05em', marginBottom: '0.8rem', fontWeight: 700, padding: '0 1.2rem' }}>{lang === 'es' ? 'Transporte Próximo' : 'Nearby Transport'}</h4>
+                <div style={{ padding: '0 1.2rem' }}>
+                  {nearbyLines.length > 0 ? (
+                    nearbyLines.map(line => (
+                      <div key={line.id} className="premium-route-card" style={{ marginBottom: '0.5rem', padding: '0.75rem' }} onClick={() => { onSelectLine(line.id, { isNearby: true }); setActiveMenu(null); }}>
+                        <div className="line-pill" style={{ background: line.color, width: '38px', height: '22px', fontSize: '0.75rem' }}>{line.shortName}</div>
+                        <div className="route-details">
+                          <div className="route-name" style={{ fontSize: '0.85rem' }}>{line.name}</div>
+                          <div className="route-meta" style={{ fontSize: '0.7rem' }}>
+                            <MapPin size={10} /> {line.distance.toFixed(1)} km
+                          </div>
+                        </div>
+                        <ChevronRight size={16} className="arrow-icon" />
+                      </div>
+                    ))
+                  ) : (
+                    <div style={{ textAlign: 'center', padding: '1rem', opacity: 0.6, fontSize: '0.85rem' }}>
+                      {lang === 'va' ? 'No hi ha línies prop' : lang === 'gb' ? 'No lines nearby' : lang === 'ru' ? 'Нет линий поблизости' : 'No hay líneas cerca'}
                     </div>
-                  </div>
-                  <ChevronRight size={16} className="arrow-icon" />
+                  )}
                 </div>
-              ))
+              </>
             ) : (
-              <div style={{ textAlign: 'center', padding: '1rem', opacity: 0.6, fontSize: '0.85rem' }}>
-                {lang === 'va' ? 'No hi ha línies prop' : lang === 'gb' ? 'No lines nearby' : lang === 'ru' ? 'Нет линий поблизости' : 'No hay líneas cerca'}
+              <div style={{ padding: '0 1.2rem' }}>
+                <h4 style={{ fontSize: '0.75rem', textTransform: 'uppercase', opacity: 0.5, letterSpacing: '0.05em', marginBottom: '0.8rem', fontWeight: 700 }}>
+                  {nearbyCategory === 'shop' ? (lang === 'es' ? 'Tiendas y Comercios' : 'Shops & Stores') : 
+                   (lang === 'es' ? 'Cultura y Ocio' : 'Culture & Leisure')}
+                </h4>
+                <div className="poi-list" style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', maxHeight: '40vh', overflowY: 'auto', paddingRight: '0.5rem' }}>
+                  {poi
+                    .filter(p => {
+                      if (nearbyCategory === 'shop') return p.type === 'shop';
+                      if (nearbyCategory === 'culture') return p.type === 'culture' || p.type === 'transport';
+                      return false;
+                    })
+                    .map(p => ({
+                      ...p,
+                      distance: userLocation ? getDistance(p.coords, [userLocation.lat, userLocation.lng]) : Infinity
+                    }))
+                    .sort((a, b) => a.distance - b.distance)
+                    .map(p => (
+                      <div key={p.id} className="premium-route-card" style={{ padding: '0.85rem', cursor: 'pointer' }} onClick={() => { onSelectPOI(p); setActiveMenu(null); }}>
+                        <div className="line-pill" style={{ 
+                          background: p.type === 'transport' ? 'var(--primary)' : 
+                                     p.type === 'culture' ? '#8b5cf6' : '#ec4899',
+                          width: '42px', height: '24px', fontSize: '0.65rem',
+                          display: 'flex', alignItems: 'center', justifyContent: 'center'
+                        }}>
+                          {p.type === 'transport' ? <Train size={12} /> : 
+                           p.type === 'culture' ? <Landmark size={12} /> : <ShoppingBag size={12} />}
+                        </div>
+                        <div className="route-details">
+                          <div className="route-name" style={{ fontSize: '0.9rem', fontWeight: 700 }}>{p.name}</div>
+                          <div className="route-meta" style={{ fontSize: '0.75rem', opacity: 0.7 }}>
+                            {p.address || p.description} {p.distance !== Infinity && `• ${p.distance.toFixed(1)} km`}
+                          </div>
+                        </div>
+                        <Navigation size={18} className="arrow-icon" style={{ opacity: 0.4 }} />
+                      </div>
+                    ))}
+                </div>
               </div>
             )}
           </div>
@@ -393,17 +488,17 @@ const Footer = ({ onSelectLine, selectedLineId, lang, onMenuOpen, favorites, tog
       )}
 
       <div className="crystal-footer" role="navigation" aria-label="Navegación principal">
-        <button 
-          className={`nav-btn ${activeMenu === 'lines' ? 'active' : ''}`} 
+        <button
+          className={`nav-btn ${activeMenu === 'lines' ? 'active' : ''}`}
           onClick={() => toggleMenu('lines')}
           aria-label={t.lines}
           aria-expanded={activeMenu === 'lines'}
         >
           <Route size={22} /><span>{t.lines}</span>
         </button>
-        <button 
-          className={`nav-btn ${activeMenu === 'alerts' ? 'active' : ''}`} 
-          onClick={() => toggleMenu('alerts')} 
+        <button
+          className={`nav-btn ${activeMenu === 'alerts' ? 'active' : ''}`}
+          onClick={() => toggleMenu('alerts')}
           style={{ position: 'relative' }}
           aria-label={t.alerts}
           aria-expanded={activeMenu === 'alerts'}
@@ -442,20 +537,29 @@ const Footer = ({ onSelectLine, selectedLineId, lang, onMenuOpen, favorites, tog
             </span>
           </div>
         </button>
-        <button 
-          className={`nav-btn ${activeMenu === 'taxi' ? 'active' : ''}`} 
+        <button
+          className={`nav-btn ${activeMenu === 'taxi' ? 'active' : ''}`}
           onClick={() => toggleMenu('taxi')}
           aria-label="Taxis"
           aria-expanded={activeMenu === 'taxi'}
         >
           <Phone size={22} /><span>Taxi</span>
         </button>
-        <button 
-          className={`nav-btn ${activeMenu === 'lines' && scheduleTab === 'Favoritas' ? 'active' : ''}`} 
-          onClick={() => { if (activeMenu === 'lines' && scheduleTab === 'Favoritas') { setActiveMenu(null); } else { setActiveMenu('lines'); setScheduleTab('Favoritas'); if (onMenuOpen) onMenuOpen(); if (selectedLineId) onSelectLine(null); } }}
-          aria-label={t.favs}
+        <button
+          className={`nav-btn ${activeMenu === 'nearby' ? 'active' : ''}`}
+          onClick={() => {
+            if (activeMenu === 'nearby') {
+              setActiveMenu(null);
+            } else {
+              setActiveMenu('nearby');
+              window.dispatchEvent(new CustomEvent('requestUserLocation'));
+              if (onMenuOpen) onMenuOpen();
+              if (selectedLineId) onSelectLine(null);
+            }
+          }}
+          aria-label={t.nearby}
         >
-          <Heart size={22} /><span>{t.favs}</span>
+          <MapPin size={22} /><span>{t.nearby}</span>
         </button>
       </div>
     </>

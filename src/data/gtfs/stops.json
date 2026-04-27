@@ -1,233 +1,1311 @@
 [
   {
-    "stop_id": "stop_1",
-    "stop_name": "Av. de Loring (Alicante)",
-    "stop_lat": 38.3375,
-    "stop_lon": -0.4914,
-    "zone_id": "vega_baja"
+    "stop_id": "5001010212",
+    "stop_name": "av, de Segura Benejúzar",
+    "stop_lat": 38.0811919265,
+    "stop_lon": -0.8378022293,
+    "is_station": false
   },
   {
-    "stop_id": "stop_2",
-    "stop_name": "El Altet",
-    "stop_lat": 38.2709,
-    "stop_lon": -0.5513,
-    "zone_id": "vega_baja"
+    "stop_id": "5001010107",
+    "stop_name": "av, de Segura front BBVA Benejúzar",
+    "stop_lat": 38.0812228895,
+    "stop_lon": -0.8377112546,
+    "is_station": false
   },
   {
-    "stop_id": "stop_3",
-    "stop_name": "Santa Pola",
-    "stop_lat": 38.1964,
-    "stop_lon": -0.5615,
-    "zone_id": "vega_baja"
+    "stop_id": "50040500104",
+    "stop_name": "Av. Alcalde Vicente Escudero – Palacio del Agua Orihuela",
+    "stop_lat": 38.0878854982,
+    "stop_lon": -0.9532099944,
+    "is_station": false
   },
   {
-    "stop_id": "stop_4",
-    "stop_name": "La Marina",
-    "stop_lat": 38.1384,
-    "stop_lon": -0.6433,
-    "zone_id": "vega_baja"
+    "stop_id": "5090220208",
+    "stop_name": "av. Constitución (marquesina Bar Pantanico) Formentera del Segura",
+    "stop_lat": 38.0864780556,
+    "stop_lon": -0.7471563045,
+    "is_station": false
   },
   {
-    "stop_id": "stop_5",
-    "stop_name": "Guardamar",
-    "stop_lat": 38.0878,
-    "stop_lon": -0.6559,
-    "zone_id": "vega_baja"
+    "stop_id": "5090220107",
+    "stop_name": "av. Constitución 62 Formentera del Segura",
+    "stop_lat": 38.0865547652,
+    "stop_lon": -0.747043056,
+    "is_station": false
   },
   {
-    "stop_id": "stop_6",
-    "stop_name": "Torrevieja",
-    "stop_lat": 37.9792,
-    "stop_lon": -0.6758,
-    "zone_id": "vega_baja"
+    "stop_id": "5090030210",
+    "stop_name": "Av. Constitución, 62 - Supermercat Catral",
+    "stop_lat": 38.158766914,
+    "stop_lon": -0.7990887621,
+    "is_station": false
   },
   {
-    "stop_id": "stop_7",
-    "stop_name": "C.C. Zenia Boulevard",
-    "stop_lat": 37.9272,
-    "stop_lon": -0.735,
-    "zone_id": "vega_baja"
+    "stop_id": "5090030102",
+    "stop_name": "Av. Constitución, 77 - Supermercat Catral",
+    "stop_lat": 38.1588292498,
+    "stop_lon": -0.7990242926,
+    "is_station": false
   },
   {
-    "stop_id": "stop_8",
-    "stop_name": "Mil Palmeras",
-    "stop_lat": 37.8821,
-    "stop_lon": -0.7588,
-    "zone_id": "vega_baja"
+    "stop_id": "5090010211",
+    "stop_name": "Av. Cortes Valencianas - Residencial Vistabella - Depòsit d aigua Torrevieja",
+    "stop_lat": 38.0054200597,
+    "stop_lon": -0.6673421119,
+    "is_station": false
   },
   {
-    "stop_id": "stop_9",
-    "stop_name": "Pilar de la Horadada",
-    "stop_lat": 37.868,
-    "stop_lon": -0.7925,
-    "zone_id": "vega_baja"
+    "stop_id": "5090010112",
+    "stop_name": "Av. Cortes Valencianas - Urb. Jardín del Mar - Depòsit d aigua Torrevieja",
+    "stop_lat": 38.0064862372,
+    "stop_lon": -0.667014502,
+    "is_station": false
   },
   {
-    "stop_id": "stop_10",
-    "stop_name": "Alicante",
-    "stop_lat": 38.3375,
-    "stop_lon": -0.4914,
-    "zone_id": "vega_baja"
+    "stop_id": "5090010102",
+    "stop_name": "Av. Costa Blanca encreuament C/Rio Seco - Torre de la Horadada Pilar de la Horadada",
+    "stop_lat": 37.8751380974,
+    "stop_lon": -0.7631434202,
+    "is_station": false
   },
   {
-    "stop_id": "stop_11",
-    "stop_name": "Zenia Boulevard",
-    "stop_lat": 37.9272,
-    "stop_lon": -0.735,
-    "zone_id": "vega_baja"
+    "stop_id": "5090010221",
+    "stop_name": "Av. Costa Blanca encreuament C/Rio Segura - Torre de la Horadada Pilar de la Horadada",
+    "stop_lat": 37.8749952703,
+    "stop_lon": -0.7633624589,
+    "is_station": false
   },
   {
-    "stop_id": "stop_12",
-    "stop_name": "Orihuela",
-    "stop_lat": 38.0779,
-    "stop_lon": -0.9447,
-    "zone_id": "vega_baja"
+    "stop_id": "5090030101",
+    "stop_name": "Av. Crevillente, 22 Dolores",
+    "stop_lat": 38.1384615668,
+    "stop_lon": -0.7729987863,
+    "is_station": false
   },
   {
-    "stop_id": "stop_13",
-    "stop_name": "Hospital Vega Baja",
-    "stop_lat": 38.0772,
-    "stop_lon": -0.8451,
-    "zone_id": "vega_baja"
+    "stop_id": "5090030212",
+    "stop_name": "Av. Crevillente, 37 Dolores",
+    "stop_lat": 38.1383926309,
+    "stop_lon": -0.7730812186,
+    "is_station": false
   },
   {
-    "stop_id": "stop_14",
-    "stop_name": "Callosa de Segura",
-    "stop_lat": 38.1292,
-    "stop_lon": -0.8768,
-    "zone_id": "vega_baja"
+    "stop_id": "5001010204",
+    "stop_name": "av. de los Llanos Heredades",
+    "stop_lat": 38.0909957237,
+    "stop_lon": -0.7622291441,
+    "is_station": false
   },
   {
-    "stop_id": "stop_15",
-    "stop_name": "La Mata",
-    "stop_lat": 38.0267,
-    "stop_lon": -0.6558,
-    "zone_id": "vega_baja"
+    "stop_id": "5001010115",
+    "stop_name": "av. de los Llanos Iglesia Heredades",
+    "stop_lat": 38.0909133108,
+    "stop_lon": -0.7622429398,
+    "is_station": false
   },
   {
-    "stop_id": "stop_16",
-    "stop_name": "Hospital Torrevieja",
-    "stop_lat": 37.9615,
-    "stop_lon": -0.7138,
-    "zone_id": "vega_baja"
+    "stop_id": "5090090204",
+    "stop_name": "Av. del Mar, 102 Montesinos, Los",
+    "stop_lat": 38.0278049991,
+    "stop_lon": -0.746705,
+    "is_station": false
   },
   {
-    "stop_id": "stop_17",
-    "stop_name": "Lago Jardín",
-    "stop_lat": 37.9555,
-    "stop_lon": -0.7169,
-    "zone_id": "vega_baja"
+    "stop_id": "5090050210",
+    "stop_name": "Av. del Mar, 13 San Miguel de Salinas",
+    "stop_lat": 37.9777850163,
+    "stop_lon": -0.7855181832,
+    "is_station": false
   },
   {
-    "stop_id": "stop_18",
-    "stop_name": "Desamparados",
-    "stop_lat": 38.0674,
-    "stop_lon": -0.9631,
-    "zone_id": "vega_baja"
+    "stop_id": "5090090101",
+    "stop_name": "Av. del Mar, 79 Montesinos, Los",
+    "stop_lat": 38.0277509991,
+    "stop_lon": -0.746392,
+    "is_station": false
   },
   {
-    "stop_id": "stop_19",
-    "stop_name": "Los Montesinos",
-    "stop_lat": 38.0264,
-    "stop_lon": -0.7628,
-    "zone_id": "vega_baja"
+    "stop_id": "5090050108",
+    "stop_name": "Av. del Mar, 8 San Miguel de Salinas",
+    "stop_lat": 37.9776789043,
+    "stop_lon": -0.7854410046,
+    "is_station": false
   },
   {
-    "stop_id": "stop_20",
-    "stop_name": "Crevillente",
-    "stop_lat": 38.2494,
-    "stop_lon": -0.8105,
-    "zone_id": "vega_baja"
+    "stop_id": "5090010214",
+    "stop_name": "Av. Desiderio Rodríguez encreuament C/ Johannes Kepler - La Veleta Torrevieja",
+    "stop_lat": 37.9625605748,
+    "stop_lon": -0.7038220459,
+    "is_station": false
   },
   {
-    "stop_id": "stop_21",
-    "stop_name": "Aeropuerto Alicante/Elche",
-    "stop_lat": 38.2822,
-    "stop_lon": -0.5582,
-    "zone_id": "vega_baja"
+    "stop_id": "5090010109",
+    "stop_name": "Av. Desiderio Rodríguez encreuament C/ Mar Caribe - La Veleta Torrevieja",
+    "stop_lat": 37.9628675084,
+    "stop_lon": -0.7032422228,
+    "is_station": false
   },
   {
-    "stop_id": "stop_22",
-    "stop_name": "Almoradí",
-    "stop_lat": 38.1105,
-    "stop_lon": -0.7915,
-    "zone_id": "vega_baja"
+    "stop_id": "5090170104",
+    "stop_name": "Av. Desiderio Rodriguez front 76 (Cinta de la sal) Torrevieja",
+    "stop_lat": 37.9717186647,
+    "stop_lon": -0.6948299948,
+    "is_station": false
   },
   {
-    "stop_id": "stop_23",
-    "stop_name": "Rojales",
-    "stop_lat": 38.0863,
-    "stop_lon": -0.7226,
-    "zone_id": "vega_baja"
+    "stop_id": "5090010213",
+    "stop_name": "Av. Desiderio Rodriguez, 122 (Pizzeria Los Amigos) Torrevieja",
+    "stop_lat": 37.9671296127,
+    "stop_lon": -0.6995053036,
+    "is_station": false
   },
   {
-    "stop_id": "stop_24",
-    "stop_name": "Aeropuerto",
-    "stop_lat": 38.2822,
-    "stop_lon": -0.5582,
-    "zone_id": "vega_baja"
+    "stop_id": "5090010110",
+    "stop_name": "Av. Desiderio Rodriguez, 31 (Pizzeria Los Amigos) Torrevieja",
+    "stop_lat": 37.9670347368,
+    "stop_lon": -0.6993494804,
+    "is_station": false
   },
   {
-    "stop_id": "stop_25",
-    "stop_name": "Abanilla",
-    "stop_lat": 38.2045,
-    "stop_lon": -1.0408,
-    "zone_id": "vega_baja"
+    "stop_id": "5090210107",
+    "stop_name": "Av. Desiderio Rodriguez, 76 (Cinta de la sal) Torrevieja",
+    "stop_lat": 37.9721394363,
+    "stop_lon": -0.6947760188,
+    "is_station": false
   },
   {
-    "stop_id": "stop_26",
-    "stop_name": "La Murada",
-    "stop_lat": 38.1884,
-    "stop_lon": -0.9634,
-    "zone_id": "vega_baja"
+    "stop_id": "5090210202",
+    "stop_name": "Av. Diego Ramirez – Bodega Rivera Torrevieja",
+    "stop_lat": 37.9800515057,
+    "stop_lon": -0.6872567302,
+    "is_station": false
   },
   {
-    "stop_id": "stop_27",
-    "stop_name": "Benferri",
-    "stop_lat": 38.1407,
-    "stop_lon": -0.9611,
-    "zone_id": "vega_baja"
+    "stop_id": "50040400101",
+    "stop_name": "Av. Duque Tamames – Glorieta Orihuela",
+    "stop_lat": 38.0818513079,
+    "stop_lon": -0.9446207189,
+    "is_station": false
   },
   {
-    "stop_id": "stop_28",
-    "stop_name": "Elche",
-    "stop_lat": 38.2721,
-    "stop_lon": -0.6912,
-    "zone_id": "vega_baja"
+    "stop_id": "5090010119",
+    "stop_name": "av. La Alegría (La Marina) Elx",
+    "stop_lat": 38.1451921316,
+    "stop_lon": -0.6456399684,
+    "is_station": false
   },
   {
-    "stop_id": "stop_29",
-    "stop_name": "Sant Vicent del Raspeig",
-    "stop_lat": 38.3962,
-    "stop_lon": -0.5255,
-    "zone_id": "vega_baja"
+    "stop_id": "5001020203",
+    "stop_name": "av. La Alegría La Marina Elx",
+    "stop_lat": 38.1427969991,
+    "stop_lon": -0.646522,
+    "is_station": false
   },
   {
-    "stop_id": "stop_30",
-    "stop_name": "Crevillent",
-    "stop_lat": 38.2494,
-    "stop_lon": -0.8105,
-    "zone_id": "vega_baja"
+    "stop_id": "5001010105",
+    "stop_name": "Av. La Paz, 21 junt farmacia Jacarilla",
+    "stop_lat": 38.0616436136,
+    "stop_lon": -0.8678117812,
+    "is_station": false
   },
   {
-    "stop_id": "stop_31",
-    "stop_name": "Doña Inés (Carrefour)",
-    "stop_lat": 37.9940,
-    "stop_lon": -0.6850,
-    "zone_id": "vega_baja"
+    "stop_id": "5001010214",
+    "stop_name": "Av. La Paz, 36 junt farmacia Jacarilla",
+    "stop_lat": 38.0616994049,
+    "stop_lon": -0.8678433184,
+    "is_station": false
   },
   {
-    "stop_id": "stop_32",
-    "stop_name": "Los Balcones",
-    "stop_lat": 37.9700,
-    "stop_lon": -0.7100,
-    "zone_id": "vega_baja"
+    "stop_id": "5001010111",
+    "stop_name": "Av. Orihuela, 21 (estación Repsol) Almoradí",
+    "stop_lat": 38.1045989991,
+    "stop_lon": -0.797468,
+    "is_station": false
   },
   {
-    "stop_id": "stop_33",
-    "stop_name": "Hotel Fontana",
-    "stop_lat": 37.9750,
-    "stop_lon": -0.6820,
-    "zone_id": "vega_baja"
+    "stop_id": "5001010208",
+    "stop_name": "Av. Orihuela, front 21 (estación Repsol) Almoradí",
+    "stop_lat": 38.1047969991,
+    "stop_lon": -0.797382,
+    "is_station": false
+  },
+  {
+    "stop_id": "5003010202",
+    "stop_name": "Av. Príncipe de Asturias (Barrio de San Pedro) - Puente del Rey Orihuela",
+    "stop_lat": 38.0854845052,
+    "stop_lon": -0.9388516954,
+    "is_station": false
+  },
+  {
+    "stop_id": "5003010108",
+    "stop_name": "Av. Príncipe de Asturias, front 10 - Puente del Rey Orihuela",
+    "stop_lat": 38.0860695558,
+    "stop_lon": -0.9388801454,
+    "is_station": false
+  },
+  {
+    "stop_id": "5001020208",
+    "stop_name": "av. San Isidro 8 San Fulgencio",
+    "stop_lat": 38.1135799991,
+    "stop_lon": -0.71679,
+    "is_station": false
+  },
+  {
+    "stop_id": "5001020109",
+    "stop_name": "av. san Isidro San Fulgencio",
+    "stop_lat": 38.1130949991,
+    "stop_lon": -0.716987,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090220209",
+    "stop_name": "av. Vega Baja (junt Casa Pollina) (front) Rojales",
+    "stop_lat": 38.0882587761,
+    "stop_lon": -0.7247876055,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090220106",
+    "stop_name": "av. Vega Baja (junt Casa Pollina) Rojales",
+    "stop_lat": 38.0883401944,
+    "stop_lon": -0.7248094843,
+    "is_station": false
+  },
+  {
+    "stop_id": "50040400107",
+    "stop_name": "Barrio Mariano Cases – CV-921 pk 1,5 Orihuela",
+    "stop_lat": 38.0634908685,
+    "stop_lon": -0.9463449257,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090050215",
+    "stop_name": "Bigastro – Farmacia Bigastro",
+    "stop_lat": 38.0630354414,
+    "stop_lon": -0.9000694367,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090050214",
+    "stop_name": "Bigastro – Hipperber Bigastro",
+    "stop_lat": 38.0629543562,
+    "stop_lon": -0.9035125432,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090050213",
+    "stop_name": "Bigastro – Mas y mas Bigastro",
+    "stop_lat": 38.0632399991,
+    "stop_lon": -0.894575,
+    "is_station": false
+  },
+  {
+    "stop_id": "5001010117",
+    "stop_name": "c. Acequia del Río front supermercat DIA Rojales",
+    "stop_lat": 38.0880889991,
+    "stop_lon": -0.729445,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090210209",
+    "stop_name": "C. Almoravides Orihuela",
+    "stop_lat": 37.9453751412,
+    "stop_lon": -0.7232602756,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090050104",
+    "stop_name": "c. Bañuls (junt famacia) Bigastro",
+    "stop_lat": 38.0629355949,
+    "stop_lon": -0.9000435518,
+    "is_station": false
+  },
+  {
+    "stop_id": "5001010102",
+    "stop_name": "c. Bañuls 73 Bigastro",
+    "stop_lat": 38.0628794994,
+    "stop_lon": -0.9029556857,
+    "is_station": false
+  },
+  {
+    "stop_id": "5001010206",
+    "stop_name": "c. Dr. Marañón Almoradí",
+    "stop_lat": 38.1069279991,
+    "stop_lon": -0.787202,
+    "is_station": false
+  },
+  {
+    "stop_id": "5001010113",
+    "stop_name": "c. Dr. Marañón junt taulells La Torre Almoradí",
+    "stop_lat": 38.1068799991,
+    "stop_lon": -0.78735,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090210208",
+    "stop_name": "C. Escorpiones . Mercadona Torrevieja",
+    "stop_lat": 37.9498119991,
+    "stop_lon": -0.719273,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090210103",
+    "stop_name": "C. Escorpiones Torrevieja",
+    "stop_lat": 37.9487923126,
+    "stop_lon": -0.7158956841,
+    "is_station": false
+  },
+  {
+    "stop_id": "5001010215",
+    "stop_name": "c. Goya 11 Bigastro",
+    "stop_lat": 38.0640399991,
+    "stop_lon": -0.895663,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090050105",
+    "stop_name": "c. Ramon y Cajal (junt estanc) Bigastro",
+    "stop_lat": 38.06264699,
+    "stop_lon": -0.895043,
+    "is_station": false
+  },
+  {
+    "stop_id": "5001020108",
+    "stop_name": "c. san Antón 15 San Fulgencio",
+    "stop_lat": 38.1112479991,
+    "stop_lon": -0.718795,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090040107",
+    "stop_name": "C.C Zenia Boulevard Orihuela",
+    "stop_lat": 37.9296619991,
+    "stop_lon": -0.734711,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090050107",
+    "stop_name": "C/ 19 de abril, 29 - Guardia Civil San Miguel de Salinas",
+    "stop_lat": 37.9791002815,
+    "stop_lon": -0.7890592749,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090050211",
+    "stop_name": "C/ 19 de abril, 32 - Guardia Civil San Miguel de Salinas",
+    "stop_lat": 37.9791119271,
+    "stop_lon": -0.7889245786,
+    "is_station": false
+  },
+  {
+    "stop_id": "50040400106",
+    "stop_name": "C/ Amalia Ortuno – Farmacia (Arneva) Orihuela",
+    "stop_lat": 38.0559557142,
+    "stop_lon": -0.9408671917,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090100202",
+    "stop_name": "C/ Apolo, 72 - Gasolinera BP Torrevieja",
+    "stop_lat": 37.9827529991,
+    "stop_lon": -0.67933,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090150102",
+    "stop_name": "C/ Apolo, 93 - Gasolinera BP Torrevieja",
+    "stop_lat": 37.9830088135,
+    "stop_lon": -0.679623936,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090030103",
+    "stop_name": "C/ Azorín, 22 Catral",
+    "stop_lat": 38.162331197,
+    "stop_lon": -0.8016368164,
+    "is_station": false
+  },
+  {
+    "stop_id": "50040500111",
+    "stop_name": "C/ Ctra. La Aparecida 16 (La Aparecida) Orihuela",
+    "stop_lat": 38.0804880081,
+    "stop_lon": -1.0081866453,
+    "is_station": false
+  },
+  {
+    "stop_id": "50040500110",
+    "stop_name": "C/ Ctra. La Aparecida 48A (La Purita) Orihuela",
+    "stop_lat": 38.0805824606,
+    "stop_lon": -1.0005222958,
+    "is_station": false
+  },
+  {
+    "stop_id": "50040500203",
+    "stop_name": "C/ Ctra. La Aparecida frente 10 (La Aparecida) Orihuela",
+    "stop_lat": 38.0804032846,
+    "stop_lon": -1.0076954576,
+    "is_station": false
+  },
+  {
+    "stop_id": "50040500204",
+    "stop_name": "C/ Ctra. La Aparecida frente 40 (La Purita) Orihuela",
+    "stop_lat": 38.0803342789,
+    "stop_lon": -0.9994967786,
+    "is_station": false
+  },
+  {
+    "stop_id": "50040500103",
+    "stop_name": "C/ de la Manceberia 4 Orihuela",
+    "stop_lat": 38.0845939991,
+    "stop_lon": -0.948043,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090030211",
+    "stop_name": "C/ de la Purísima, 19 Catral",
+    "stop_lat": 38.1620746065,
+    "stop_lon": -0.8019383182,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090130102",
+    "stop_name": "C/ Francisco Tormo de Haro encreuament C/ Ocarasa - LIDL Orihuela",
+    "stop_lat": 38.0814473619,
+    "stop_lon": -0.94898541,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090130205",
+    "stop_name": "C/ Francisco Tormo de Haro encreuament C/ Oriolanos ausentes - LIDL Orihuela",
+    "stop_lat": 38.0813308368,
+    "stop_lon": -0.9491771743,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090130103",
+    "stop_name": "C/ Francisco Tormo de Haro, 24 - Registro Orihuela",
+    "stop_lat": 38.0825596322,
+    "stop_lon": -0.9529000725,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090130204",
+    "stop_name": "C/ Francisco Tormo de Haro, front 24 - Registro Orihuela",
+    "stop_lat": 38.0824688477,
+    "stop_lon": -0.9530409052,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090050103",
+    "stop_name": "C/ General Bañuls, 107 - Entrada Bigastro",
+    "stop_lat": 38.0627606757,
+    "stop_lon": -0.9059903243,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090050216",
+    "stop_name": "C/ General Bañuls, 32 - Entrada Bigastro",
+    "stop_lat": 38.0628687889,
+    "stop_lon": -0.9060125891,
+    "is_station": false
+  },
+  {
+    "stop_id": "50040400104",
+    "stop_name": "C/ Hurquillo-Arneva 1 (CV-923) (Hurquillo) Orihuela",
+    "stop_lat": 38.059018407,
+    "stop_lon": -0.9234436328,
+    "is_station": false
+  },
+  {
+    "stop_id": "50040400105",
+    "stop_name": "C/ Hurquillo, frente 16 (Hurquillo) Orihuela",
+    "stop_lat": 38.0553424947,
+    "stop_lon": -0.9388757381,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090010217",
+    "stop_name": "C/ Isla Tabarca, 6 - Cap Roig Orihuela",
+    "stop_lat": 37.9144764734,
+    "stop_lon": -0.7374584117,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090010106",
+    "stop_name": "C/ Isla Tabarca, front 6 - Cap Roig Orihuela",
+    "stop_lat": 37.9143255941,
+    "stop_lon": -0.7372790181,
+    "is_station": false
+  },
+  {
+    "stop_id": "50040500210",
+    "stop_name": "C/ La Constitución 53 – San Francisco Orihuela",
+    "stop_lat": 38.0931199991,
+    "stop_lon": -0.955709,
+    "is_station": false
+  },
+  {
+    "stop_id": "50040500215",
+    "stop_name": "C/ López Pozas 14 Orihuela",
+    "stop_lat": 38.0852453799,
+    "stop_lon": -0.9482053457,
+    "is_station": false
+  },
+  {
+    "stop_id": "5001120113",
+    "stop_name": "C/ Mayor, 44 Daya Nueva",
+    "stop_lat": 38.1132075747,
+    "stop_lon": -0.7594423326,
+    "is_station": false
+  },
+  {
+    "stop_id": "5001120210",
+    "stop_name": "C/ Mayor, 57 Daya Nueva",
+    "stop_lat": 38.1131248306,
+    "stop_lon": -0.75914199,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090230103",
+    "stop_name": "C/ Mestre Albéniz Rafal",
+    "stop_lat": 38.1025226809,
+    "stop_lon": -0.8518122963,
+    "is_station": false
+  },
+  {
+    "stop_id": "5001010110",
+    "stop_name": "C/ Norte, 21 - La Cruz de Galindo Almoradí",
+    "stop_lat": 38.0992445327,
+    "stop_lon": -0.8045685191,
+    "is_station": false
+  },
+  {
+    "stop_id": "5001010209",
+    "stop_name": "C/ Norte, 22 - La Cruz de Galindo Almoradí",
+    "stop_lat": 38.0993329991,
+    "stop_lon": -0.804606,
+    "is_station": false
+  },
+  {
+    "stop_id": "5003010107",
+    "stop_name": "C/ Orihuela - La Campaneta Orihuela",
+    "stop_lat": 38.0903169111,
+    "stop_lon": -0.8966430664,
+    "is_station": false
+  },
+  {
+    "stop_id": "5003010106",
+    "stop_name": "C/ Orihuela - Vereda Don Fernando Orihuela",
+    "stop_lat": 38.0911472127,
+    "stop_lon": -0.8810808676,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090100203",
+    "stop_name": "C/ Orihuela, 86 - Gasolinera BP Torrevieja",
+    "stop_lat": 37.9826624992,
+    "stop_lon": -0.6862458825,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090170106",
+    "stop_name": "C/ Ramon Gallud, 74 - Hotel Fontana Torrevieja",
+    "stop_lat": 37.9772842683,
+    "stop_lon": -0.6798229175,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090010105",
+    "stop_name": "C/ Saavedra Fajardo, 6 - Campoamor - Hotel Montepiedra Orihuela",
+    "stop_lat": 37.9017144573,
+    "stop_lon": -0.7532090036,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090010218",
+    "stop_name": "C/ Saavedra Fajardo, front 6 - Campoamor - Hotel Montepiedra Orihuela",
+    "stop_lat": 37.9015743777,
+    "stop_lon": -0.7531374059,
+    "is_station": false
+  },
+  {
+    "stop_id": "50040500216",
+    "stop_name": "C/ San Agustín 34 Orihuela",
+    "stop_lat": 38.0828916898,
+    "stop_lon": -0.9475909291,
+    "is_station": false
+  },
+  {
+    "stop_id": "50040500214",
+    "stop_name": "C/ Santa Justa – Ayuntamiento Orihuela",
+    "stop_lat": 38.0854435213,
+    "stop_lon": -0.949701821,
+    "is_station": false
+  },
+  {
+    "stop_id": "50040500112",
+    "stop_name": "C/ Tetuan 18 (La Italiana) Orihuela",
+    "stop_lat": 38.0766849991,
+    "stop_lon": -1.013279,
+    "is_station": false
+  },
+  {
+    "stop_id": "50040500202",
+    "stop_name": "C/ Tetuan. frente 18 (La Italiana) Orihuela",
+    "stop_lat": 38.0766679991,
+    "stop_lon": -1.013021,
+    "is_station": false
+  },
+  {
+    "stop_id": "50040500113",
+    "stop_name": "C/ Tomillo – Raiguero Poniente 30 (La Cabra) Orihuela",
+    "stop_lat": 38.0753484853,
+    "stop_lon": -1.0206919534,
+    "is_station": false
+  },
+  {
+    "stop_id": "5003010101",
+    "stop_name": "Callosa de Segura Callosa de Segura",
+    "stop_lat": 38.1226274925,
+    "stop_lon": -0.8768811807,
+    "is_station": false
+  },
+  {
+    "stop_id": "5001010213",
+    "stop_name": "Camino Jacarillo, 1 Repsol Benejúzar",
+    "stop_lat": 38.0770693592,
+    "stop_lon": -0.8431306801,
+    "is_station": false
+  },
+  {
+    "stop_id": "5001010106",
+    "stop_name": "Camino Jacarillo, front 1 Repsol Benejúzar",
+    "stop_lat": 38.0770159513,
+    "stop_lon": -0.8430869954,
+    "is_station": false
+  },
+  {
+    "stop_id": "5001020111",
+    "stop_name": "Camping La Marina - La Marina II Elx",
+    "stop_lat": 38.1306339991,
+    "stop_lon": -0.650017,
+    "is_station": false
+  },
+  {
+    "stop_id": "5001020205",
+    "stop_name": "Camping La Marina (front) - La Marina II Elx",
+    "stop_lat": 38.1306219991,
+    "stop_lon": -0.650092,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090010205",
+    "stop_name": "Camping La Marina (front) Elx",
+    "stop_lat": 38.1296244208,
+    "stop_lon": -0.650306858,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090010118",
+    "stop_name": "Camping La Marina Elx",
+    "stop_lat": 38.1296138348,
+    "stop_lon": -0.6501837927,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090010104",
+    "stop_name": "Campoamor Orihuela",
+    "stop_lat": 37.9015858232,
+    "stop_lon": -0.7493789958,
+    "is_station": false
+  },
+  {
+    "stop_id": "5001120121",
+    "stop_name": "Casco Urbano Daya Vieja",
+    "stop_lat": 38.1049139991,
+    "stop_lon": -0.738604,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090100104",
+    "stop_name": "CC. Habaneras Torrevieja",
+    "stop_lat": 37.9897869991,
+    "stop_lon": -0.685696,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090040112",
+    "stop_name": "Cibeles Torrevieja",
+    "stop_lat": 37.9768828346,
+    "stop_lon": -0.6900485815,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090050102",
+    "stop_name": "Correntias - CV-95 pk 1+700 ascendente Orihuela",
+    "stop_lat": 38.0752843931,
+    "stop_lon": -0.9272386089,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090050217",
+    "stop_name": "Correntias - CV-95 pk 1+700 descendente Orihuela",
+    "stop_lat": 38.0754424932,
+    "stop_lon": -0.9273386017,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090030105",
+    "stop_name": "Crevillent – Camping Marjal Crevillent",
+    "stop_lat": 38.1775037706,
+    "stop_lon": -0.8093224606,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090030107",
+    "stop_name": "Crevillent – El Rocio Crevillent",
+    "stop_lat": 38.2066749216,
+    "stop_lon": -0.8152212156,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090130104",
+    "stop_name": "Cruz Cubierta - CV-915 pk 2+450 ascendente Orihuela",
+    "stop_lat": 38.0742641295,
+    "stop_lon": -0.9699990865,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090130203",
+    "stop_name": "Cruz Cubierta - CV-915 pk 2+450 descendente Orihuela",
+    "stop_lat": 38.0742048201,
+    "stop_lon": -0.9698667612,
+    "is_station": false
+  },
+  {
+    "stop_id": "5001010205",
+    "stop_name": "ctra. Almoradí junt Bar Sáez Heredades",
+    "stop_lat": 38.0948829991,
+    "stop_lon": -0.763168,
+    "is_station": false
+  },
+  {
+    "stop_id": "5001010114",
+    "stop_name": "ctra. Almoradí-Heredades junt bar Sáez Heredades",
+    "stop_lat": 38.0948199991,
+    "stop_lon": -0.76323,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090050106",
+    "stop_name": "Ctra. Orihuela, 8 - Vistabella Jacarilla",
+    "stop_lat": 38.0245957939,
+    "stop_lon": -0.8365558463,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090050212",
+    "stop_name": "Ctra. Orihuela, front 8 - Vistabella Jacarilla",
+    "stop_lat": 38.0246731903,
+    "stop_lon": -0.8364727166,
+    "is_station": false
+  },
+  {
+    "stop_id": "5003010102",
+    "stop_name": "CV-9112 - El Baden Orihuela",
+    "stop_lat": 38.1054448621,
+    "stop_lon": -0.8622784726,
+    "is_station": false
+  },
+  {
+    "stop_id": "50040400103",
+    "stop_name": "CV-925 pk 0,300 I Orihuela",
+    "stop_lat": 38.0768852808,
+    "stop_lon": -0.9410962015,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090130106",
+    "stop_name": "Desamparados - Universitat - CV-915 pk 3+600 ascendente Orihuela",
+    "stop_lat": 38.0673279526,
+    "stop_lon": -0.979208612,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090130201",
+    "stop_name": "Desamparados - Universitat - CV-915 pk 3+650 descendente Orihuela",
+    "stop_lat": 38.0669747717,
+    "stop_lon": -0.9793914873,
+    "is_station": false
+  },
+  {
+    "stop_id": "5003010208",
+    "stop_name": "El Badén Orihuela",
+    "stop_lat": 38.1055258233,
+    "stop_lon": -0.8622212395,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090030106",
+    "stop_name": "El Realengo Crevillent",
+    "stop_lat": 38.201082318,
+    "stop_lon": -0.8136478862,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090100103",
+    "stop_name": "El Salad - CV-905 pk 7+950 ascendente Torrevieja",
+    "stop_lat": 38.0089299991,
+    "stop_lon": -0.694649,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090100205",
+    "stop_name": "El Salad - CV-905 pk 7+950 descendente Torrevieja",
+    "stop_lat": 38.0088354208,
+    "stop_lon": -0.6943581646,
+    "is_station": false
+  },
+  {
+    "stop_id": "5014010109",
+    "stop_name": "Elx-Benijófar Alacant",
+    "stop_lat": 38.301629,
+    "stop_lon": -0.533145,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090220108",
+    "stop_name": "Estación de Autobuses Almoradí",
+    "stop_lat": 38.1132388314,
+    "stop_lon": -0.7868582497,
+    "is_station": true
+  },
+  {
+    "stop_id": "5090010116",
+    "stop_name": "Estación de Autobuses Guardamar del Segura",
+    "stop_lat": 38.0877707496,
+    "stop_lon": -0.6560185196,
+    "is_station": true
+  },
+  {
+    "stop_id": "5003010109",
+    "stop_name": "Estación intermodal Orihuela",
+    "stop_lat": 38.0773340023,
+    "stop_lon": -0.9453912551,
+    "is_station": true
+  },
+  {
+    "stop_id": "5090230109",
+    "stop_name": "Estación Miguel Hernández Orihuela",
+    "stop_lat": 38.0781033594,
+    "stop_lon": -0.9443291702,
+    "is_station": true
+  },
+  {
+    "stop_id": "5090050109",
+    "stop_name": "Ford - CV-95 pk 19+700 ascendente San Miguel de Salinas",
+    "stop_lat": 37.9758713202,
+    "stop_lon": -0.7811043967,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090050209",
+    "stop_name": "Ford - CV-95 pk 19+700 descendente San Miguel de Salinas",
+    "stop_lat": 37.9759639856,
+    "stop_lon": -0.7810533269,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090060103",
+    "stop_name": "Guardamar – Restautant Xinés Guardamar del Segura",
+    "stop_lat": 38.0833459991,
+    "stop_lon": -0.650936,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090070105",
+    "stop_name": "Hospital Torrevieja Torrevieja",
+    "stop_lat": 37.9643925369,
+    "stop_lon": -0.7172232255,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090230104",
+    "stop_name": "Hospital Vega Baja Orihuela",
+    "stop_lat": 38.0895615002,
+    "stop_lon": -0.8535286554,
+    "is_station": false
+  },
+  {
+    "stop_id": "5003010203",
+    "stop_name": "La Campaneta Orihuela",
+    "stop_lat": 38.0902463917,
+    "stop_lon": -0.8964056911,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090040202",
+    "stop_name": "La Cibeles Torrevieja",
+    "stop_lat": 37.9769649994,
+    "stop_lon": -0.6901978524,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090010204",
+    "stop_name": "La Marina Elx",
+    "stop_lat": 38.1455867105,
+    "stop_lon": -0.645705819,
+    "is_station": false
+  },
+  {
+    "stop_id": "5001020204",
+    "stop_name": "La Marina III (front) Elx",
+    "stop_lat": 38.1365029991,
+    "stop_lon": -0.648471,
+    "is_station": false
+  },
+  {
+    "stop_id": "5001020112",
+    "stop_name": "La Marina III Elx",
+    "stop_lat": 38.1364729991,
+    "stop_lon": -0.648409,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090100105",
+    "stop_name": "La Tejera (Molino) Torrevieja",
+    "stop_lat": 37.9844059991,
+    "stop_lon": -0.682354,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090050205",
+    "stop_name": "La Zenia (front) Orihuela",
+    "stop_lat": 37.9254919991,
+    "stop_lon": -0.728357,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090050113",
+    "stop_name": "La Zenia Orihuela",
+    "stop_lat": 37.9257235571,
+    "stop_lon": -0.7290374338,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090050208",
+    "stop_name": "Los Balcones - CV-95 pk 25+100 descendente Torrevieja",
+    "stop_lat": 37.9635666486,
+    "stop_lon": -0.7239468017,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090050110",
+    "stop_name": "Los Balcones - CV-95 pk 25+300 ascendente Torrevieja",
+    "stop_lat": 37.9630788328,
+    "stop_lon": -0.721956398,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090010103",
+    "stop_name": "Mil Palmeras (Nacional – 332) Pilar de la Horadada",
+    "stop_lat": 37.8915805971,
+    "stop_lon": -0.7623736845,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090010108",
+    "stop_name": "N-332 52+900 ascendente - Rocio de Mar Torrevieja",
+    "stop_lat": 37.9491232434,
+    "stop_lon": -0.7135766101,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090010215",
+    "stop_name": "N-332 52+900 descendente - Rocio de Mar Torrevieja",
+    "stop_lat": 37.9492075095,
+    "stop_lon": -0.7138280958,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090060205",
+    "stop_name": "N-332 pk 63+650 descendente - La Mata Torrevieja",
+    "stop_lat": 38.0241372606,
+    "stop_lon": -0.6570898059,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090060102",
+    "stop_name": "N-332 pk 63+900 ascendente - La Mata Torrevieja",
+    "stop_lat": 38.0262439991,
+    "stop_lon": -0.655954,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090010115",
+    "stop_name": "N-332 pk 67+300 ascendente - Urb. La Rosa Guardamar del Segura",
+    "stop_lat": 38.0560738544,
+    "stop_lon": -0.6568971718,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090010208",
+    "stop_name": "N-332 pk 67+570 descendente - Urb. La Rosa Guardamar del Segura",
+    "stop_lat": 38.0583071959,
+    "stop_lon": -0.6569832033,
+    "is_station": false
+  },
+  {
+    "stop_id": "50040500105",
+    "stop_name": "N-340 – Cementerio Orihuela",
+    "stop_lat": 38.093820207,
+    "stop_lon": -0.9611977603,
+    "is_station": false
+  },
+  {
+    "stop_id": "50040500209",
+    "stop_name": "N-340 – frente Cementerio Orihuela",
+    "stop_lat": 38.0936226872,
+    "stop_lon": -0.9611678647,
+    "is_station": false
+  },
+  {
+    "stop_id": "50040500108",
+    "stop_name": "N-340 n.º 36 – Rincón de Bonanza Orihuela",
+    "stop_lat": 38.0888480383,
+    "stop_lon": -0.9751609038,
+    "is_station": false
+  },
+  {
+    "stop_id": "50040500206",
+    "stop_name": "N-340 n.º 41 – Rincón de Bonanza Orihuela",
+    "stop_lat": 38.0887750802,
+    "stop_lon": -0.975031067,
+    "is_station": false
+  },
+  {
+    "stop_id": "50040500207",
+    "stop_name": "N-340 pk 384.5 – San José Obrero Orihuela",
+    "stop_lat": 38.0929919991,
+    "stop_lon": -0.970848,
+    "is_station": false
+  },
+  {
+    "stop_id": "50040500205",
+    "stop_name": "N-340 pk 683.2 – frente Residuos sólidos Orihuela",
+    "stop_lat": 38.0800261103,
+    "stop_lon": -0.9794588492,
+    "is_station": false
+  },
+  {
+    "stop_id": "50040500109",
+    "stop_name": "N-340 pk 683.2 – Residuos sólidos Orihuela",
+    "stop_lat": 38.0802542726,
+    "stop_lon": -0.9792117184,
+    "is_station": false
+  },
+  {
+    "stop_id": "50040500107",
+    "stop_name": "N-340 pk 684.5 – San José Obrero Orihuela",
+    "stop_lat": 38.0930909991,
+    "stop_lon": -0.970825,
+    "is_station": false
+  },
+  {
+    "stop_id": "50040500208",
+    "stop_name": "N-340 pk 685 – frente Rte El Piste Orihuela",
+    "stop_lat": 38.0934669991,
+    "stop_lon": -0.965643,
+    "is_station": false
+  },
+  {
+    "stop_id": "50040500106",
+    "stop_name": "N-340 pk 685 – Rte El Piste Orihuela",
+    "stop_lat": 38.0935649991,
+    "stop_lon": -0.965713,
+    "is_station": false
+  },
+  {
+    "stop_id": "5023310205",
+    "stop_name": "Parque-Barbarroja - CV-845 pk 18+600 ascendente Orihuela",
+    "stop_lat": 38.2763436651,
+    "stop_lon": -0.9645774447,
+    "is_station": false
+  },
+  {
+    "stop_id": "5023310102",
+    "stop_name": "Parque-Barbarroja CV-845 pk 18+600 descendente Orihuela",
+    "stop_lat": 38.2762694879,
+    "stop_lon": -0.9646114765,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090010101",
+    "stop_name": "Pilar de la Horadada Pilar de la Horadada",
+    "stop_lat": 37.8631465159,
+    "stop_lon": -0.7874329582,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090010114",
+    "stop_name": "Pinomar Guardamar del Segura",
+    "stop_lat": 38.034828419,
+    "stop_lon": -0.6600459049,
+    "is_station": false
+  },
+  {
+    "stop_id": "50040500211",
+    "stop_name": "Pl. Capuchinos Orihuela",
+    "stop_lat": 38.0910899577,
+    "stop_lon": -0.9527488402,
+    "is_station": false
+  },
+  {
+    "stop_id": "50040500212",
+    "stop_name": "Pl. Mpnserrate Orihuela",
+    "stop_lat": 38.0887843389,
+    "stop_lon": -0.9516760301,
+    "is_station": false
+  },
+  {
+    "stop_id": "50040500213",
+    "stop_name": "Pl. Santiago Orihuela",
+    "stop_lat": 38.087507751,
+    "stop_lon": -0.9508685177,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090210212",
+    "stop_name": "Platja Flamenca – CC. Via Park Orihuela",
+    "stop_lat": 37.932133993,
+    "stop_lon": -0.73205037,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090210211",
+    "stop_name": "Platja Flamenca – Mercadillo Orihuela",
+    "stop_lat": 37.9352265429,
+    "stop_lon": -0.7300468678,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090010107",
+    "stop_name": "Platja Flamenca Orihuela",
+    "stop_lat": 37.9314736837,
+    "stop_lon": -0.724421639,
+    "is_station": false
+  },
+  {
+    "stop_id": "5001010109",
+    "stop_name": "Pont Don Pedro – ermita Almoradí",
+    "stop_lat": 38.0965656738,
+    "stop_lon": -0.8143312703,
+    "is_station": false
+  },
+  {
+    "stop_id": "5001010210",
+    "stop_name": "Pont Don Pedro Almoradí",
+    "stop_lat": 38.0966999991,
+    "stop_lon": -0.814245,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090230207",
+    "stop_name": "Rafal Rafal",
+    "stop_lat": 38.1025579112,
+    "stop_lon": -0.8517163536,
+    "is_station": false
+  },
+  {
+    "stop_id": "5003010105",
+    "stop_name": "San Bartolomé Orihuela",
+    "stop_lat": 38.0902528279,
+    "stop_lon": -0.8601077291,
+    "is_station": false
+  },
+  {
+    "stop_id": "5001020207",
+    "stop_name": "San Francisco de Asís 4 San Fulgencio",
+    "stop_lat": 38.1332499991,
+    "stop_lon": -0.690774,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090010117",
+    "stop_name": "San Fulgencio Encreuament San Fulgencio",
+    "stop_lat": 38.119016862,
+    "stop_lon": -0.6561759393,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090090102",
+    "stop_name": "San Luis – CV-905 pk 6+600 ascendente Torrevieja",
+    "stop_lat": 38.0192853158,
+    "stop_lon": -0.7028615993,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090090203",
+    "stop_name": "San Luis – CV-905 pk 6+600 descendente Torrevieja",
+    "stop_lat": 38.0193347934,
+    "stop_lon": -0.7024663189,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090030104",
+    "stop_name": "Sant Felip Neri Crevillent",
+    "stop_lat": 38.1759364348,
+    "stop_lon": -0.7981928944,
+    "is_station": false
+  },
+  {
+    "stop_id": "5001010216",
+    "stop_name": "Taller Lavadero Bigastro",
+    "stop_lat": 38.0645349991,
+    "stop_lon": -0.900193,
+    "is_station": false
+  },
+  {
+    "stop_id": "5031010101",
+    "stop_name": "Torrevieja Torrevieja",
+    "stop_lat": 37.9796526168,
+    "stop_lon": -0.6754606318,
+    "is_station": false
+  },
+  {
+    "stop_id": "5001020110",
+    "stop_name": "Urb. Buenavista - La Marina I Elx",
+    "stop_lat": 38.1255429991,
+    "stop_lon": -0.6516,
+    "is_station": false
+  },
+  {
+    "stop_id": "5001020206",
+    "stop_name": "Urb. Buenavista (front) - La Marina I Elx",
+    "stop_lat": 38.1254599991,
+    "stop_lon": -0.651749,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090130105",
+    "stop_name": "Vereda Buenavista - CV-915 pk 2+750 ascendente Orihuela",
+    "stop_lat": 38.0723222689,
+    "stop_lon": -0.9718696619,
+    "is_station": false
+  },
+  {
+    "stop_id": "5090130202",
+    "stop_name": "Vereda Buenavista - CV-915 pk 2+750 descendente Orihuela",
+    "stop_lat": 38.072230208,
+    "stop_lon": -0.9717671256,
+    "is_station": false
+  },
+  {
+    "stop_id": "5003010204",
+    "stop_name": "Vereda Don Fernando Orihuela",
+    "stop_lat": 38.0910226003,
+    "stop_lon": -0.8809817032,
+    "is_station": false
   }
 ]

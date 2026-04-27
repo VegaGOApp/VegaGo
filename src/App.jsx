@@ -8,10 +8,11 @@ import './index.css';
 
 function App() {
   const [selectedLineId, setSelectedLineId] = useState(null);
+  const [selectedPOI, setSelectedPOI] = useState(null);
   const [theme, setTheme] = useState('light');
   const [lang, setLang] = useState('es');
   const [isNearbySelection, setIsNearbySelection] = useState(false);
-  
+
   // Single source of truth for moving vehicles
   const vehicles = useBusSimulation();
 
@@ -35,9 +36,9 @@ function App() {
   }, [favorites]);
 
   const toggleFavorite = (lineId) => {
-    setFavorites(prev => 
-      prev.includes(lineId) 
-        ? prev.filter(id => id !== lineId) 
+    setFavorites(prev =>
+      prev.includes(lineId)
+        ? prev.filter(id => id !== lineId)
         : [...prev, lineId]
     );
   };
@@ -49,25 +50,27 @@ function App() {
 
   return (
     <div className={`app-container ${theme}`}>
-      <BusMap 
-        selectedLineId={selectedLineId} 
-        onSelectLine={handleSelectLine} 
+      <BusMap
+        selectedLineId={selectedLineId}
+        selectedPOI={selectedPOI}
+        onSelectLine={handleSelectLine}
         theme={theme}
         vehicles={vehicles}
         isNearbySelection={isNearbySelection}
       />
-      
-      <SearchBar 
-        onSelectLine={handleSelectLine} 
+
+      <SearchBar
+        onSelectLine={handleSelectLine}
+        onSelectPOI={setSelectedPOI}
         selectedLineId={selectedLineId}
-        theme={theme} 
+        theme={theme}
         setTheme={setTheme}
         lang={lang}
         setLang={setLang}
       />
 
-      <RouteDetails 
-        selectedLineId={selectedLineId} 
+      <RouteDetails
+        selectedLineId={selectedLineId}
         onClose={() => setSelectedLineId(null)}
         lang={lang}
         favorites={favorites}
@@ -75,8 +78,9 @@ function App() {
         vehicles={vehicles}
       />
 
-      <Footer 
-        onSelectLine={handleSelectLine} 
+      <Footer
+        onSelectLine={handleSelectLine}
+        onSelectPOI={setSelectedPOI}
         selectedLineId={selectedLineId}
         lang={lang}
         favorites={favorites}

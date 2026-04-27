@@ -2,7 +2,10 @@ import React, { useEffect, useState, useMemo, useRef } from 'react';
 import { MapContainer, TileLayer, Polyline, CircleMarker, Popup, useMap, Marker, useMapEvents } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import { busLines } from '../data/busLines';
-import { Navigation } from 'lucide-react';
+import stopsData from '../data/gtfs/stops.json';
+import poisData from '../data/gtfs/pois.json';
+import { Navigation, ShoppingBag, Landmark, MapPin } from 'lucide-react';
+
 import L from 'leaflet';
 import { Geolocation } from '@capacitor/geolocation';
 import { createPortal } from 'react-dom';
@@ -16,55 +19,32 @@ L.Icon.Default.mergeOptions({
 });
 
 // 1. Move static data outside to prevent re-creation on every render
-const STATIONS = [
-  { name: 'Aeropuerto Alicante-Elche', coords: [38.2822, -0.5582], type: 'airport' },
-  { name: 'Orihuela Miguel Hernández', coords: [38.0779, -0.9447], type: 'ave' },
-  { name: 'Elche Alta Velocidad', coords: [38.2461, -0.7668], type: 'ave' },
-  { name: 'Alicante Terminal', coords: [38.3446, -0.4939], type: 'ave' },
-  { name: 'Callosa de Segura', coords: [38.1226, -0.8752], type: 'cercanias' },
-  { name: 'San Isidro - Albatera - Catral', coords: [38.1724, -0.8286], type: 'cercanias' },
-  { name: 'Crevillent', coords: [38.2285, -0.8166], type: 'cercanias' },
-  { name: 'Elche Parque', coords: [38.2669, -0.6983], type: 'cercanias' },
-  { name: 'San Gabriel', coords: [38.3291, -0.5087], type: 'cercanias' },
-  { name: 'Torrellano', coords: [38.2896, -0.5825], type: 'cercanias' },
-  { name: 'Elche Carrús', coords: [38.2689, -0.7067], type: 'cercanias' },
-  { name: 'Universitat d\'Alacant', coords: [38.3841, -0.5284], type: 'cercanias' },
-  { name: 'Sant Vicent Centre', coords: [38.3946, -0.5287], type: 'cercanias' },
-  { name: 'Hospital General Dr. Balmis (Alicante)', coords: [38.3585, -0.4886], type: 'hospital' },
-  { name: 'Hospital General Universitario de Elche', coords: [38.2612, -0.6861], type: 'hospital' },
-  { name: 'Hospital Universitario de Torrevieja', coords: [37.9615, -0.7138], type: 'hospital' },
-  { name: 'Hospital Vega Baja (Orihuela)', coords: [38.0772, -0.8451], type: 'hospital' },
-  { name: 'Hospital Universitario del Vinalopó', coords: [38.2520, -0.7100], type: 'hospital' }
-];
+const STATIONS = [];
+const TRAIN_LINES = [];
 
-const TRAIN_LINES = [
-  { 
-    name: 'Línea C-1 Cercanías', 
-    info: 'Alicante - Elche - Orihuela (Murcia)', 
-    color: '#ef4444',
-    path: [[38.3446, -0.4939], [38.3360, -0.5015], [38.3291, -0.5087], [38.3150, -0.5350], [38.3000, -0.5650], [38.2896, -0.5825], [38.2800, -0.6200], [38.2700, -0.6600], [38.2669, -0.6983], [38.2689, -0.7067], [38.2580, -0.7450], [38.2450, -0.7850], [38.2285, -0.8166], [38.2100, -0.8180], [38.1900, -0.8240], [38.1724, -0.8286], [38.1450, -0.8500], [38.1226, -0.8752], [38.1050, -0.9000], [38.0779, -0.9447]]
-  },
-  { 
-    name: 'Línea C-3 Cercanías', 
-    info: 'Alicante - Universidad - San Vicente', 
-    color: '#a855f7',
-    path: [[38.3446, -0.4939], [38.3580, -0.4990], [38.3720, -0.5150], [38.3841, -0.5284], [38.3946, -0.5287]]
-  }
-];
+const getStationIcon = () => {
+  const html = `
+    <div class="station-marker-circle" style="
+      background: #84cc16; 
+      width: 10px; 
+      height: 10px; 
+      border-radius: 50%; 
+      border: 1.25px solid white; 
+      box-shadow: 0 0 0 0.75px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.2);
+    "></div>
+  `;
+  return L.divIcon({ html, className: 'custom-station-container', iconSize: [10, 10], iconAnchor: [5, 5] });
+};
 
-const getStationIcon = (type) => {
-  let html = '';
-  const svgSize = 12;
-  if (type === 'airport') {
-    html = `<div class="station-icon airport"><svg width="${svgSize}" height="${svgSize}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.2-1.1.6L3 8l6 5-4 4-3-1-2 2 4 4 2-2-1-3 4-4 5 6 1.2-.7c.4-.2.7-.6.6-1.1Z"/></svg></div>`;
-  } else if (type === 'ave') {
-    html = `<div class="station-icon ave"><svg width="${svgSize}" height="${svgSize}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16"/><path d="M12 3v8"/><path d="M8 19l-2 3"/><path d="M18 22l-2-3"/><path d="M8 15h0"/><path d="M16 15h0"/></svg></div>`;
-  } else if (type === 'hospital') {
-    html = `<div class="station-icon hospital" style="font-weight: 900; font-size: 11px;">H</div>`;
-  } else {
-    html = `<div class="station-icon cercanias">C</div>`;
-  }
-  return L.divIcon({ html, className: 'custom-station-container', iconSize: [20, 20], iconAnchor: [10, 10] });
+const getPOIIcon = (type, isPremium) => {
+  let color = isPremium ? 'var(--primary)' : '#64748b';
+  let html = `
+    <div class="poi-marker ${isPremium ? 'premium' : ''}" style="background: ${color}; color: white; padding: 2px; border-radius: 50%; border: 1px solid white; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 5px rgba(0,0,0,0.2);">
+      ${type === 'shop' ? '<svg width="6" height="6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>' :
+        '<svg width="6" height="6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>'}
+    </div>
+  `;
+  return L.divIcon({ html, className: 'custom-poi-container', iconSize: [12, 12], iconAnchor: [6, 6] });
 };
 
 // 2. Memoized Bus Marker for high performance
@@ -83,15 +63,15 @@ const BusMarker = React.memo(({ vehicle, isSelected, onClick }) => {
   }), [isSelected, vehicle.heading, vehicle.lineColor]);
 
   return (
-    <Marker 
-      position={vehicle.coords} 
+    <Marker
+      position={vehicle.coords}
       icon={icon}
       eventHandlers={{ click: () => onClick(vehicle.lineId) }}
     >
       <Popup>
         <div style={{ textAlign: 'center' }}>
           <div style={{ fontWeight: 800, color: vehicle.lineColor }}>
-            {vehicle.lineId.includes('l') ? `Línea ${vehicle.lineId.replace('l','')}` : 'Bus'}
+            {vehicle.lineId.includes('l') ? `Línea ${vehicle.lineId.replace('l', '')}` : 'Bus'}
           </div>
           <div style={{ fontSize: '0.8rem' }}>Próxima parada: <strong>{vehicle.lastStop}</strong></div>
         </div>
@@ -102,26 +82,43 @@ const BusMarker = React.memo(({ vehicle, isSelected, onClick }) => {
 
 const MapFitter = ({ selectedLineId, isNearbySelection }) => {
   const map = useMap();
-  const isFirstRender = useRef(true);
-  
+  const lastFittedId = useRef(null);
+
   useEffect(() => {
-    if (selectedLineId) {
-      if (isNearbySelection) {
-        // Skip fitBounds to keep the user's focus on their current location + nearby popup
-        return;
+    // Only fit bounds if the selected ID changed and it's not a nearby selection
+    if (selectedLineId && selectedLineId !== lastFittedId.current) {
+      if (!isNearbySelection) {
+        const line = busLines.find(l => l.id === selectedLineId);
+        if (line && line.path.length > 0) {
+          map.fitBounds(line.path, { 
+            padding: [50, 50, 300, 50], 
+            animate: true, 
+            duration: 1.5 
+          });
+          lastFittedId.current = selectedLineId;
+        }
+      } else {
+        // If it's a nearby selection, we just acknowledge the ID without fitting
+        lastFittedId.current = selectedLineId;
       }
-      const line = busLines.find(l => l.id === selectedLineId);
-      if (line && line.path.length > 0) {
-        // For lines, we fit bounds first
-        map.fitBounds(line.path, { padding: [50, 50, 300, 50], animate: true, duration: 2 });
-      }
-      isFirstRender.current = false;
-    } else if (!isFirstRender.current) {
-      map.flyTo([38.0844, -0.7442], 10, { animate: true, duration: 1 });
-    } else {
-      isFirstRender.current = false;
+    } else if (!selectedLineId) {
+      // Clear last fitted ID when nothing is selected
+      lastFittedId.current = null;
+      // We removed the flyTo center on deselect to give user more freedom
     }
-  }, [selectedLineId, map]);
+  }, [selectedLineId, map, isNearbySelection]);
+
+  return null;
+};
+
+const POIFitter = ({ selectedPOI }) => {
+  const map = useMap();
+
+  useEffect(() => {
+    if (selectedPOI && selectedPOI.coords) {
+      map.flyTo(selectedPOI.coords, 16, { animate: true, duration: 1.5 });
+    }
+  }, [selectedPOI, map]);
 
   return null;
 };
@@ -155,7 +152,7 @@ const LocateControl = () => {
   const handleLocate = async () => {
     if (isLocating) return;
     setIsLocating(true);
-    
+
     try {
       const permissions = await Geolocation.checkPermissions();
       if (permissions.location !== 'granted') {
@@ -172,22 +169,22 @@ const LocateControl = () => {
         position = await Geolocation.getCurrentPosition({
           enableHighAccuracy: true,
           timeout: 7000,
-          maximumAge: 5000 
+          maximumAge: 5000
         });
       } catch (err) {
         position = await Geolocation.getCurrentPosition({
           enableHighAccuracy: false,
           timeout: 7000,
-          maximumAge: 10000 
+          maximumAge: 10000
         });
       }
 
       const { latitude, longitude } = position.coords;
       const latlng = [latitude, longitude];
-      
+
       const targetZoom = 15;
       const point = map.project(latlng, targetZoom);
-      const offsetPoint = point.add([0, window.innerHeight * 0.18]); 
+      const offsetPoint = point.add([0, window.innerHeight * 0.18]);
       const targetCenter = map.unproject(offsetPoint, targetZoom);
 
       map.flyTo(targetCenter, targetZoom, {
@@ -195,7 +192,7 @@ const LocateControl = () => {
         duration: 2,
         easeLinearity: 0.25
       });
-      
+
       window.dispatchEvent(new CustomEvent('onUserLocation', { detail: { lat: latitude, lng: longitude } }));
     } catch (e) {
       alert("GPS desactivado o sin señal.");
@@ -205,16 +202,22 @@ const LocateControl = () => {
     }
   };
 
+  useEffect(() => {
+    const handleRequest = () => handleLocate();
+    window.addEventListener('requestUserLocation', handleRequest);
+    return () => window.removeEventListener('requestUserLocation', handleRequest);
+  }, [handleLocate]);
+
   return (
-    <button 
-      onClick={handleLocate} 
-      className={`crystal-fab ${isLocating ? 'locating' : ''}`} 
+    <button
+      onClick={handleLocate}
+      className={`crystal-fab ${isLocating ? 'locating' : ''}`}
       disabled={isLocating}
-      style={{ 
-        position: 'absolute', 
-        bottom: 'calc(7.5rem + var(--safe-area-bottom))', 
-        right: '1.2rem', 
-        zIndex: 1000 
+      style={{
+        position: 'absolute',
+        bottom: 'calc(7.5rem + var(--safe-area-bottom))',
+        right: '1.2rem',
+        zIndex: 1000
       }}
       title="Mi ubicación"
     >
@@ -223,7 +226,151 @@ const LocateControl = () => {
   );
 };
 
-export default function BusMap({ selectedLineId, onSelectLine, theme, vehicles, isNearbySelection }) {
+const VEGA_BAJA_CENTER = [38.0844, -0.7442];
+const VEGA_BAJA_ZOOM = 10;
+const VEGA_BAJA_BOUNDS = [[37.5, -1.5], [38.7, 0.0]];
+
+// Memoized Background Stops Layer
+const StopsLayer = React.memo(() => {
+  return (
+    <>
+      {stopsData.map(stop => {
+        if (stop.is_station) {
+          return (
+            <Marker 
+              key={stop.stop_id} 
+              position={[stop.stop_lat, stop.stop_lon]} 
+              icon={getStationIcon()}
+              zIndexOffset={100}
+            >
+              <Popup>
+                <div style={{ fontWeight: 800 }}>{stop.stop_name}</div>
+                <div style={{ fontSize: '0.75rem', color: 'var(--primary)', fontWeight: 600 }}>Estación de Autobús</div>
+                <div style={{ fontSize: '0.7rem', opacity: 0.6 }}>Vega Baja - GVA</div>
+              </Popup>
+            </Marker>
+          );
+        }
+        
+        return (
+          <CircleMarker 
+            key={stop.stop_id} 
+            center={[stop.stop_lat, stop.stop_lon]} 
+            pathOptions={{ 
+              color: '#1e3a8a', 
+              fillColor: '#84cc16', 
+              fillOpacity: 0.4, 
+              weight: 0.6, 
+              opacity: 0.4 
+            }} 
+            radius={2.2}
+            interactive={true}
+          >
+            <Popup>
+              <div style={{ fontWeight: 800 }}>{stop.stop_name}</div>
+              <div style={{ fontSize: '0.75rem', opacity: 0.6 }}>ID: {stop.stop_id}</div>
+            </Popup>
+          </CircleMarker>
+        );
+      })}
+    </>
+  );
+});
+
+// Memoized All Lines Layer
+const LinesLayer = React.memo(({ selectedLineId, onSelectLine }) => {
+  return (
+    <>
+      {busLines.map(line => {
+        const isSelected = selectedLineId === line.id;
+        if (!line.path || line.path.length === 0) return null;
+        
+        return (
+          <React.Fragment key={line.id}>
+            <Polyline
+              positions={line.path}
+              pathOptions={{
+                color: '#ffffff',
+                weight: isSelected ? 7 : 4.5,
+                opacity: isSelected ? 0.6 : 0.2,
+                lineJoin: 'round'
+              }}
+              interactive={false}
+            />
+            <Polyline
+              positions={line.path}
+              pathOptions={{
+                color: line.color,
+                weight: isSelected ? 5 : 3,
+                opacity: isSelected ? 1 : 0.7,
+                lineJoin: 'round'
+              }}
+              eventHandlers={{
+                click: () => onSelectLine(line.id)
+              }}
+            >
+              <Popup><strong>{line.name}</strong></Popup>
+            </Polyline>
+          </React.Fragment>
+        );
+      })}
+    </>
+  );
+});
+
+// Memoized Train & Stations Layer
+const StaticInfrastructureLayer = React.memo(() => {
+  return (
+    <>
+      {TRAIN_LINES.map((line, i) => (
+        <React.Fragment key={`train-line-${i}`}>
+          <Polyline
+            positions={line.path}
+            pathOptions={{ color: line.color, weight: 7, opacity: 0.9, lineJoin: 'round' }}
+          />
+          <Polyline
+            positions={line.path}
+            pathOptions={{ color: '#ffffff', weight: 3, opacity: 1, lineJoin: 'round' }}
+          >
+            <Popup>
+              <div style={{ textAlign: 'center' }}>
+                <strong style={{ color: line.color }}>{line.name}</strong>
+                <div style={{ fontSize: '0.85rem', marginTop: '4px' }}>{line.info}</div>
+              </div>
+            </Popup>
+          </Polyline>
+        </React.Fragment>
+      ))}
+      {STATIONS.map((s, i) => (
+        <Marker key={i} position={s.coords} icon={getStationIcon()}>
+          <Popup><strong>{s.name}</strong></Popup>
+        </Marker>
+      ))}
+    </>
+  );
+});
+
+const POIsLayer = React.memo(() => {
+  return (
+    <>
+      {poisData.map(poi => (
+        <Marker key={poi.id} position={poi.coords} icon={getPOIIcon(poi.type, poi.isPremium)}>
+          <Popup>
+            <div style={{ padding: '4px' }}>
+              <div style={{ fontWeight: 800, fontSize: '0.9rem', marginBottom: '2px' }}>{poi.name}</div>
+              <div style={{ fontSize: '0.75rem', opacity: 0.7, marginBottom: '4px' }}>{poi.description}</div>
+              {poi.isPremium && (
+                <div style={{ background: 'var(--primary)', color: 'white', fontSize: '0.65rem', padding: '2px 6px', borderRadius: '4px', fontWeight: 700, display: 'inline-block' }}>OFERTA VEGAGO</div>
+              )}
+            </div>
+          </Popup>
+        </Marker>
+      ))}
+    </>
+  );
+});
+
+export default function BusMap({ selectedLineId, selectedPOI, onSelectLine, theme, vehicles, isNearbySelection }) {
   const [userPos, setUserPos] = useState(null);
 
   useEffect(() => {
@@ -232,83 +379,94 @@ export default function BusMap({ selectedLineId, onSelectLine, theme, vehicles, 
     return () => window.removeEventListener('onUserLocation', handleUserLocation);
   }, []);
 
-  const tileUrl = theme === 'dark'
+  const tileUrl = useMemo(() => theme === 'dark'
     ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
-    : 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
+    : 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', [theme]);
 
-  const linesToRender = useMemo(() => selectedLineId ? [busLines.find(l => l.id === selectedLineId)] : busLines, [selectedLineId]);
+  const selectedLine = useMemo(() => busLines.find(l => l.id === selectedLineId), [selectedLineId]);
 
   return (
     <div className="map-container">
-      <MapContainer 
-        center={[38.0844, -0.7442]} 
-        zoom={11} 
-        minZoom={9} 
-        maxBounds={[[37.5, -1.5], [38.7, 0.0]]} 
-        maxBoundsViscosity={1.0} 
-        style={{ height: '100%', width: '100%', zIndex: 0 }} 
-        zoomControl={false} 
+      <MapContainer
+        center={VEGA_BAJA_CENTER}
+        zoom={VEGA_BAJA_ZOOM}
+        minZoom={9}
+        maxBounds={VEGA_BAJA_BOUNDS}
+        maxBoundsViscosity={0.6}
+        style={{ height: '100%', width: '100%', zIndex: 0 }}
+        zoomControl={false}
         attributionControl={false}
-        preferCanvas={true} // Performance boost for geometries
+        preferCanvas={true}
       >
         <TileLayer url={tileUrl} updateWhenIdle={true} />
         <MapFitter selectedLineId={selectedLineId} isNearbySelection={isNearbySelection} />
+        <POIFitter selectedPOI={selectedPOI} />
         <LocateControl />
         <OutOfBoundsControl />
+        
+        {selectedPOI && (
+          <Marker 
+            position={selectedPOI.coords}
+            icon={L.divIcon({
+              className: 'custom-station-container',
+              html: `
+                <div class="station-marker-circle selected-highlight" style="
+                  background: #84cc16; 
+                  width: 10px; 
+                  height: 10px; 
+                  border-radius: 50%; 
+                  border: 1.5px solid white; 
+                  box-shadow: 0 0 10px rgba(132, 204, 22, 0.8), 0 0 0 1px rgba(132, 204, 22, 0.4);
+                "></div>
+              `,
+              iconSize: [10, 10],
+              iconAnchor: [5, 5]
+            })}
+          >
+            <Popup>
+              <strong>{selectedPOI.name}</strong><br/>
+              {selectedPOI.address || selectedPOI.description}
+            </Popup>
+          </Marker>
+        )}
 
         {userPos && (
-          <CircleMarker 
-            center={[userPos.lat, userPos.lng]} 
-            pathOptions={{ color: '#ffffff', fillColor: '#84cc16', fillOpacity: 1, weight: 3 }} 
-            radius={8} 
+          <CircleMarker
+            center={[userPos.lat, userPos.lng]}
+            pathOptions={{ color: '#ffffff', fillColor: '#84cc16', fillOpacity: 1, weight: 3 }}
+            radius={8}
             zIndexOffset={1000}
           />
         )}
 
-        {/* Render Train Lines */}
-        {TRAIN_LINES.map((line, i) => (
-          <React.Fragment key={`train-line-${i}`}>
-            <Polyline 
-              positions={line.path} 
-              pathOptions={{ color: line.color, weight: 7, opacity: 0.9, lineJoin: 'round' }} 
-            />
-            <Polyline 
-              positions={line.path} 
-              pathOptions={{ color: '#ffffff', weight: 3, opacity: 1, lineJoin: 'round' }} 
-            >
-              <Popup>
-                <div style={{ textAlign: 'center' }}>
-                  <strong style={{ color: line.color }}>{line.name}</strong>
-                  <div style={{ fontSize: '0.85rem', marginTop: '4px' }}>{line.info}</div>
-                </div>
-              </Popup>
-            </Polyline>
-          </React.Fragment>
-        ))}
+        <StaticInfrastructureLayer />
+        <POIsLayer />
+        <StopsLayer />
+        <LinesLayer selectedLineId={selectedLineId} onSelectLine={onSelectLine} />
 
-        {/* Render Stations */}
-        {STATIONS.map((s, i) => <Marker key={i} position={s.coords} icon={getStationIcon(s.type)}><Popup><strong>{s.name}</strong></Popup></Marker>)}
-        
-        {/* Render Vehicles (Buses) with memoized component */}
+        {/* Dynamic Vehicles */}
         {vehicles.map(v => (
-          <BusMarker 
-            key={v.id} 
-            vehicle={v} 
-            isSelected={selectedLineId === v.lineId} 
-            onClick={onSelectLine} 
+          <BusMarker
+            key={v.id}
+            vehicle={v}
+            isSelected={selectedLineId === v.lineId}
+            onClick={onSelectLine}
           />
         ))}
 
-        {linesToRender.map(line => line && (
-          <React.Fragment key={line.id}>
-            <Polyline positions={line.path} pathOptions={{ color: '#ffffff', weight: selectedLineId ? 10 : 0, opacity: 0.8 }} />
-            <Polyline positions={line.path} pathOptions={{ color: line.color, weight: selectedLineId ? 6 : 4, opacity: selectedLineId ? 1 : 0.4, lineJoin: 'round', lineCap: 'round' }} eventHandlers={{ click: () => onSelectLine(line.id) }} />
-            {selectedLineId === line.id && line.stops?.map((stop, idx) => (
-              <CircleMarker key={idx} center={stop.coords} pathOptions={{ color: '#ffffff', fillColor: line.color, fillOpacity: 1, weight: 2.8 }} radius={idx === 0 || idx === line.stops.length-1 ? 7.5 : 5.5} eventHandlers={{ click: () => onSelectLine(line.id) }}>
-                <Popup><strong>{stop.name}</strong><div style={{fontSize: '0.8rem', color: '#666'}}>{line.name}</div></Popup>
-              </CircleMarker>
-            ))}
-          </React.Fragment>
+        {/* Selected Line Highlighting (Stops) */}
+        {selectedLine && selectedLine.stops?.map((stop, idx) => (
+          <CircleMarker 
+            key={`${selectedLineId}-${idx}`} 
+            center={stop.coords} 
+            pathOptions={{ color: '#ffffff', fillColor: selectedLine.color, fillOpacity: 1, weight: 2.8 }} 
+            radius={idx === 0 || idx === selectedLine.stops.length - 1 ? 7.5 : 5.5} 
+          >
+            <Popup>
+              <strong>{stop.name}</strong>
+              <div style={{ fontSize: '0.8rem', color: '#666' }}>{selectedLine.name}</div>
+            </Popup>
+          </CircleMarker>
         ))}
       </MapContainer>
     </div>

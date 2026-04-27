@@ -1,12 +1,92 @@
 [
-  { "id": "torrevieja", "name": "Radio Taxi Torrevieja", "phone": "965712277", "city": "Torrevieja" },
-  { "id": "orihuela", "name": "Radio Taxi Orihuela", "phone": "966740202", "city": "Orihuela" },
-  { "id": "orihuela-costa", "name": "Radio Taxi Orihuela Costa", "phone": "966761088", "city": "Orihuela Costa" },
-  { "id": "guardamar", "name": "Taxi Guardamar", "phone": "965032965", "city": "Guardamar del Segura" },
-  { "id": "pilar", "name": "Radio Taxi Pilar de la Horadada", "phone": "966766013", "city": "Pilar de la Horadada" },
-  { "id": "almoradi", "name": "Taxis Almoradí", "phone": "680913095", "city": "Almoradí" },
-  { "id": "san-fulgencio", "name": "Taxi San Fulgencio", "phone": "666415415", "city": "San Fulgencio" },
-  { "id": "rojales", "name": "Taxi Quesada", "phone": "617555444", "city": "Rojales" },
-  { "id": "albatera", "name": "Taxi Albatera", "phone": "672319682", "city": "Albatera" },
-  { "id": "bigastro", "name": "Taxi Bigastro", "phone": "610730073", "city": "Bigastro" }
+  {
+    "name": "Taxi Vega (Aeropuerto 24h)",
+    "city": "Toda la Vega Baja",
+    "phone": "603545555",
+    "adapted": true
+  },
+  {
+    "name": "Radio Taxi Torrevieja",
+    "city": "Torrevieja",
+    "phone": "965712277",
+    "adapted": true
+  },
+  {
+    "name": "Radio Taxi Orihuela",
+    "city": "Orihuela Ciudad",
+    "phone": "966743033",
+    "adapted": true
+  },
+  {
+    "name": "Radio Taxi Guardamar",
+    "city": "Guardamar del Segura",
+    "phone": "965729607",
+    "adapted": true
+  },
+  {
+    "name": "Radio Taxi Almoradí",
+    "city": "Almoradí",
+    "phone": "965700085",
+    "adapted": true
+  },
+  {
+    "name": "Radio Taxi Callosa",
+    "city": "Callosa de Segura",
+    "phone": "966756070",
+    "adapted": true
+  },
+  {
+    "name": "Taxi Costa",
+    "city": "Orihuela Costa",
+    "phone": "966761088",
+    "adapted": true
+  },
+  {
+    "name": "Taxi San Fulgencio / La Marina",
+    "city": "San Fulgencio",
+    "phone": "966790000",
+    "adapted": false
+  },
+  {
+    "name": "Taxi Albatera",
+    "city": "Albatera",
+    "phone": "965485011",
+    "adapted": false
+  },
+  {
+    "name": "Taxi Catral / Dolores",
+    "city": "Catral y Dolores",
+    "phone": "965723000",
+    "adapted": false
+  },
+  {
+    "name": "Taxi Víctor",
+    "city": "Algorfa / Benejúzar",
+    "phone": "619062108",
+    "adapted": true
+  },
+  {
+    "name": "Taxi Rojales",
+    "city": "Rojales / Ciudad Quesada",
+    "phone": "966715014",
+    "adapted": false
+  },
+  {
+    "name": "Taxi Rafal",
+    "city": "Rafal",
+    "phone": "619062108",
+    "adapted": false
+  },
+  {
+    "name": "Taxi Redován",
+    "city": "Redován",
+    "phone": "966743033",
+    "adapted": true
+  },
+  {
+    "name": "Tele Taxi Torrevieja",
+    "city": "Torrevieja",
+    "phone": "966927420",
+    "adapted": true
+  }
 ]
