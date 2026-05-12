@@ -23,4 +23,4 @@ El nombre **VegaGo**, su logotipo y el dominio **vegago.app** son propiedad del 
 Este repositorio público tiene fines informativos y de protección de identidad de marca. El código fuente del proyecto se mantiene en repositorios privados por motivos de seguridad y propiedad intelectual.
 
 ---
-*© 2024-2026 VegaGo - Todos los derechos reservados.*
+*© 2026 VegaGo - Todos los derechos reservados.*
